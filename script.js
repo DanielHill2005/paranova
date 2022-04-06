@@ -41,3 +41,14 @@ function storyLoop (number){
     console.log(story[number].text);
     document.getElementById('storyText').textContent += `\n ${story[number].text}`;
 }
+function choicesAvailable (number) {
+    if (story[number].choices.length > 0) {
+        for (let i = 0; i < story[number].choices.length; i++) {
+            choiceList += `<button>${story[number].choices[i][1]}</button>`;
+        }
+        console.log(choiceList);
+        return document.getElementById(`choices`).innerHTML += choiceList;
+    } else {
+        return console.log(`this story is over`);
+    }
+}
