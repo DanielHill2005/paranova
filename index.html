@@ -9,11 +9,14 @@
 <body>
     <h1>Paranova</h1>
     <section id="text">
-        <div id="storyText">Default</div><!--Intended for the building of the story text-->
+        <div id="storyText"></div><!--Intended for the building of the story text-->
     </section>
-    <li id="choices"></li><!--Intended to display the choices the user is capable of makes (Actual choices the user has available for that part of the story)-->
-    <section id="chosenChoices"></section><!--Intended to display the choices the user has made (The list of all the choices the user made)-->
-    <input type="button" value="start" onclick="storyLoop('one')">
+    <section id="choices" onclick="storyLoop()">
+        <h3>Options:</h3>
+    </section>
+    <section id="chosenChoices"></section><!--Intended to display the choices the user makes-->
+    <button id="restart" onclick="window.location.reload()">RESTART</button>
+    <input type="button" value="start" onclick="storyLoop(`one`),choicesAvailable(`one`)">
     <script src="script.js"></script>
 </body>
 </html>

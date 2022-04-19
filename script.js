@@ -1,11 +1,13 @@
+var modified = 0;
+var modifier = 1;
 const story = {
     one: 
     {
         text: `text1`,
-        oldManText: 0, 
-        variable: ['name', 1],               
+        oldManText: '', 
+        variable: [modified, modifier],               
         choices: [
-            [`two`,`choice 1`],
+            [`two`,`choice1`],
             [`three`,`choice2`],
             [`four`,`choice3`]
         ]
@@ -37,18 +39,22 @@ const story = {
         choices: 0,
     }
 };
+let choiceList = document.getElementById('choices'), choices = [];
+
 function storyLoop (number){
-    console.log(story[number].text);
-    document.getElementById('storyText').textContent += `\n ${story[number].text}`;
+        let currentAddedText = story[number].text + story[number].oldManText;
+        document.getElementById('storyText').textContent += `\n ${currentAddedText}`;
+        for(i = 0; i < story[number].variable.length; i+= 2){
+            story[number].variable[i] += story[number].variable[(i+1)]
+        }
 }
-function choicesAvailable (number) {
+function choicesAvailable (number){
     if (story[number].choices.length > 0) {
         for (let i = 0; i < story[number].choices.length; i++) {
-            choiceList += `<button>${story[number].choices[i][1]}</button>`;
+            choiceList += `<button ${onclick=console.log("Hello")}>${story[number].choices[i][1]}</button>`;
         }
-        console.log(choiceList);
-        return document.getElementById(`choices`).innerHTML += choiceList;
+        return document.getElementById(`choices`).innerHTML += choiceList.replace(`[object HTMLElement]`, ``);
     } else {
-        return console.log(`this story is over`);
+        return document.getElementById(`choices`).innerHTML += `You've reached one of the various endings!\nPlay again to get another one!`;
     }
 }
