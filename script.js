@@ -1,11 +1,10 @@
 var modified = 0;
-var modifier = 1;
 const story = {
     one: 
     {
         text: `text1`,
         oldManText: '', 
-        variable: [modified, modifier],               
+        variable: ['modified', 1],               
         choices: [
             [`two`,`choice1`],
             [`three`,`choice2`],
@@ -44,8 +43,12 @@ let choiceList = document.getElementById('choices'), choices = [];
 function storyLoop (number){
         let currentAddedText = story[number].text + story[number].oldManText;
         document.getElementById('storyText').textContent += `\n ${currentAddedText}`;
-        for(i = 0; i < story[number].variable.length; i+= 2){
-            story[number].variable[i] += story[number].variable[(i+1)]
+        for(i = 0; i < (story[number].variable.length / 2); i++){
+            switch (story[number].variable[i]){
+                case 'modified':
+                    modified += story[number].variable[i+1];
+                    return modified;
+            }
         }
 }
 function choicesAvailable (number){
