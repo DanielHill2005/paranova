@@ -11,17 +11,14 @@
     <section id="text">
         <div id="storyText"></div><!--Intended for the building of the story text-->
     </section>
-    <section id="choices" onclick="storyLoop()">
-        <h3>Options:</h3>
-    </section>
-    <section id="chosenChoices"></section><!--Intended to display the choices the user makes-->
-    <section id="choiceMenu">
+    <h3>Options:</h3>
+    <section id="choiceMenu"> <!--choice user interface-->
         <input type="button" value="start" onclick="storyLoop(`one`)">
     </section>
-    <section id="clock">
+    <section id="clock"> <!--shows timeLeft variable-->
         <p id="time"></p>
     </section>
-    <button id="restart" onclick="window.location.reload()">RESTART</button>
-    <script src="script.js"></script>
+    <button id="restart" onclick="window.location.reload()">RESTART</button> <!--resets the page-->
+    <script src="script.js"></script> <!--links javascript-->
 </body>
 </html>
