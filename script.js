@@ -1,68 +1,79 @@
-var modified = 0;
-var modified2 = 10;
+var timeLeft = 30;
+var oldMan = 0;
 const story = {
     one: 
     {
-        text: `text1`,
+        text: `tavern `,
         oldManText: '', 
-        variable: ['modified', 1, 'modified2', -5],               
+        variable: 0,               
         choices: [
-            [`two`,`choice1`],
-            [`three`,`choice2`],
-            [`four`,`choice3`]
-        ]
+            [`two`,`outside`],
+            [`three`,`dungeon`],
+            [`four`,`castle`]
+        ],
+        time: 0
     },
     two: 
     {
-        text: `text2`,
-        oldManText: 'hi lol', 
+        text: `outside `,
+        oldManText: '', 
         variable: 0,               
         choices: [
-            [`three`,`choice 1`],
-            [`four`,`choice 2`],
-        ]
-    },
+            [`three`,`dungeon`],
+            [`four`,`castle`],
+        ],
+        time:1
+    }, 
     three: 
     {
-        text: `text 3`,
-        oldManText: 0,
-        variable: 0,
+        text: `dungeon `,
+        oldManText: '',
+        variable: ['oldMan', 1],
         choices: [
-            [`four`,`choice 1`],
-        ]
+            [`four`,`castle`],
+        ],
+        time:2
     },
     four:
     {
-        text: 'text 4',
-        oldManText: 0,
+        text: 'castle',
+        oldManText: ' hi ',
         variable: 0,
         choices: 0,
+        time: 3
     }
 };
 let choiceList = document.getElementById('choices'), choices = [];
 
+// const newButton = document.createElement("button");
 function storyLoop (number){
-    let currentAddedText = story[number].text + story[number].oldManText;
-    document.getElementById('storyText').textContent += `\n ${currentAddedText}`;
-    for(i = 0; i < (story[number].variable.length / 2); i++){
-        if (story[number].variable[i] = 'modified'){
-            alert(modified);
-            modified += story[number].variable[i+1];
-            alert(modified);
-        } else if (story[number].variable[i] = 'modified2'){
-            alert(modified2);
-            modified2 += story[number].variable[i+1];
-            alert(modified2);
-        }
+    alert(timeLeft);
+    document.getElementById('choiceMenu').innerHTML = '';
+    let currentAddedText = '';
+    if(oldMan == 0){
+        currentAddedText = story[number].text;
+    } else if (oldMan == 1) {
+    currentAddedText = story[number].text + story[number].oldManText;
     }
+    document.getElementById('storyText').textContent += `\n ${currentAddedText}`;
+    for(i = 0; i < story[number].choices.length; i++){
+        let btn = document.createElement('button');
+        btn.setAttribute('onclick', `varUpdater('${story[number].choices[i][0]}'), storyLoop('${story[number].choices[i][0]}')`);
+        btn.innerHTML = story[number].choices[i][1];
+        document.getElementById('choiceMenu').appendChild(btn);
+    }
+    
 }
-function choicesAvailable (number){
-    if (story[number].choices.length > 0) {
-        for (let i = 0; i < story[number].choices.length; i++) {
-            choiceList += `<button ${onclick=console.log("Hello")}>${story[number].choices[i][1]}</button>`;
+
+function varUpdater (number) {
+    timeLeft -= story[number].time;
+    for(i = 0; i < story[number].variable.length; i+=2){
+        switch (story[number].variable[i]){
+            case 'oldMan':
+                oldMan += story[number].variable[i+1];
+                break;
+            default:
+                alert('something broke lol');
         }
-        return document.getElementById(`choices`).innerHTML += choiceList.replace(`[object HTMLElement]`, ``);
-    } else {
-        return document.getElementById(`choices`).innerHTML += `You've reached one of the various endings!\nPlay again to get another one!`;
     }
 }

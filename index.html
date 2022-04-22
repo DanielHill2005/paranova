@@ -15,8 +15,13 @@
         <h3>Options:</h3>
     </section>
     <section id="chosenChoices"></section><!--Intended to display the choices the user makes-->
+    <section id="choiceMenu">
+        <input type="button" value="start" onclick="storyLoop(`one`)">
+    </section>
+    <section id="clock">
+        <p id="time"></p>
+    </section>
     <button id="restart" onclick="window.location.reload()">RESTART</button>
-    <input type="button" value="start" onclick="storyLoop(`one`),choicesAvailable(`one`)">
     <script src="script.js"></script>
 </body>
 </html>
