@@ -1,8 +1,9 @@
-var timeLeft = 30; //defines all the variables
+var timeLeft = 31; //defines all the variables
 var oldMan = 0;
+artifactDoor = 'closed';
 const story = { //holds the entire story
     one: {
-        text: `     It’s the staryear 193-08793. The Milky Way galaxy’s unexplored mysteries didn’t last long after humanity finally discovered the secrets of space travel. I was born in an age of space pirates and war. With the entire galaxy conquered, humanity had nothing to do but fight over what we already had. All I ever wanted to do was be an old school explorer. But with this galaxy completely explored and the endless space between other galaxies untraversable, I was stuck as a bounty hunter.\n     I’m on a frigid ice planet. The howling wind means I can only use my eyes, but visibility is so low I barely have that. I creep forward while crouching until I’m over the ridge. There he is, Jean-Luc Pélissier. Wanted dead or alive for stealing and espionage. I throw a smoke bomb and run in with my thermal glasses. I knock him down and arrest him. He tries to run but that’s a mistake. Now he’s with the others I’ve taken down. I search his body and find an ancient relic.\n`,  //main text
+        text: `     It’s the staryear 193-08793. The Milky Way galaxy’s unexplored mysteries didn’t last long after humanity finally discovered the secrets of space travel. I was born in an age of space pirates and war. With the entire galaxy conquered, humanity had nothing to do but fight over what we already had. All I ever wanted to do was be an old school explorer. But with this galaxy completely explored and the endless space between other galaxies untraversable, I was stuck as a bounty hunter.\n     I’m on a frigid ice planet. The howling wind means I can only use my eyes, but visibility is so low I barely have that. I creep forward while crouching until I’m over the ridge. There he is, Jean-Luc Pélissier. Wanted dead or alive for stealing and espionage. I throw a smoke bomb and run in with my thermal glasses. I knock him down and arrest him. He tries to run but that’s a mistake. Now he’s with the others I’ve taken down. I search his body and find an ancient relic.`,  //main text
         oldManText: '',  //optional text
         variable: 0, //holds what variables will be changed         
         choices: [
@@ -13,14 +14,14 @@ const story = { //holds the entire story
         time: 0 //holds how much time is subtracted to get to this choice
     },
     two: {
-        text: `These hooligans need to be taught a lesson. I get up like I’m leaving but the moment I pass them I whip out my laser pistol and start firing. Once the smoke clears three of the four hooligans are dead and the last is begging for his life.`,
+        text: `These hooligans need to be taught a lesson. I get up like I’m leaving but the moment I pass them I whip out my laser pistol and start blasting. Once the smoke clears three of the four hooligans are down and the last is begging to be let go. `,
         oldManText: '', 
         variable: 0,               
         choices: [
-            [`five`,``],
+            [`one`,`return`],
             [`six`,``]
         ],
-        time:1
+        time:5
     }, 
     three: {
         text: `“Why don't you kick rocks and leave us alone” one of the hooligans says. 
@@ -32,7 +33,7 @@ const story = { //holds the entire story
             [`seven`,``],
             [`eight`,``]
         ],
-        time:2
+        time:0
     },
     four: {
         text: `Whatever. I’ll let it go. Not my problem. Or at least it wasn’t until the old man suddenly threw his glass at the wall near the hooligans and then kindly said, “Please keep it down.”
@@ -45,7 +46,7 @@ const story = { //holds the entire story
             [`nine`,``],
             [`ten`,``]
         ],
-        time: 3
+        time: 0
     },
     five: {
         text: ` `,
@@ -1150,8 +1151,20 @@ const story = { //holds the entire story
 };
 
 function storyLoop (number){ //all of the mechanics
-    timeLeft -= story[number].time; //subtracts time 
-    document.getElementById(`clock`).innerHTML = timeLeft;
+    timeLeft -= story[number].time; //subtracts time     
+    if (timeLeft <= 10 && artifactDoor == 'closed'){ //special events
+        artifactDoor = 'open';
+        document.getElementById('storyText').innerHTML += '<i><br><br>Suddenly a loud rumbling can be heard all across the entire planet. A huge beacon of light shoots out from the ocean. Something important must be happening there</i><br><br> ';
+    } else if (timeLeft <= 5 && artifactDoor == 'open'){
+        document.getElementById('storyText').innerHTML += "<i><br><br>The beacon of light vanishes</i><br><br> ";
+        artifactDoor = 'closed forever';
+    } else if (timeLeft <= 0){
+        timeLeft = 0;
+        document.getElementById('storyText').innerHTML += "<br><br>I’m out of time. I need to get back to my ship. I start running hoping that I have enough time to escape. I finally reach my ship and get in. As I’m flying away I look back at the star. It looks giant and red. Then there’s a flash of light. I should have enough time to get away. I start flying away but something weird happens. Even though I’m powering up the engines I’m slowing down. Then the ship stops and starts going backwards. The star’s gravity is enough to pull me in. I give up. I turn around and watch as the beautiful and massive explosion turns me into nothing in an instant.";
+    }
+    if(timeLeft <= 30){
+    document.getElementById(`clock`).innerHTML = `Time left = ${timeLeft}`;
+    }        
     for(i = 0; i < story[number].variable.length; i+=2){ //updates all variables
         switch (story[number].variable[i]){ //uses the first value in a set to point to which variable to update
             case 'oldMan': 
@@ -1162,17 +1175,21 @@ function storyLoop (number){ //all of the mechanics
         }
     }    
     document.getElementById('choiceMenu').innerHTML = ''; //clears all of the old choices
+    if(timeLeft > 0){
     let currentAddedText = ''; //holds the new text to be added
     if(oldMan == 0){ //adds the main text and optional text if needed
         currentAddedText = story[number].text;
     } else if (oldMan == 1) {
     currentAddedText = story[number].text + story[number].oldManText;
     }
-    document.getElementById('storyText').textContent += `\n ${currentAddedText}`; //adds the text to the main story
+    //let chosenChoicesArray = []
+    //document.getElementById("chosenChoices").innerHTML += chosenChoicesArray.push(story[number].choices)
+    document.getElementById('storyText').innerHTML += `<br>${currentAddedText}`; //adds the text to the main story
     for(i = 0; i < story[number].choices.length; i++){ //loops for how many choices there are
         let btn = document.createElement('button'); //creates a button HTML tag inside of a variable
         btn.setAttribute('onclick', `storyLoop('${story[number].choices[i][0]}')`); //adds an onclick attribute to the button with the specific pointer needed
         btn.innerHTML = story[number].choices[i][1]; //adds the button text
         document.getElementById('choiceMenu').appendChild(btn); //adds the button to the UI
-    }   
+    } 
+}  
 }
