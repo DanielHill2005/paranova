@@ -1,6 +1,11 @@
 var timeLeft = 31; //defines all the variables
 var oldMan = 0;
-artifactDoor = 'closed';
+var knowChief = 0;
+var convinceLeaders = 0;
+var artifactInfo = 0;
+var artifactDoor = 'closed';
+var trueEnding = 0;
+var storyArray = [];
 const story = { //holds the entire story
     one: {
         text: `     It’s the staryear 193-08793. The Milky Way galaxy’s unexplored mysteries didn’t last long after humanity finally discovered the secrets of space travel. I was born in an age of space pirates and war. With the entire galaxy conquered, humanity had nothing to do but fight over what we already had. All I ever wanted to do was be an old school explorer. But with this galaxy completely explored and the endless space between other galaxies untraversable, I was stuck as a bounty hunter.\n     I’m on a frigid ice planet. The howling wind means I can only use my eyes, but visibility is so low I barely have that. I creep forward while crouching until I’m over the ridge. There he is, Jean-Luc Pélissier. Wanted dead or alive for stealing and espionage. I throw a smoke bomb and run in with my thermal glasses. I knock him down and arrest him. He tries to run but that’s a mistake. Now he’s with the others I’ve taken down. I search his body and find an ancient relic.`,  //main text
@@ -16,7 +21,7 @@ const story = { //holds the entire story
     two: {
         text: `These hooligans need to be taught a lesson. I get up like I’m leaving but the moment I pass them I whip out my laser pistol and start blasting. Once the smoke clears three of the four hooligans are down and the last is begging to be let go. `,
         oldManText: '', 
-        variable: 0,               
+        variable: ['artifactInfo', 1],               
         choices: [
             [`one`,`return`],
             [`six`,``]
@@ -1151,6 +1156,7 @@ const story = { //holds the entire story
 };
 
 function storyLoop (number){ //all of the mechanics
+    storyArray.push(number);
     timeLeft -= story[number].time; //subtracts time     
     if (timeLeft <= 10 && artifactDoor == 'closed'){ //special events
         artifactDoor = 'open';
@@ -1170,6 +1176,18 @@ function storyLoop (number){ //all of the mechanics
             case 'oldMan': 
                 oldMan += story[number].variable[i+1]; //updates variable by the second value in a set
                 break;
+            case 'knowChief':
+                knowChief += story[number].variable[i+1];
+                break;
+            case 'conviceLeaders':
+                convinceLeaders += story[number].variable[i+1];
+                break;
+            case 'artifactInfo':
+                artifactInfo += story[number].variable[i+1];
+                break;
+            case 'trueEnding':
+                trueEnding += story[number].variable[i+1];
+                break;
             default:
                 alert('something broke lol, try restarting'); //debugging tool
         }
@@ -1182,9 +1200,19 @@ function storyLoop (number){ //all of the mechanics
     } else if (oldMan == 1) {
     currentAddedText = story[number].text + story[number].oldManText;
     }
-    //let chosenChoicesArray = []
-    //document.getElementById("chosenChoices").innerHTML += chosenChoicesArray.push(story[number].choices)
     document.getElementById('storyText').innerHTML += `<br>${currentAddedText}`; //adds the text to the main story
+    if (knowChief == 1){
+        story['oneHundred'].choices.push(['placeholder', 'placeholder'])
+        knowChief = -1000000;
+    }
+    if (convinceLeaders = 2){
+        story['oneHundred'].choices.push(['placeholder', 'placeholder'])
+        convinceLeaders = -1000000;
+    }
+    if (artifactInfo == 2){
+        story['oneHundred'].choices.push(['placeholder', 'placeholder']);
+        artifactInfo = -1000000;
+    }    
     for(i = 0; i < story[number].choices.length; i++){ //loops for how many choices there are
         let btn = document.createElement('button'); //creates a button HTML tag inside of a variable
         btn.setAttribute('onclick', `storyLoop('${story[number].choices[i][0]}')`); //adds an onclick attribute to the button with the specific pointer needed
