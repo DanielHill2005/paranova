@@ -253,7 +253,7 @@ const story = { //holds the entire story
     twentyFour: {
         text: `“Alright, but we are leaving right now. Let’s go!”`,
         oldManText: ``,
-        variable: [oldMan,1],       
+        variable: ["oldMan",1],       
         choices: [
             [`twentyFive`,`Continue`]
         ],
