@@ -8,114 +8,104 @@ var trueEnding = 0;
 var storyArray = [];
 const story = { //holds the entire story
     one: {
-        text: `     It’s the staryear 193-08793. The Milky Way galaxy’s unexplored mysteries didn’t last long after humanity finally discovered the secrets of space travel. I was born in an age of space pirates and war. With the entire galaxy conquered, humanity had nothing to do but fight over what we already had. All I ever wanted to do was be an old school explorer. But with this galaxy completely explored and the endless space between other galaxies untraversable, I was stuck as a bounty hunter.\n     I’m on a frigid ice planet. The howling wind means I can only use my eyes, but visibility is so low I barely have that. I creep forward while crouching until I’m over the ridge. There he is, Jean-Luc Pélissier. Wanted dead or alive for stealing and espionage. I throw a smoke bomb and run in with my thermal glasses. I knock him down and arrest him. He tries to run but that’s a mistake. Now he’s with the others I’ve taken down. I search his body and find an ancient relic.`,  //main text
+        text: `It’s the staryear 193-08793. The Milky Way galaxy’s unexplored mysteries didn’t last long after humanity finally discovered the secrets of space travel. I was born in an age of space pirates and war. With the entire galaxy conquered, humanity had nothing to do but fight over what we already had. All I ever wanted to do was be an old school explorer. But with this galaxy completely explored and the endless space between other galaxies untraversable, I was stuck as a bounty hunter. 
+        I’m on a frigid ice planet. The howling wind means I can only use my eyes, but visibility is so low I barely have that. I creep forward while crouching until I’m over the ridge. There he is, Jean-Luc Pélissier. Wanted dead or alive for stealing and espionage. I throw a smoke bomb and run in with my thermal glasses. I knock him down and arrest him. He tries to run but that’s a mistake. Now he’s with the others I’ve taken down. I search his body and find an ancient relic.`,  //main text
         oldManText: '',  //optional text
         variable: 0, //holds what variables will be changed         
         choices: [
-            [`two`,`Fight Them`],
-            [`three`,`Join Them`],
-            [`four`,`Ignore Them`]
+            [`two`,`Respect his efforts`],
+            [`three`,`Insult him`],
+            [`four`,`Ignore the body`]
         ], //holds all the choices
         time: 0 //holds how much time is subtracted to get to this choice
     },
     two: {
-        text: `These hooligans need to be taught a lesson. I get up like I’m leaving but the moment I pass them I whip out my laser pistol and start blasting. Once the smoke clears three of the four hooligans are down and the last is begging to be let go. `,
+        text: `I say “Good effort on the run, you almost lost me”. I grab his identification chip and begin to go to my ship.`,
         oldManText: '', 
         variable: ['artifactInfo', 1],               
         choices: [
-            [`one`,`return`],
-            [`six`,``]
+            [`five`,`Continue`]
         ],
         time:5
     }, 
     three: {
-        text: `“Why don't you kick rocks and leave us alone” one of the hooligans says. 
-        “Oh yeah you would want that, huh,” I say angrily. 
-        As soon as I say that, the old man appears and says, “They’re not worth your time”`,
+        text: `“Ha! Look at this goofy goober of a criminal” I say insultingly. I grab his identification chip and head to my ship.`,
         oldManText: '',
         variable: ['oldMan', 1],
         choices: [
-            [`seven`,``],
-            [`eight`,``]
+            [`five`,`Continue`]
         ],
         time:0
     },
     four: {
-        text: `Whatever. I’ll let it go. Not my problem. Or at least it wasn’t until the old man suddenly threw his glass at the wall near the hooligans and then kindly said, “Please keep it down.”
-        The hooligans were shocked by his outburst and sudden kind attitude but one managed to squeak out, “What’s it matter to you?”
-        With surprising speed the old man grabbed the more confident hooligan by his collar and then slammed him into the table.
-        `,
+        text: `I look at him and sigh because I know I'm going to be doing this for a long time. I grab his identification chip and go to my ship.`,
         oldManText: ' hi ',
         variable: 0,
         choices: [
-            [`nine`,``],
-            [`ten`,``]
+            [`five`,`Continue`]
         ],
         time: 0
     },
     five: {
-        text: ` `,
+        text: `My ship's computer scans the relic but can’t translate it. It looks like some sort of map. For a precious few minutes I had hope that I could finally live my dream as an explorer. 
+        Now I’m back at this old bar like always, drinking away my sorrows. I’m sitting in the corner examining the map. There’s an old man sitting on the other side of the bar by himself and a group of obnoxious men that look to be my age but act like they’ve never left their home world before. I’m getting sick of these guys, what should I do?`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`six`,`Fight the hooligans`],
+            [`eleven`,`Join hooligans`],
+            [`sixteen`,`Ignore hooligans`]
         ],
         time: 0
     },
     six: {
-        text: ` `,
+        text: `These hooligans need to be taught a lesson. I get up like I’m leaving but the moment I pass them I whip out my laser pistol and start firing. Once the smoke clears three of the four hooligans are dead and the last is begging for his life.`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`seven`,`Let him go`],
+            [`eight`,`Kill him`]
         ],
         time: 0
     },
     seven: {
-        text: ` `,
+        text: `I don’t have the heart to kill a man begging for his life so I let him scramble out of the bar without a word. The old man looks shocked but then he says, “Thanks, I was about to do something about them myself, but you beat me to it. Let me buy you a drink.”`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`nine`,`Accept the drink`],
+            [`ten`,`Decline the drink`]
         ],
         time: 0
     },
     eight: {
-        text: ` `,
+        text: `This guy disgusts me, I pull the trigger and he collapses on the floor. The old man looks scared but then says, “Thanks, I was about to do something about them myself, but you beat me to it. Let me buy you a drink.”`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`nine`,`Accept the drink`],
+            [`ten`,`Decline the drink`]
         ],
         time: 0
     },
     nine: {
-        text: ` `,
+        text: `We sit and talk for another hour. I almost forget why I was even at the bar until he mentions he is an archaeologist. 
+        “Wait, so can you decipher old languages and codes or are you just the diggy kind?” I ask.
+        He chuckles and says, “I knew you would ask that. I saw you staring at that map earlier. But to answer your question, yeah, a little of both. My skills are hardly ever useful now. Let me take a look.”`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`twentyThree`,`Continue`]
         ],
         time: 0
     },
     ten: {
-        text: ` `,
+        text: `The old man looks a little dejected by the rejection but he takes it in stride and says, “Well at least let me help you.”
+        He must have seen the confused look on my face because then he explains, “I saw you looking at that map earlier. I’m an archaeologist, let me see it.”`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`twentyThree`,`Continue`]
         ],
         time: 0
     },
@@ -1143,6 +1133,314 @@ const story = { //holds the entire story
         time: 0
     },
     oneHundredFour: {
+        text: ` `,
+        oldManText: ``,
+        variable: 0,       
+        choices: [
+            [``,``],
+            [``,``],
+            [``,``]
+        ],
+        time: 0
+    },
+    oneHundredFive: {
+        text: ` `,
+        oldManText: ``,
+        variable: 0,       
+        choices: [
+            [``,``],
+            [``,``],
+            [``,``]
+        ],
+        time: 0
+    },
+    oneHundredSix: {
+        text: ` `,
+        oldManText: ``,
+        variable: 0,       
+        choices: [
+            [``,``],
+            [``,``],
+            [``,``]
+        ],
+        time: 0
+    },
+    oneHundredSeven: {
+        text: ` `,
+        oldManText: ``,
+        variable: 0,       
+        choices: [
+            [``,``],
+            [``,``],
+            [``,``]
+        ],
+        time: 0
+    },
+    oneHundredEight: {
+        text: ` `,
+        oldManText: ``,
+        variable: 0,       
+        choices: [
+            [``,``],
+            [``,``],
+            [``,``]
+        ],
+        time: 0
+    },
+    oneHundredNine: {
+        text: ` `,
+        oldManText: ``,
+        variable: 0,       
+        choices: [
+            [``,``],
+            [``,``],
+            [``,``]
+        ],
+        time: 0
+    },
+    oneHundredTen: {
+        text: ` `,
+        oldManText: ``,
+        variable: 0,       
+        choices: [
+            [``,``],
+            [``,``],
+            [``,``]
+        ],
+        time: 0
+    },
+    oneHundredEleven: {
+        text: ` `,
+        oldManText: ``,
+        variable: 0,       
+        choices: [
+            [``,``],
+            [``,``],
+            [``,``]
+        ],
+        time: 0
+    },
+    oneHundredTwelve: {
+        text: ` `,
+        oldManText: ``,
+        variable: 0,       
+        choices: [
+            [``,``],
+            [``,``],
+            [``,``]
+        ],
+        time: 0
+    },
+    oneHundredThirteen: {
+        text: ` `,
+        oldManText: ``,
+        variable: 0,       
+        choices: [
+            [``,``],
+            [``,``],
+            [``,``]
+        ],
+        time: 0
+    },
+    oneHundredFourteen: {
+        text: ` `,
+        oldManText: ``,
+        variable: 0,       
+        choices: [
+            [``,``],
+            [``,``],
+            [``,``]
+        ],
+        time: 0
+    },
+    oneHundredFifteen: {
+        text: ` `,
+        oldManText: ``,
+        variable: 0,       
+        choices: [
+            [``,``],
+            [``,``],
+            [``,``]
+        ],
+        time: 0
+    },
+    oneHundredSixteen: {
+        text: ` `,
+        oldManText: ``,
+        variable: 0,       
+        choices: [
+            [``,``],
+            [``,``],
+            [``,``]
+        ],
+        time: 0
+    },
+    oneHundredSeventeen: {
+        text: ` `,
+        oldManText: ``,
+        variable: 0,       
+        choices: [
+            [``,``],
+            [``,``],
+            [``,``]
+        ],
+        time: 0
+    },
+    oneHundredEighteen: {
+        text: ` `,
+        oldManText: ``,
+        variable: 0,       
+        choices: [
+            [``,``],
+            [``,``],
+            [``,``]
+        ],
+        time: 0
+    },
+    oneHundredNineteen: {
+        text: ` `,
+        oldManText: ``,
+        variable: 0,       
+        choices: [
+            [``,``],
+            [``,``],
+            [``,``]
+        ],
+        time: 0
+    },
+    oneHundredTwenty: {
+        text: ` `,
+        oldManText: ``,
+        variable: 0,       
+        choices: [
+            [``,``],
+            [``,``],
+            [``,``]
+        ],
+        time: 0
+    },
+    oneHundredTwentyOne: {
+        text: ` `,
+        oldManText: ``,
+        variable: 0,       
+        choices: [
+            [``,``],
+            [``,``],
+            [``,``]
+        ],
+        time: 0
+    },
+    oneHundredTwentyTwo: {
+        text: ` `,
+        oldManText: ``,
+        variable: 0,       
+        choices: [
+            [``,``],
+            [``,``],
+            [``,``]
+        ],
+        time: 0
+    },
+    oneHundredTwentyThree: {
+        text: ` `,
+        oldManText: ``,
+        variable: 0,       
+        choices: [
+            [``,``],
+            [``,``],
+            [``,``]
+        ],
+        time: 0
+    },
+    oneHundredTwentyFour: {
+        text: ` `,
+        oldManText: ``,
+        variable: 0,       
+        choices: [
+            [``,``],
+            [``,``],
+            [``,``]
+        ],
+        time: 0
+    },
+    oneHundredTwentyFive: {
+        text: ` `,
+        oldManText: ``,
+        variable: 0,       
+        choices: [
+            [``,``],
+            [``,``],
+            [``,``]
+        ],
+        time: 0
+    },
+    oneHundredTwentySix: {
+        text: ` `,
+        oldManText: ``,
+        variable: 0,       
+        choices: [
+            [``,``],
+            [``,``],
+            [``,``]
+        ],
+        time: 0
+    },
+    oneHundredTwentySeven: {
+        text: ` `,
+        oldManText: ``,
+        variable: 0,       
+        choices: [
+            [``,``],
+            [``,``],
+            [``,``]
+        ],
+        time: 0
+    },
+    oneHundredTwentyEight: {
+        text: ` `,
+        oldManText: ``,
+        variable: 0,       
+        choices: [
+            [``,``],
+            [``,``],
+            [``,``]
+        ],
+        time: 0
+    },
+    oneHundredTwentyNine: {
+        text: ` `,
+        oldManText: ``,
+        variable: 0,       
+        choices: [
+            [``,``],
+            [``,``],
+            [``,``]
+        ],
+        time: 0
+    },
+    oneHundredThirty: {
+        text: ` `,
+        oldManText: ``,
+        variable: 0,       
+        choices: [
+            [``,``],
+            [``,``],
+            [``,``]
+        ],
+        time: 0
+    },
+    oneHundredThirtyOne: {
+        text: ` `,
+        oldManText: ``,
+        variable: 0,       
+        choices: [
+            [``,``],
+            [``,``],
+            [``,``]
+        ],
+        time: 0
+    },
+    oneHundredThirtyTwo: {
         text: ` `,
         oldManText: ``,
         variable: 0,       
