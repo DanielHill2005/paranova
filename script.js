@@ -664,386 +664,399 @@ const story = { //holds the entire story
             [`sixtyThree`,`Talk to the leader`],
             [`seventyFour`,`Talk to the prophet`],
             [`eightySeven`,`Talk to civilian`]
-            [`ninetyFive`,`Leave`]
         ],
         time: 0
     },
     sixtyThree: {
-        text: ` `,
+        text: `I maneuver throughout the city and see a large building like some sort of council building. I walk up the grand steps and get greeted by a bunch of kids. I greet them and walk into the building and in an instant everyone looks at me and the chatter comes a minimum. Whispers are the only sound in the room. Then after a few seconds I walk forward and people look at someone in the distance. I look at this person who I thought was just some guy with a little authority. After overhearing people's whispers, I figured out it was the leader of the city. I know this conversation will be spoken about so I decide to speak highly formal and respectful. I walk up to the leader, shake his hand, and greet him. I ask him about what he is and what he does for the city. He responds with discipline and respect to me, even though he just barely met me.`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`sixtyFour`,`Ask about artifact`],
+            [`sixtyFive`,`Ask about civilization`],
+            [`sixtySix`,`Tell him about star`]
         ],
         time: 0
     },
     sixtyFour: {
-        text: ` `,
+        text: `I ask “Do you know about the artifact or where it may be?” 
+        “No, I don't know its whereabouts, though I do know something about it,” he says. I asked him to explain what he knows about the artifact. He says “I do know of this one saying that may help you. ‘Praecipio tibi, ut ne desinas.’” I ask what it means. He says “It’s an ancient saying passed down from leader to leader. I have no idea what it means.”`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`seventyThree`,`Continue`]
         ],
         time: 0
     },
     sixtyFive: {
-        text: ` `,
+        text: `I ask about their civilization. He laughs and invites me to sit.
+        “Our ‘civilization’ is not much more than a large family where everyone has a part to play. The jungle forces us to stay together to survive. Only the strong survive. That’s how I was elected. When the previous leader dies, candidates come together and have a tournament where we fight till the other surrenders. I am the strongest fighter in the tribe. But only by a little bit,” He says with a chuckle, “I almost lost the fight because of the shock of finding out that the final opponent was my wife!”`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`seventyThree`,`Continue`]
         ],
         time: 0
     },
     sixtySix: {
-        text: ` `,
+        text: `“Hey there’s something you should know,” I say.
+        “What is it?” he asks in a concerned tone.
+        “The star it’s going to explode, meaning it’s going to become a supernova,” I tell him.
+        “Really? Why don’t I believe you?”`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`sixtySeven`,`Be honest`],
+            [`sixtyEight`,`Try to trick him into believing you`]
         ],
         time: 0
     },
     sixtySeven: {
-        text: ` `,
+        text: `“Look, I'm being completely honest with you. I’m not from here, which you could probably guess. I have advanced technology that allows me to see that the star is at the end of its life cycle. That means it’s going to explode in a massive supernova.” I tell him.
+        “Look I told people to not mess or lie to me, now skedaddle and leave me alone.”
+        “Look I'm telling the truth, you’re only failing yourself!” I plead.
+        “Hah, okay” he says sarcastically, “Now leave me alone and stop lying to me.”
+        “Alright, alright. I’ll skedaddle and leave you alone,” I say.`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`seventyThree`,`Continue`]
         ],
         time: 0
     },
     sixtyEight: {
-        text: ` `,
+        text: `“I’m serious. The star’s going to blow” I say.
+        “Still not believing it,” he responds.
+        I know I won’t get to him with the truth so I make up a lie, “The prophet said so!” 
+        He freezes and just says “You talked to the prophet?”
+        “Yeah, he was the one that told me the sun is going to explode” I say.
+        “You know how I know you’re lying? It’s because he discloses all of his teachings to me so that I am always in the know,” he says, “Now why don’t you skedaddle and leave me alone!”
+        “Alright fine I’ll leave you alone” I say.`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`seventyThree`,`Continue`]
         ],
         time: 0
     },
-    sixtyNine: {
-        text: ` `,
+    sixtyNine: {//this onr is locked unless you talk to civilian
+        text: `“Look I don’t know why you don’t believe me, but if you’re that stubborn, I guess I’ll have to show you through a fight,” I say nervously.
+        “A fight aye?” he says with a smirk.
+        “Yeah, a fight to convince you that what I’m saying is true,” I add.
+        “Okay fine. Your fight is accepted,” he says eagerly.
+        He grabs two swords from the wall that form an x shape, and hands me one of them. He then takes me down the hall into a massive room with a big pit.`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`seventy`,`Fight offensively`],
+            [`seventyOne`,`Fight defensively`],
+            [`seventyTwo`,`Try to cheat in the fight`]
         ],
         time: 0
     },
     seventy: {
-        text: ` `,
+        text: `So we begin our fight with the swords pointed at each other. I grip the sword strongly and charge at him. He quickly dodges the strike attacks decisively. He slices my shoulder and says “watch all your angles.” I quickly get up and swing and swing but he counters all of my attacks. I get closer to him but he quickly hits his sword against mine, parrying the blow, and in one swift motion he manages to cut me. We continue fighting for a little while until we both feel exhausted. He grips his sword hard and does his finishing strike where in one swift motion hits my hand. It tosses my sword into the air and he catches it. Then leading to him having two swords with me left defenseless. Before I know it I lose and I’m dead, for nothing and with no artifact.`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
         ],
         time: 0
     },
     seventyOne: {
-        text: ` `,
+        text: `I grab the sword and grip it tight. I can tell from his stance that he is going to be aggressive, so I decide to stay on the defense. I weave and counter every strike that he attempts. A little into the fight he doesn’t know what to do when I fight defensively so I just have to fight defensively the whole time. After a little while of fighting we both get fatigued. If I want to survive I will have to make my next play extremely well. So because I don’t have the energy to fight for too much longer, I grip my sword tighter than I already am. I roll close to him and hit his hand so he loses his grip and then I hit his sword, launching it into the air. Before he can grab it, I manage to get behind him and get my sword against his neck. As the sword is coming down I grab it, ultimately having both swords against his neck. I then say, “Do you want this to be the end or do you want to believe me?”
+        He sighs and says, “Okay fine, now I’ll believe you.” I release my swords and we both get up.
+        “Hey, good fight,” he says as he nods to me.
+        “Thank you,” I say nodding to him out of respect for one another.`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`seventyThree`,`Continue`]
         ],
         time: 0
     },
     seventyTwo: {
-        text: ` `,
+        text: `I grab the sword and some smoke bombs. These work in a similar way to poppers, but produce a lot of smoke. I grab a popper, but begin fighting only with my sword. The fight was challenging and fun, but I know if I lost I will most likely be dead. I throw the popper to the floor, surprising him. I manage to hit him until he’s bloodied. I fight only with my sword for a little bit. We are both getting tired and so I know I will have the element of surprise on him, but he is just waiting for me to throw another bomb. I throw one down and attack him but in a split second he disappears. I grip my sword and start swinging toward his direction, but he uses the smoke to his advantage and sneaks up behind me. He strikes the final blow. He walks in front of me and says, “Good fight kid,” as he nods out of respect. Before I can actually convince him, he strikes me dead.`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
         ],
         time: 0
     },
     seventyThree: {
-        text: ` `,
+        text: `What do I do next?`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`sixtyFour`,`Ask about artifact`],
+            [`sixtyFive`,`Ask about civilization`],
+            [`sixtySix`,`Tell him about star`],
+            [`ninetySix`,`Reenter main city`]
         ],
         time: 0
     },
     seventyFour: {
-        text: ` `,
+        text: `I walk along the path to the church-like building. It’s a tall tower with a bell at the top. Inside there is a small podium in the center where a man is standing and talking to the various people around him. The room could comfortably fit around 50 people with extra in some galleries above the man. 
+        As I walk in he is talking. He seems to be reciting some kind of scripture saying “-does that, will the hero have completed his true quest.” It seems to be some kind of conclusion because as soon as he says that, the quiet room becomes loud with the buzz of conversation about whatever he was talking about before I came in. 
+        Once enough people leave I feel comfortable enough to go up and ask some questions. At this point it becomes obvious that he is blind.`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`seventyFive`,`Ask about the artifact`],
+            [`seventyNine`,`Ask about the civilization`],
+            [`eighty`,`Tell him about the star`]
         ],
         time: 0
     },
     seventyFive: {
-        text: ` `,
+        text: `“Excuse me sir, can I ask you a question?” I ask.
+        “Yes, of course, my child.” He says.
+        “The artifact that everyone worships, where is it?”
+        “That’s not something for the average person to know.”
+        “Well I’m not the average person.”
+        “Then who are you?”`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`seventySix`,`A curious citizen`],
+            [`seventySeven`,`Tell the truth`],
+            [`seventyEight`,`Beat it out of him`]
         ],
         time: 0
     },
     seventySix: {
-        text: ` `,
+        text: `“I'm just a normal guy wanting to get closer to my faith.” I say hopefully.
+        “You must have duties to attend to, please leave.”`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`eightySix`,`Continue`]
         ],
         time: 0
     },
     seventySeven: {
-        text: ` `,
+        text: `“I’m not from here. I am a human from a society far more advanced than yours. I want to find the artifact to-”
+        I was going to say more because I thought he would want more convincing but he cut me off by saying, “It’s in the ocean about just off the nearest coast to this city. You will be able to find it easily because it’s in the eye of a massive whirlpool. I would not go now though, there is a beast defending the entrance that can only be calmed by the special words only the chief knows. In fact, this beast is the thing generating the whirlpool”
+        I’m kind of shocked for a moment at all that information but I eventually manage to say, “Why would you tell me all this so easily?”
+        “That I can’t tell you, but soon you will know.” He says before leaving me alone in the room.`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`eightySix`,`Continue`]
         ],
         time: 0
     },
     seventyEight: {
-        text: ` `,
+        text: `I start to grab him and hit him but before I can do anything, a dozen guards jump out of hiding places I didn’t know were there. They impale me with spears before I know what happened. As death slowly comes over me the last thing I hear is the prophet saying, “So close, but you weren’t him.”`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
         ],
         time: 0
     },
     seventyNine: {
-        text: ` `,
+        text: `“Can you tell me some of the history of this place?” I ask.
+        He looks kind of confused at why I would ask that question but continues on anyway, “A long time ago the akias visited our ancestors. The akias weren’t like us. They are some kind of extremely advanced alien species. Some say they even had magic.”
+        I still don’t really believe this akias story. As much as we have looked, humanity has never found another advanced race like we always hoped. Most people have given up on the idea by now. I could sit here and ponder the existence of aliens for as long as I want, but I have a big blue deadline so I need to get back on topic.
+        “This stuff about aliens is all very interesting, but what does all this have to do with the artifact you people worship?” I ask.
+        “When the akias people left us, they took all of their influence on this planet with them. Except for two things. They left an artifact and a prophecy connected to it-”
+        Prophecy? That’s exactly what I need. I stop him and say, “Tell me the prophecy.”
+        “Ok, fine, it goes like this. ‘Upon the dawn of a dying star, the last rays will shine on our hero. The hero casts a single shadow, before others join him. Once the shadows join together the hero will be complete. The hero will use the galaxy’s last prize to save the people of the dying star. Only when the hero does that, will the hero have completed his true quest.’”`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`eightySix`,`Continue`]
         ],
         time: 0
     },
     eighty: {
-        text: ` `,
+        text: `These people deserve to know what’s about to happen. I might even be able to help them. I would have to give up finding the artifact but I can at least try.
+        I go up to him and I say “Excuse me, I have something I need to tell you.” Before I can say anything else he starts talking to me, well, more like he began talking at me. He’s rambling on about me and their religion and whatever else.`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`eightyOne`,`Listen and pretend to be a normal citizen`],
+            [`eightyTwo`,`Listen and bring it up`],
+            [`eightyFour`,`Tell him to shut up and listen`]
         ],
         time: 0
     },
     eightyOne: {
-        text: ` `,
+        text: `Once he’s done I say, “Something really bad is about to happen. You need to hear about it. Areps is about to blow!”
+        He looks a bit suspicious but then asks, “What is Areps?”
+        I’m an idiot. Of course they don’t use the imperial name for the star. “Uhhh, that’s what I call our star.” I tried to explain.
+        “Ohhh… run along now,” He said dismissively.
+        That was dumb, I have to try something else.`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`eightyThree`,`Continue`]
         ],
         time: 0
     },
     eightyTwo: {
-        text: ` `,
+        text: `Once he’s finished I say, “Look, something really bad is about to happen. Your star is about to go supernova. That means explode. I can help you.”He laughs and says, “What did I tell you about pranking your elders, Tair.”As much as I tried to convince him, he just kept thinking it was a prank. I’ll have to try something else later.`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`eightyThree`,`Continue`]
         ],
         time: 0
     },
     eightyThree: {
-        text: ` `,
+        text: `He’s blind so if I leave the church and come back later I can try again. I feel a little bad for exploiting that but you do what you have to.`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`eightySix`,`Continue`]
         ],
         time: 0
     },
     eightyFour: {
-        text: ` `,
+        text: `Before he can start I cut him off and say, “Shut up! This is more important! The sun is about to EXPLODE!” At first he looks shocked at the disrespect but it got his attention so he listens when I say, “I can help your people. Your star is at the end of its lifetime. You might have noticed it’s gotten bigger and redder, and down here it’s gotten hotter. We don’t have any time left. My ship is probably big enough to fit your entire population inside. You need to tell your people to follow me.”`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`eightyFive`,`Continue`]
         ],
         time: 0
     },
     eightyFive: {
-        text: ` `,
+        text: `He looks at me with almost a sense of satisfaction. It’s almost like he’s proud of me. Strange. 
+        Eventually he says, “Alright, I’ll let everyone know. Thank you.”`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`eightySix`,`Continue`]
         ],
         time: 0
     },
     eightySix: {
-        text: ` `,
+        text: `What do I do next?`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`seventyFive`,`Ask about the artifact`],
+            [`seventyNine`,`Ask about the civilization`],
+            [`eighty`,`Tell him about the star`],
+            [`ninetySix`,`Reenter main city`]
         ],
         time: 0
     },
     eightySeven: {
-        text: ` `,
+        text: `“Hey, can I speak with you?” I said to a random motherly looking woman. 
+        “Uhhh, sure?” She answered.
+       She looks a little put off by me but hopefully that doesn’t stop her from giving me any info I can use.`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`eightyEight`,`Ask about the artifact`],
+            [`eightyNine`,`Ask about the prophet`],
+            [`ninety`,`Ask about the leader`]
         ],
         time: 0
     },
     eightyEighty: {
-        text: ` `,
+        text: `What do you know about the artifact? I’m trying to find it.” 
+        “The artifact is a gift from the akias people who visited us long ago.”
+        “Okay yeah, but where is it?”
+        “I have no idea, I have never seen it. But we worship this thing, what do you intend to do with it once you find it?” She says accusingly.`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`ninetyOne`,`Sell it`],
+            [`ninetyTwo`,`Use it`],
+            [`ninetyThree`,`Hide it`]
         ],
         time: 0
     },
     eightyNine: {
-        text: ` `,
+        text: `“What do you know about this prophet guy?” I ask.“The prophet is a great man, not just some ‘guy’. They say his blindness gave him the ability to see the truth. But I guess if you wanted to pass yourself off as a local you could. I don’t know if he would appreciate the dishonesty though.”`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`ninetyFour`,`Continue`]
         ],
         time: 0
     },
     ninety: {
-        text: ` `,
+        text: `“Tell me about the big guy in the palace. What’s the leader of you weirdos like?” I ask.
+        “What makes you think we are weirdos?! The leader could crush you with his pinky finger! He is the strongest out of all of us. But the only way to get him to change his mind is to beat it into him. He knows how to fight in many ways, but from what I hear he needs to get better at fighting against a defensive opponent. Good luck!” She says with a laugh.`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`ninetyFour`,`Continue`]
         ],
         time: 0
     },
     ninetyOne: {
-        text: ` `,
+        text: `“I’m going to sell it to the highest bidder. It will make me rich and famous. The last great mystery solved by me. To be honest I really don’t care about the thing.” I say before I can stop myself.
+        She looks horrified and then slaps me and walks away without a word.`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`ninetyFour`,`Continue`]
         ],
         time: 0
     },
     ninetyTwo: {
-        text: ` `,
+        text: `“When I find it I will study it and find out how to use it myself. I don’t know what I’ll do with it but I promise I will do something great.” 
+        She looks shocked. She must have got something special out of those two sentences because she acts like she made some great revelation. These people are so weird.`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`ninetyFour`,`Continue`]
         ],
         time: 0
     },
     ninetyThree: {
-        text: ` `,
+        text: `“Once I find it I’m going to hide it to make sure it doesn’t fall into the wrong hands.”
+        She looks at me like I’m an idiot and says, “Don’t you think it might be pretty well hidden here already?”
+        I get flustered and say, “Shut up! I’ll figure it out when I get there.”`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`ninetyFour`,`Continue`]
         ],
         time: 0
     },
     ninetyFour: {
-        text: ` `,
+        text: `What should I do next?`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`eightyEight`,`Ask about the Artifact`],
+            [`eightyNine`,`Ask about the prophet`],
+            [`ninety`,`Ask about the leader`]
         ],
         time: 0
     },
     ninetyFive: {
-        text: ` `,
-        oldManText: ``,
-        variable: 0,       
+        text: `I aboard my ship and begin to enter the location to get the artifact. Something about it feels off because I know I essentially have two choices: save the people or get the artifact. Do I go search for the artifact or save the people?`,
+        oldManText: `The old man says to me, “You know if you do this you are abandoning an entire civilization to die.” “What would you have me do?” I ask
+        “Well, the archaeologist in me wants to find and study this artifact, but the human in me wants to save the people. It’s up to you.”`,
+        variable: ["oldMan",1],       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`ninetySix`,`No, reenter main city`],
+            [`ninetySeven`,`Yes`]
         ],
         time: 0
     },
     ninetySix: {
-        text: ` `,
+        text: `I reenter the main city. Where to next?`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`sixtyThree`,`Talk to the leader`],
+            [`seventyFour`,`Talk to the prophet`],
+            [`eightySeven`,`Talk to civilian`]
+            //[`ninetyFive`,`Search for artifact?`] could possibly be locked, bring it up tmrw
+            //[`oneHundredTwentySix`,`Save the people`] locked off until you've convinced both leader and prophet
         ],
         time: 0
     },
     ninetySeven: {
-        text: ` `,
+        text: `I finally have enough information to get the artifact. After looking at how much time I have left I know I have to hurry. I can hear the whirlpool before I can see it. It sounds like a thousand waves crashing against another thousand waves at the same time. Somehow all that noise isn’t enough to cover up the sound of the monster breathing. I can literally see its slow breath heaving up and down. There was also a strange creaking noise that popped every once in a while. I assumed that it had something to do with how it generates the whirlpool.
+        Once I was close enough I set my ship to stay idle 50 feet above the water. I can see all the way down the massive whirlpool into the beast’s mouth. The whirlpool itself is probably 100s of feet across and about a 100 feet down. There was heavy mist in the air from the crashing waves and whatever else.I stepped out onto the deck and felt the cool mist. I thought it was refreshing until I realized it’s probably more of that beast’s saliva than anything else. I bellowed the words, “PRAECIPIO TIBI, UT NE DESINAS!”Somehow it heard me because suddenly the loud creaking from before turned into a light buzz as the raging whirlpool changed into a smooth tunnel. Apparently the monster can keep the water rotating at such a slow pace it almost looks frozen, all while the structural integrity of the tunnel remains intact. I went back into my ship and started the descent.`,
         oldManText: ``,
         variable: 0,
         choices: [
@@ -1437,17 +1450,6 @@ const story = { //holds the entire story
             [``,``]
         ],
         time: 0
-    },
-    oneHundredThirtyTwo: {
-        text: ` `,
-        oldManText: ``,
-        variable: 0,       
-        choices: [
-            [``,``],
-            [``,``],
-            [``,``]
-        ],
-        time: 0
     }
 };
 
@@ -1456,7 +1458,7 @@ function storyLoop (number){ //all of the mechanics
     timeLeft -= story[number].time; //subtracts time     
     if (timeLeft <= 10 && artifactDoor == 'closed'){ //special events
         document.getElementById('storyText').innerHTML += '<i><br><br>Suddenly a loud rumbling can be heard all across the entire planet. A huge beacon of light shoots out from the ocean. Something important must be happening there</i></br></br> ';
-        story['ninetySeven'].choices = [['placeholder', 'placeholder'], ['placeholder', 'placeholder'], ['placeholder', 'placeholder']];
+        story['ninetySeven'].choices = [['oneHundredTwentyTwo', 'Continue']];
         artifactDoor = 'open';
     } else if (timeLeft <= 5 && artifactDoor == 'open'){
         document.getElementById('storyText').innerHTML += "<i><br><br>The beacon of light vanishes</i></br></br> ";
