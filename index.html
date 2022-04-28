@@ -20,8 +20,12 @@
     <section id="clock"> <!--shows timeLeft variable-->
         <p id="time"></p>
     </section>
-    <section id="chosenChoices">
-        <p id="chosen"></p>
+    <section id="puzzleBox" class="puzzleOff">
+        <img src="cipher.png">
+        <article class="puzzleMenu">
+        <input type="text" id="puzzleInput">
+        <input type="button" onclick="puzzleCode()" value="Submit">
+        </article>
     </section>
     <button id="restart" onclick="window.location.reload()">RESTART</button> <!--resets the page-->
     <script src="script.js"></script> <!--links javascript-->

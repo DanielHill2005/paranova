@@ -1,0 +1,13 @@
+.puzzleOff {
+    display: none;
+}
+.puzzleOn {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+}
+.puzzleMenu {
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+}

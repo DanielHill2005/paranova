@@ -1,12 +1,15 @@
 var timeLeft = 31; //defines all the variables
 var oldMan = 0;
 var knowChief = 0;
-var convinceLeaders = 0;
-var artifactInfo = 0;
+var convinceLeader = 0;
+var convinceProphet = 0;
+var artifactInfoLeader = 0;
+var artifactInfoProphet = 0;
 var artifactDoor = 'closed';
 var trueEnding = 0;
 var storyArray = [];
 var death = 0;
+var puzzleStart = 0;
 const story = { //holds the entire story
     one: {
         text: `It’s the staryear 193-08793. The Milky Way galaxy’s unexplored mysteries didn’t last long after humanity finally discovered the secrets of space travel. I was born in an age of space pirates and war. With the entire galaxy conquered, humanity had nothing to do but fight over what we already had. All I ever wanted to do was be an old school explorer. But with this galaxy completely explored and the endless space between other galaxies untraversable, I was stuck as a bounty hunter. 
@@ -270,7 +273,7 @@ const story = { //holds the entire story
     },    
     twentySix: {
         text: `After a long month of traveling I finally made it. I’m at Vortex. The planet is covered in dense jungle with about half of the surface area being ocean. It reminds me of the old pictures of earth before humanity left it as a dry ball of radiated dust. 
-        When I entered the system I got a worrying alert. My ship’s computer flashed huge danger signals at me. I read the report in horror. This solar system orbits the star Areps. Areps is a star at the end of its lifetime. At the very end of its lifetime. My computer calculates that I have x imperial time units left before the star blows up in a massive supernova. 
+        When I entered the system I got a worrying alert. My ship’s computer flashed huge danger signals at me. I read the report in horror. This solar system orbits the star Areps. Areps is a star at the end of its lifetime. At the very end of its lifetime. My computer calculates that I have ${timeLeft} imperial time units left before the star blows up in a massive supernova. 
         It’s fine. I’ll just be in and out, as long as nothing goes wrong. I land my ship in the first good spot I see so I can start looking soon. As soon as I step out of my ship I hear a loud guttural war cry from several humans running towards me. I’m too busy wondering why there were no logs of human civilization on this planet to notice the answer fly right by my face in the form of several ancient looking spears that deflect off my shield. They must be too primitive to be noticed. Still, it’s strange, we should have detected any life on this planet at all.
         My headset translates the warcry as, “FOR THE ARTIFACT!”. It seems that they speak a different language than was written on the map.`,
         oldManText: ``,
@@ -682,7 +685,7 @@ const story = { //holds the entire story
         text: `I ask “Do you know about the artifact or where it may be?” 
         “No, I don't know its whereabouts, though I do know something about it,” he says. I asked him to explain what he knows about the artifact. He says “I do know of this one saying that may help you. ‘Praecipio tibi, ut ne desinas.’” I ask what it means. He says “It’s an ancient saying passed down from leader to leader. I have no idea what it means.”`,
         oldManText: ``,
-        variable: 0,       
+        variable: ['artifactInfoLeader',1],       
         choices: [
             [`seventyThree`,`Continue`]
         ],
@@ -716,7 +719,8 @@ const story = { //holds the entire story
         “Look I told people to not mess or lie to me, now skedaddle and leave me alone.”
         “Look I'm telling the truth, you’re only failing yourself!” I plead.
         “Hah, okay” he says sarcastically, “Now leave me alone and stop lying to me.”
-        “Alright, alright. I’ll skedaddle and leave you alone,” I say.`,
+        “Alright, alright. I’ll skedaddle and leave you alone,” I say.
+        Dang, maybe I can learn something about this guy from someone who knows him, then I can try to convince him again later.`,
         oldManText: ``,
         variable: 0,       
         choices: [
@@ -731,7 +735,8 @@ const story = { //holds the entire story
         He freezes and just says “You talked to the prophet?”
         “Yeah, he was the one that told me the sun is going to explode” I say.
         “You know how I know you’re lying? It’s because he discloses all of his teachings to me so that I am always in the know,” he says, “Now why don’t you skedaddle and leave me alone!”
-        “Alright fine I’ll leave you alone” I say.`,
+        “Alright fine I’ll leave you alone” I say.
+        Dang, maybe I can learn something about this guy from someone who knows him, then I can try to convince him again later.`,
         oldManText: ``,
         variable: 0,       
         choices: [
@@ -768,7 +773,7 @@ const story = { //holds the entire story
         “Hey, good fight,” he says as he nods to me.
         “Thank you,” I say nodding to him out of respect for one another.`,
         oldManText: ``,
-        variable: 0,       
+        variable: ['convinceLeader',1],       
         choices: [
             [`seventyThree`,`Continue`]
         ],
@@ -839,7 +844,7 @@ const story = { //holds the entire story
         I’m kind of shocked for a moment at all that information but I eventually manage to say, “Why would you tell me all this so easily?”
         “That I can’t tell you, but soon you will know.” He says before leaving me alone in the room.`,
         oldManText: ``,
-        variable: 0,       
+        variable: ['artifactInfoProphet',1],       
         choices: [
             [`eightySix`,`Continue`]
         ],
@@ -924,7 +929,7 @@ const story = { //holds the entire story
         text: `He looks at me with almost a sense of satisfaction. It’s almost like he’s proud of me. Strange. 
         Eventually he says, “Alright, I’ll let everyone know. Thank you.”`,
         oldManText: ``,
-        variable: 0,       
+        variable: ['convinceProphet',1],       
         choices: [
             [`eightySix`,`Continue`]
         ],
@@ -1034,7 +1039,7 @@ const story = { //holds the entire story
         text: `I aboard my ship and begin to enter the location to get the artifact. Something about it feels off because I know I essentially have two choices: save the people or get the artifact. Do I go search for the artifact or save the people?`,
         oldManText: `The old man says to me, “You know if you do this you are abandoning an entire civilization to die.” “What would you have me do?” I ask
         “Well, the archaeologist in me wants to find and study this artifact, but the human in me wants to save the people. It’s up to you.”`,
-        variable: ["oldMan",1],       
+        variable: 0,       
         choices: [
             [`ninetySix`,`No, reenter main city`],
             [`ninetySeven`,`Yes`]
@@ -1060,56 +1065,50 @@ const story = { //holds the entire story
         oldManText: ``,
         variable: 0,
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`ninetyEight`,`Continue`]
         ],
         time: 0
     },
     ninetyEight: {
-        text: ` `,
-        oldManText: ``,
-        variable: 0,       
-        choices: [
-            [``,``],
-            [``,``],
-            [``,``]
-        ],
+        text: `It quickly became obvious that there was a problem. At the bottom of the whirlpool I can see the entrance. Sealed. The door has text on it that matches the map I used to get here. I can use the cipher that the old man sent me. The handwriting is very different from what’s on the engraving. Did that old fart actually know what he was talking about?\nℸ ̣ ⍑╎ᓭ       ℸ ̣ 7ᒲʖ      ∴╎ꖎꖎ      7!¡ᒷリ     7リ     ℸ ̣ ⍑ᒷ      ᒷ⍊ᒷ 7⎓       ℸ ̣ ⍑ᒷ       ⎓╎リᔑꖎ       ↸ᔑ||,     ʖ⚍ℸ ̣     ᓵꖎ7ᓭᒷ    ʖᒷ⎓7∷ᒷ リ╎⊣⍑ℸ ̣         ℸ ̣ ᔑꖌᒷᓭ       7⍊ᒷ∷`,
+        oldManText: `Or I could just ask him. “Hey old man! Take a look at this,” I yell over the sound of the water.“You know I have a name,” He says, sounding a little hurt, “It’s Colmãn.”“Alright, Colmãn, take a look at this.”It only takes him a few seconds of looking at it for him to translate it back to me as, “This tomb will open on the eve of the final day, but close before night takes over.” “That must mean tonight. With how much time is left I doubt the sun will rise again before it blows,” I say.“I think it should open right as we have ${timeLeft} imperial time units left,” Colmãn says, “But we need to get in there right after because it will close in another 1 or 2 time units. Should we just wait here for it to open or try to go do something else before it opens?”`,
+        variable: ['puzzleStart', 1],       
+        choices: 0,
         time: 0
     },
     ninetyNine: {
-        text: ` `,
+        text: `I wait until something finally happens. The door rumbles open and I walk in.`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`oneHundredTen`,`Continue`]
         ],
         time: 0
     },
+
     oneHundred: {
-        text: ` `,
+        text: `So this means that tonight it will open. When I have x time units left should be right when this thing opens. But it will close soon after. Either I wait here or try to do something else real quick and come back.`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`ninetyNine`,`Wait`],
+            [`ninetySix`,`Go back to main city`]
         ],
         time: 0
     },
+   
     oneHundredOne: {
-        text: ` `,
+        text: `So this means that tonight it will open. When I have x time units left should be right when this thing opens. But it will close soon after. I get ready to hunker down and wait until I check my watch. No… What?! There’s no way! I missed it. That explains the sound I heard earlier.`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`oneHundredFour`,`Blast my way in`],
+            [`oneHundredFive`,`Go back to the people`],
+            [`oneHundredSix`,`Give up`]
         ],
         time: 0
     },
+    /*This was an oopsy so oneHundredTwo is to be discarded     
     oneHundredTwo: {
         text: ` `,
         oldManText: ``,
@@ -1121,50 +1120,40 @@ const story = { //holds the entire story
         ],
         time: 0
     },
+    */
     oneHundredThree: {
-        text: ` `,
-        oldManText: ``,
-        variable: 0,       
-        choices: [
-            [``,``],
-            [``,``],
-            [``,``]
-        ],
+        text: `It quickly became obvious that there was a problem. At the bottom of the whirlpool I can see the entrance. Sealed. The door has text on it that matches the map I used to get here. I can use the cipher that the old man sent me. The handwriting is very different from what’s on the engraving. Did that old fart actually know what he was talking about?\nℸ ̣ ⍑╎ᓭ       ℸ ̣ 7ᒲʖ      ∴╎ꖎꖎ      7!¡ᒷリ     7リ     ℸ ̣ ⍑ᒷ      ᒷ⍊ᒷ 7⎓       ℸ ̣ ⍑ᒷ       ⎓╎リᔑꖎ       ↸ᔑ||,     ʖ⚍ℸ ̣     ᓵꖎ7ᓭᒷ    ʖᒷ⎓7∷ᒷ リ╎⊣⍑ℸ ̣         ℸ ̣ ᔑꖌᒷᓭ       7⍊ᒷ∷`,
+        oldManText: `Or I could just ask him. “Hey old man! Take a look at this,” I yell over the sound of the water. “You know I have a name,” He says, sounding a little hurt, “It’s Colmãn.”“Alright, Colmãn, take a look at this.”It only takes him a few seconds of looking at it for him to translate it back to me as, “This tomb will open on the eve of the final day, but close before night takes over.” “That must mean tonight. With how much time is left I doubt the sun will rise again before it blows,” I say.“I think it should open right as we have ${timeLeft} imperial time units left,” Colmãn says, “But we need to get in there right after because it will close in another 1 or 2 time units. Should we just wait here for it to open or try to go do something else before it opens?”`,
+        variable: ['puzzleStart', 2],       
+        choices: 0,
         time: 0
     },
-    oneHundredFour: {
-        text: ` `,
-        oldManText: ``,
+    oneHundredFour: {//user dies
+        text: `I get into my ship in a fit of rage and start blasting. I don’t care about ammo, I don’t care about this planet, I don’t care about this stupid artifact, I don’t care ab- The sea monster lunges at my ship with its mouth wide open. It crunches my ship with me inside it. I don’t care.`,
+        oldManText: `Colmãn and I look at each other and simply nod.`,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
         ],
         time: 0
     },
     oneHundredFive: {
-        text: ` `,
+        text: `I’ve got no chance of getting the artifact, but I might have a chance to save the people. I’m going to go back to the city and make sure they aren’t killed by their own star.`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`ninetySix`,`Continue`]
         ],
         time: 0
     },
     oneHundredSix: {
-        text: ` `,
+        text: `There’s nothing I can do. I barely have any time left. No reason to continue. I’ll just leave this stupid planet. I walk to my ship dejected. I fly off with no artifact and leave all these people to die. My life fades back into obscurity.`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
         ],
         time: 0
     },
+    /*This was an oopsy and numbers oneHundredSeven to oneHundredNine are to be discarded
     oneHundredSeven: {
         text: ` `,
         oldManText: ``,
@@ -1198,179 +1187,169 @@ const story = { //holds the entire story
         ],
         time: 0
     },
+    */
     oneHundredTen: {
-        text: ` `,
+        text: `Walking in I am taken aback by the room I’m in. It’s very small, about the size of a fighter ship. Now that I think about it, it might actually be some kind of fighter ship. All of the tech is like nothing I’ve ever seen before but I can recognize places where thrusters and controls would go. It has the ideal shape and weight placement for space travel. It’s also completely airtight or it wouldn’t be completely clean under all this water and dirt.
+        Everything that I might find useful is completely scrapped except for something at the very back. There’s some kind of canister made out of some kind of very tough black metal. This must be the artifact. I have to find some way to open it up.`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`oneHundredEleven`,`Try and break it open`],
+            [`oneHundredTwelve`,`Examine the canister`],
+            [`oneHundredThirteen`,`Examine the ship`]
         ],
         time: 0
     },
     oneHundredEleven: {
-        text: ` `,
+        text: `I took out my blunt force maximizers and hit the canister as hard as I could. It barely made a dent. What it did was make me feel like I punched a brick wall with my bare fists. Ow.`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`oneHundredTwentyOne`,`Continue`]
         ],
         time: 0
     },
     oneHundredTwelve: {
-        text: ` `,
+        text: `The longer I look at it, the more obvious it becomes that there is nothing to look at. It’s all made out of the same metal and it has some pretty intricate detail but there’s nothing apart from that.`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`oneHundredTwentyOne`,`Continue`]
         ],
         time: 0
     },
     oneHundredThirteen: {
-        text: ` `,
+        text: `On closer examination I can see some more personal aspects of the ship. I’m pretty sure that the one who owns this ship is the one this tomb was memorializing. Once I look closely at the front console I realize that it’s been modified. There is a large box that I thought was part of the weird alien tech but seems to be added on. This box covers where the controls are. It’s welded on at the base so I have no hope of even budging it. I hope it’s not a bomb.`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`oneHundredFourteen`,`Try and break open the box`],
+            [`oneHundredFifteen`,`Look for any buttons`],
+            [`oneHundredSixteen`,`Leave it alone`]
         ],
         time: 0
     },
     oneHundredFourteen: {
-        text: ` `,
+        text: `I take my blunt force maximizers from earlier and prepare to hit it with 100% power. Before I made contact with the box it made a lot of sound like it was trying to stop me, but it was not enough. Because I set my maxers to 100% I couldn’t stop the punch until after it completely shattered the box. With the box destroyed it reveals more of the center console. I can see what each button and switch goes to, even if I don’t understand the text. There’s a lever under a glass box that has a line leading to the canister. This must be how I get the artifact. I smash the glass and pull the lever. With a hiss the canister slides open. I turn around and there it is.`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`oneHundredSeventeen`,`Continue`]
         ],
         time: 0
     },
     oneHundredFifteen: {
-        text: ` `,
+        text: `I run my hands around the box trying to find something I can press until I hear it say, “Stop it.”
+        This box must be the ship’s AI. I’m screwed. I raise my blunt force maximizers to stop the AI before it can retaliate but it yells. “NO NO NO WAIT. I’m not hostile. Hold on!”
+        “Fine, I’ll give you a chance, but you have to give me whatever is in that canister,” I say pointing to it, “And tell me what is going on with this planet!”
+        “Okay maybe I will, but first I need to tell you the full story,” it says. It talks using thousands of little chirps that end up sounding like human speech somehow. “I am Zäki, I was one of the akias species. I am the one that this demeaning ‘tomb’ was made for. More like prison. They turned me into AI and locked me in this box to punish me. You see, we akias have evolved past dying, I was killed.”
+        “Hold on, Hold on, you’re getting ahead of yourself. Start at the beginning. Why did the akias people come to this planet?”
+        “Well, we have always been more advanced than your race in most ways, except one. You have always been much better at AI. A computer can imitate a human mind much easier than it can do with an akias. So we decided that we would study how humans can make such good AI. We chose a good planet that was civilized but still primitive enough to be easily manipulated. That was Vortex. When we arrived it didn’t take long for the humans to worship us as gods.”
+        “If you keep talking trash about humans I’m gonna smash you to bits.”
+        “If you would just listen you would know that I’m sympathetic towards humans. The akias tricked the humans into giving themselves up for study through a sacrificial ritual. Soon we were able to create our own version of AI, but it was different than how you humans do it. While we couldn’t create AI from scratch advanced enough to be useful, we did figure out how to transfer consciousness into AI. They started trapping human minds inside boxes like these as AI. This is when I started to have issues with how we were treating humans. Everyone else saw humans the same way you see a dairy cow, but I couldn’t look past the fact that your species had an intelligent life that we were taking advantage of. I tried to stop it, but it was just one of me versus all of them. They caught me and stopped me. But they have a cruel sense of humor so instead of just killing me they trapped me with the same fate I tried so hard to stop. Then they locked me down here. I can feel my energy source barely giving me enough energy to keep me alive but I’d need a lot of energy to break through the barrier and actually access it.”
+        “Wow. That’s a lot… I can end it for you. I think the artifact that I’m looking for is your energy source.”
+        “Okay. I can physically open it, but I will warn you. The limitations that my own kind have put on me mean that I can’t calm it, and as soon as I lose my power source I die. If I’m being honest, I could have ended it all a long time ago, but I have been too scared. But I’ll do it for you. 3.. 2.. 1..”
+        “Wait, calm it??”
+        With a hiss the canister slides open. I turn around and there it is.`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`oneHundredSeventeen`,`Continue`]
         ],
         time: 0
     },
     oneHundredSixteen: {
-        text: ` `,
+        text: `I look around for a bit and find nothing. Maybe there’s something more with that box?`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`oneHundredTwentyOne`,`Continue`]
         ],
         time: 0
     },
     oneHundredSeventeen: {
-        text: ` `,
+        text: `Inside the canister I can see a liquid looking object. The color is constantly shifting from blue to pink to colors I have never seen before. It’s kind of hard to look out. Almost as soon as it touches the air it starts expanding. Several tendrils shoot out and latch themselves on to the hull of the ship with a crunch. The main mass slowly lurches out of the canister as it gets bigger. It’s not inflating, it’s like it’s generating more mass out of nothing. The “skin” starts bubbling and popping. The tendrils pull back bringing part of the metal of the ship into the main mass like armor. More tendrils start shooting at me and I jump out of the way. Time to find a way to contain this monster.`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`oneHundredEighteen`,`Use an electro net ball to capture the artifact`],
+            [`oneHundredNineteen`,`Use my railgun`],
+            [`oneHundredTwenty`,`Freeze it`]
         ],
         time: 0
     },
     oneHundredEighteen: {
-        text: ` `,
+        text: `I grab the ball from my chest and then throw it. When the ball hits the artifact several ropes made out of pure electricity wrapped around it. For a moment the artifact was entangled and it stopped attacking me. Then it became still. I stopped jumping around to inspect the artifact. Then the electro ropes are absorbed and the artifact activates once again. I’m caught off guard so I’m not able to jump away in time. One of the tendrils strikes me directly in the chest. Before I die I can feel myself being sucked into whatever this thing is.`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
         ],
         time: 0
     },
     oneHundredNineteen: {
-        text: ` `,
+        text: `Something like this is gonna need a lot of power. I pull out my railgun and start charging it up. This is still pretty short range so I won’t use full power, but I’ll use as much as I can. Once the color of the light coming from the chamber turns red then I can shoot. But until then I can’t get hit. I switch my boots into frenzy mode so I get random bursts of speed to throw the artifact off. As soon as I see the light turn red I switch my boots into anchor mode to get the most stability. I kneel down and take the shot aiming in between the armor. In a flash of blinding light I hear the round puncture the artifact. At the impact point it became solid. Cracks splitted out from the hole. The artifact started crumbling apart, but slowly it became liquid. The hole filled back in and the artifact was whole again. I know what is about to happen so I try to jump away. But since my boots are in anchor mode my feet never leave the ground. One of the tendrils strikes me directly in the chest. Before I die I can feel myself being sucked into whatever this thing is.`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
         ],
         time: 0
     },
     oneHundredTwenty: {
-        text: ` `,
+        text: `Luckily the artifact is staying stationary so that means I can set up an artificial atmosphere. While avoiding the revolving tentacles I set up several small boxes around the artifact. These create a small force field and inject certain atmospheric conditions inside. Used on such a small scale the effect should be instantly powerful. I crank the temperature down as low as it can go. The artifact slows down and stops expanding. Then it starts getting smaller. The pieces of metal it’s using as armor fall off. Then it hardens into a small perfect sphere. I set the atmosphere back to normal but stay ready to crank it down again. The sphere stays still even when it’s not cold anymore. It must be safe for now. I pick it up carefully and walk out. I get on my ship and start it up. While flying away I pass over the city. All of the people here are going to die soon, whether they know about it or not. The only emotion I feel is pity, and maybe a little bit of shame for not helping them. Well it was either the people or the artifact, and I made my decision.`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`oneHundredTwentyTwo`,`Continue`]
         ],
         time: 0
     },
     oneHundredTwentyOne: {
-        text: ` `,
+        text: `Current location: room. What should I do?`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`oneHundredEleven`,`Try and break it open`],
+            [`oneHundredTwelve`,`Examine the canister`],
+            [`oneHundredThirteen`,`Examine the ship`]
         ],
         time: 0
     },
     oneHundredTwentyTwo: {
-        text: ` `,
+        text: `I’m out, I’m finally out. I place the artifact on the table to fully examine it, but before I can place it down my ship gets hit, making me fall and drop the artifact. I check the monitors and other equipment to see what is going on. I see that the hit came from another ship trying to attack me. I turn on the gunships and other weapons to prepare for battle. 
+        The opposing ship says, “I’m a fellow bounty hunter and I’m here for that artifact, now hand it over or else.” 
+        I turn on my microphone and say, “What are you talking about?” just trying to play dumb.
+        Then the ship said “I know you have it. I saw you leave with it.” 
+        I continue to act dumb but then the opposing ship powers on their fireball cannon. So I turn on my plasma cannon and we begin to fight. I have a few options of playing this: try to run, fight, and use the artifact.`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`oneHundredTwentyThree`,`Try to run`],
+            [`oneHundredTwentyFour`,`Fight normally`],
+            [`oneHundredTwentyFive`,`Use the artifact`]
         ],
         time: 0
     },
     oneHundredTwentyThree: {
-        text: ` `,
+        text: `I power on my ship's turbo engines to attempt to get away. I begin my fight with this bum and so I’m just weaving all their shots to not lose the artifact that I spent so long to get. I shoot my plasma cannon and at the same time they shoot their fireball resulting in a large explosion. Some of the particles flew out and made the star speed up a lot from the sheer amount of energy the explosion produced. I look over and see that the supernova just went off and because there’s no air in space there was no sound, only light. The artifact began to vibrate rigorously prior to the supernova going off. I look to see what happened as the artifact powers on the engine and makes its way into the fuel tank. The ship then speaks to me saying that it’s ready to enter light speed just as the supernova goes off. I enter lightspeed, now knowing that I am one of the most powerful people in the universe.`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
         ],
         time: 0
     },
     oneHundredTwentyFour: {
-        text: ` `,
+        text: `We’re at a stalemate with my plasma cannon and their fireball cannon. We shoot at the same time resulting in an explosion between us. I put my ship's blasters into combat mode and they do the samel. We chase each other like kids in a park playing tag. I power on my ship's turbo engines to get a higher speed chase going, leaving it up to the better pilot. I press the button that makes me 15 times faster than I’ve ever gone, thinking I lost him. I am suddenly hit in the back where the engines turbo jets are located with a fireball. Before I know it my ship and I am gone. The artifact is now out of my possession and belongs to some bum of a bounty hunter.`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
         ],
         time: 0
     },
     oneHundredTwentyFive: {
-        text: ` `,
+        text: `I should use the artifact in some way. I spent too long trying to get it to lose it because of some bum of a bounty hunter. I think for a second that this thing can be used as a fuel since it’s fluid like. I place the container with the fluid in it next to the engine. In front of my eyes the fluid pushes its way out and begins to shapeshift to get inside the fuel tank. I check the monitors to see my fuel and diagnostics of the ship. The ship now says that it’s preparing to go lightspeed and that it now has unlimited fuel. I think to myself that maybe because it’s an energy source, I can use it for my plasma cannon to make it become the most powerful in the universe. I power the cannon back on and wait for the opposing ship to start their next attack in order for me to get a good shot when they’re more vulnerable. The opposing ship begins their attack but leaves an opening for my attack. I line up the cannon to get a clean shot. I took it and in a matter of a second a bright white light shines from the ship. The ship blows up and just turns into a large ball of white light. I think to myself that I’m now one of the most powerful people in the universe. My ship asks to enter lightspeed and I agree and so I enter lightspeed.`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
         ],
         time: 0
     },
@@ -1386,68 +1365,57 @@ const story = { //holds the entire story
         time: 0
     },
     oneHundredTwentySeven: {
-        text: ` `,
+        text: `I fly down and see the door wide open. This was the spot that that huge beacon came from. I have to assume that all that noise was this door opening. I land and walk into the door.`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`oneHundredTen`,`Continue`]
         ],
         time: 0
     },
     oneHundredTwentyEight: {
-        text: ` `,
+        text: `I begin to load everyone onto the ship. People are starting to understand the situation enough that they were thanking me for saving them. Once everyone is on we leave and my mind is calm. The ship is so packed I would not be able to fit an artifact of any size even if I had the time. Only a small part of me feels regret for the lost artifact. We take off and are a good distance away to be safe from the blast. I turn my ship around so that people can say their goodbyes to their home. As they did the star explodes. The supernova provides a split second of blinding levels of light. I can’t do anything but admire its beauty, until I notice something is wrong with the planet. Or at least the area of space where the planet used to be. There was a tiny light that was quickly growing to be not so tiny. Then I realize the light is not growing, it’s getting closer. When the light emitting from the object dwindles down slightly, it suddenly stops mid-flight in front of me. I use my ship to scan the object from afar. An error appears on the monitor. I check the monitor to see what was wrong. The moment I check the monitor my ship gets hit by something big. I turn on the defenses and check what it was. I see that it’s another bounty hunter. 
+        I turn on the speakers and say, “Who are you and why are you attacking me!” 
+        After a moment of no sound I hear, “I’m another bounty hunter and I saw you enter this place. I knew you were after something and now I know exactly what, the artifact. So how about you hand it o–” 
+        From the window I watch as the other hunter’s ship gets completely destroyed into a spew of rubble. In the middle of all the rubble was the artifact. It’s beginning to glow brighter and look like it is heading straight for me. I have a few options of getting out of this alive: try to weave all attacks, try to run away, and try to fight it with my ship.`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`oneHundredTwentyNine`,`All power to weaving`],
+            [`oneHundredThirty`,`Try to run away`],
+            [`oneHundredThirtyOne`,`All power to weapons`]
         ],
         time: 0
     },
     oneHundredTwentyNine: {
-        text: ` `,
+        text: `I power up my ship and get into the driving chair. I swerve out of the way from every attack that’s thrown at me. I’m running low on fuel. Someone yells, “The energy is so bright!” I think to myself that because the energy is so bright that it might be capable of reflection. I might as well try it. I turn my ship to face the artifact and place my finger on the button that will turn the windows into mirrors. I wait till it shoots a beam of energy. The wait is excruciating but it finally shoots. I wait a split second before it hits my windows so I can get the perfect angle and push the button. Once the energy hits I start thinking that this must be what death feels like. Turns out it was just a little bit of shaking. After a moment someone asks, “Is that it?” At that moment I switch the windows back to normal and look at the artifact. It starts cracking like an egg shell. The artifact rattles and cracks bursting into an immense amount of energy. Then the light fades away, revealing nothing but a bunch of scrap. I must have obliterated anything that could have been useful. Well at least we survived.`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
         ],
         time: 0
     },
     oneHundredThirty: {
-        text: ` `,
+        text: `I power on my engines in an attempt to outrun this artifact. I take off, in the beginning the artifact matches my speed, staying in the same relative position next to my ship. I then hover my hand over the button that will boost me to three times my max speed. I wait for the artifact to try to hit my ship so I can hit the button that will make my engines enter turbo mode. It will make my ship go 15 times faster than it ever had before, but it will destroy the engines. Before the artifact hits my ship I press it. Before I know it I’m traveling so fast that my ship’s about to fall apart. I check my mirrors and shout “Hey I think we los–” the ship is hit by the artifact’s beam of pure energy causing one of the engines to fail. I don’t know what to do so I look up from the monitor telling me that the engine is down. The artifact is there right above me, hovering in space. The artifact then shoots a beam of pure energy directly inside the ship causing the ship to fail and everyone inside the ship to perish.`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
         ],
         time: 0
     },
     oneHundredThirtyOne: {
-        text: ` `,
+        text: `I turn on all my weapons I have on board my ship, pointing all of them at the artifact. Everything unloads all of my ammo on the artifact leading to a massive boom thus creating a bright light. Once the explosions are all over I look to see what the damage is. I see that nothing has happened except for the artifact growing brighter and brighter. I have one last option to take this thing out. I have to launch a nuke at it to try to destroy it. I power on my cannon that launches a 20 ton nuke. I hit the button launching it and in a split second the nuke goes off resulting in a large ball of energy spanning so wide that I would have to turn my head to even see the end. After the ball disappears, at the center is the artifact undamaged. This artifact doesn’t even have a scratch on it. All the nuke did to the artifact was make it glow brighter, almost as if it absorbed the energy. It heads towards the ship while glowing brighter. It charges up and shoots multiple beams of energy directly at the defenseless ship. The ship completely shatters like glass and begins to completely shine in white light, which from neighboring solar systems looks like a second supernova just occurred.`,
         oldManText: ``,
-        variable: 0,       
+        variable: 0,
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
         ],
         time: 0
     },
     oneHundredThirtyTwo: {
-        text: ` `,
+        text: `I have a strange feeling. Something about that wreckage is affecting my mind. Maybe there is actually something in there. I go out in my spacesuit to inspect it. I find that the true artifact is inside. It’s a fluid that is kept in a sphere. The fluid is pure energy that acts like oobleck. It hardens when something hits it and acts like fluid at normal conditions.I walk into the ship and place it next to the fuel tank and some sort of magic occurs. The sphere shifts the matter of my ship creating a hemisphere shape. I look at my ship's conditions and my fuel shows an infinite amount of energy. As the sphere creates a hemisphere shape in my ship, the people begin to pray and they tell me that I fulfilled their prophecy. They say I am the prophecised hero.`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
         ],
         time: 0
     }
@@ -1462,7 +1430,7 @@ function storyLoop (number){ //all of the mechanics
         artifactDoor = 'open';
     } else if (timeLeft <= 5 && artifactDoor == 'open'){
         document.getElementById('storyText').innerHTML += "<i><br><br>The beacon of light vanishes</i></br></br> ";
-        story['ninetySeven'].choices = [['placeholder', 'placeholder'], ['placeholder', 'placeholder'], ['placeholder', 'placeholder']];
+        story['ninetySeven'].choices = [['oneHundredTwentySeven', 'Continue']];
         artifactDoor = 'closed forever';
     } else if (timeLeft <= 0){
         timeLeft = 0;
@@ -1479,17 +1447,26 @@ function storyLoop (number){ //all of the mechanics
             case 'knowChief':
                 knowChief += story[number].variable[i+1];
                 break;
-            case 'conviceLeaders':
-                convinceLeaders += story[number].variable[i+1];
+            case 'conviceLeader':
+                convinceLeader += story[number].variable[i+1];
                 break;
-            case 'artifactInfo':
-                artifactInfo += story[number].variable[i+1];
+            case 'conviceProphet':
+                convinceProphet += story[number].variable[i+1];
+                break;
+            case 'artifactInfoLeader':
+                artifactInfoLeader += story[number].variable[i+1];
+                break;
+            case 'artifactInfoProphet':
+                artifactInfoProphet += story[number].variable[i+1];
                 break;
             case 'trueEnding':
                 trueEnding += story[number].variable[i+1];
                 break;
             case 'death':
                 death += story[number].variable[i+1];
+                break;
+            case 'puzzleStart':
+                puzzleStart += story[number].variable[i+1];
                 break;
             default:
                 alert('something broke lol, try restarting'); //debugging tool
@@ -1508,20 +1485,24 @@ function storyLoop (number){ //all of the mechanics
         document.getElementById('menu').innerHTML = 'GAME OVER! Maybe try another path?';
     }
     if (knowChief == 1){
-        story['oneHundred'].choices.push(['placeholder', 'placeholder']);
+        story['sixtySix'].choices.push(['sixtyNine', 'Fight him']);
         knowChief = -1000000;
     }
-    if (convinceLeaders = 2){
-        story['oneHundred'].choices.push(['placeholder', 'placeholder']);
+    if ((convinceLeader >= 1) && (convinceProphet >= 1)){
+        story['ninetySix'].choices.push(['oneHundredTwentySix', 'Save the people']);
         convinceLeaders = -1000000;
     }
-    if (artifactInfo == 2){
-        story['oneHundred'].choices.push(['placeholder', 'placeholder']);
+    if ((artifactInfoLeader >= 1) && (artifactInfoProphet >= 1)){
+        story['ninetySix'].choices.push(['ninetyFive', 'Search for the artifact']);
         artifactInfo = -1000000;
     }    
     if (trueEnding == 9){
-        story['oneHundred'].choices.push(['placeholder', 'Continue']);
+        story['oneHundredTwentyNine'].choices.push(['oneHundredThirtyTwo', 'Continue']);
         trueEnding = -10000000;
+    }
+    if (puzzleStart >= 1){
+        document.getElementById('puzzleBox').classList.remove('puzzleOff');
+        document.getElementById('puzzleBox').classList.add('puzzleOn');
     }
     for(i = 0; i < story[number].choices.length; i++){ //loops for how many choices there are
         let btn = document.createElement('button'); //creates a button HTML tag inside of a variable
@@ -1531,3 +1512,29 @@ function storyLoop (number){ //all of the mechanics
     } 
 }  
 }
+function puzzleCode() {
+    if((document.getElementById('puzzleInput').value.toLowerCase()) == 'this tomb will open on the eve of the final day but close before night takes over'){
+        if(puzzleStart == 1){
+            document.getElementById('puzzleBox').classList.add('puzzleOff');
+            document.getElementById('puzzleBox').classList.remove('puzzleOn');  
+            puzzleStart = -100000;          
+            storyLoop('oneHundred');
+        } else {
+            document.getElementById('puzzleBox').classList.add('puzzleOff');
+            document.getElementById('puzzleBox').classList.remove('puzzleOn');
+            puzzleStart = -10000;
+            storyLoop('oneHundredOne');            
+        }
+    } else {
+        document.getElementById('storyText').innerHTML += `<br><br>That can’t be it, that’s nonsense! Let me try something else.`;
+    }
+}
+/*
+citizen doesn't work
+three buttons for search for artifact when in main city when you have enough info
+add variables
+add time
+CSS
+    make background as image
+    etc.
+*/
