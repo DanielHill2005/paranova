@@ -8,26 +8,33 @@
     <title>Paranova</title>
 </head>
 <body>
-    <h1 id="titleName">Paranova</h1>
-    <h2>By: Daniel Hill and Isaak Maldonado</h2>
-    <section id="text">
-        <p id="storyText"></p><!--Intended for the building of the story text-->
+    <section class="leftSide">
+        <h1 id="titleName">Paranova</h1>
+        <h2>By: Daniel Hill and Isaak Maldonado</h2>
+        <section id="text">
+            <p id="storyText" class="storyText"></p><!--Intended for the building of the story text-->
+        </section>
+        <h3 id="menu">Options:</h3>
+        <section id="choiceMenu"> <!--choice user interface-->
+            <button value="Start" onclick="storyLoop(`one`)">Start</button>
+        </section>
+        <section id="puzzleBox" class="puzzleOff">
+            <img src="cipher.png">
+            <article class="puzzleMenu">
+            <input type="text" id="puzzleInput">
+            <input type="button" onclick="puzzleCode()" value="Submit">
+            </article>
+        </section>
+        <button id="restart" onclick="window.location.reload()">RESTART</button> <!--resets the page-->        
     </section>
-    <h3 id="menu">Options:</h3>
-    <section id="choiceMenu"> <!--choice user interface-->
-        <input type="button" value="start" onclick="storyLoop(`one`)">
+    <section class="rightSide">
+        <section id="clock" class="clock"> <!--shows timeLeft variable-->
+            <p id="time"></p>
+        </section>    
+        <section id="selectedChoices">
+            <p></p>
+        </section>
     </section>
-    <section id="clock"> <!--shows timeLeft variable-->
-        <p id="time"></p>
-    </section>
-    <section id="puzzleBox" class="puzzleOff">
-        <img src="cipher.png">
-        <article class="puzzleMenu">
-        <input type="text" id="puzzleInput">
-        <input type="button" onclick="puzzleCode()" value="Submit">
-        </article>
-    </section>
-    <button id="restart" onclick="window.location.reload()">RESTART</button> <!--resets the page-->
     <script src="script.js"></script> <!--links javascript-->
 </body>
 </html>

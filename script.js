@@ -12,8 +12,8 @@ var death = 0;
 var puzzleStart = 0;
 const story = { //holds the entire story
     one: {
-        text: `It’s the staryear 193-08793. The Milky Way galaxy’s unexplored mysteries didn’t last long after humanity finally discovered the secrets of space travel. I was born in an age of space pirates and war. With the entire galaxy conquered, humanity had nothing to do but fight over what we already had. All I ever wanted to do was be an old school explorer. But with this galaxy completely explored and the endless space between other galaxies untraversable, I was stuck as a bounty hunter. 
-        I’m on a frigid ice planet. The howling wind means I can only use my eyes, but visibility is so low I barely have that. I creep forward while crouching until I’m over the ridge. There he is, Jean-Luc Pélissier. Wanted dead or alive for stealing and espionage. I throw a smoke bomb and run in with my thermal glasses. I knock him down and arrest him. He tries to run but that’s a mistake. Now he’s with the others I’ve taken down. I search his body and find an ancient relic.`,  //main text
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It’s the staryear 193-08793. The Milky Way galaxy’s unexplored mysteries didn’t last long after humanity finally discovered the secrets of space travel. I was born in an age of space pirates and war. With the entire galaxy conquered, humanity had nothing to do but fight over what we already had. All I ever wanted to do was be an old school explorer. But with this galaxy completely explored and the endless space between other galaxies untraversable, I was stuck as a bounty hunter.
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I’m on a frigid ice planet. The howling wind means I can only use my eyes, but visibility is so low I barely have that. I creep forward while crouching until I’m over the ridge. There he is, Jean-Luc Pélissier. Wanted dead or alive for stealing and espionage. I throw a smoke bomb and run in with my thermal glasses. I knock him down and arrest him. He tries to run but that’s a mistake. Now he’s with the others I’ve taken down. I search his body and find an ancient relic.`,  //main text
         oldManText: '',  //optional text
         variable: 0, //holds what variables will be changed         
         choices: [
@@ -24,7 +24,7 @@ const story = { //holds the entire story
         time: 0 //holds how much time is subtracted to get to this choice
     },
     two: {
-        text: `I say “Good effort on the run, you almost lost me”. I grab his identification chip and begin to go to my ship.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I say “Good effort on the run, you almost lost me”. I grab his identification chip and begin to go to my ship.`,
         oldManText: '', 
         variable: 0,               
         choices: [
@@ -33,7 +33,7 @@ const story = { //holds the entire story
         time:0
     }, 
     three: {
-        text: `“Ha! Look at this goofy goober of a criminal” I say insultingly. I grab his identification chip and head to my ship.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“Ha! Look at this goofy goober of a criminal” I say insultingly. I grab his identification chip and head to my ship.`,
         oldManText: '',
         variable: 0,
         choices: [
@@ -42,7 +42,7 @@ const story = { //holds the entire story
         time:0
     },
     four: {
-        text: `I look at him and sigh because I know I'm going to be doing this for a long time. I grab his identification chip and go to my ship.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I look at him and sigh because I know I'm going to be doing this for a long time. I grab his identification chip and go to my ship.`,
         oldManText: ``,
         variable: 0,
         choices: [
@@ -51,8 +51,8 @@ const story = { //holds the entire story
         time: 0
     },
     five: {
-        text: `My ship's computer scans the relic but can’t translate it. It looks like some sort of map. For a precious few minutes I had hope that I could finally live my dream as an explorer. 
-        Now I’m back at this old bar like always, drinking away my sorrows. I’m sitting in the corner examining the map. There’s an old man sitting on the other side of the bar by himself and a group of obnoxious men that look to be my age but act like they’ve never left their home world before. I’m getting sick of these guys, what should I do?`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My ship's computer scans the relic but can’t translate it. It looks like some sort of map. For a precious few minutes I had hope that I could finally live my dream as an explorer. 
+        <br>Now I’m back at this old bar like always, drinking away my sorrows. I’m sitting in the corner examining the map. There’s an old man sitting on the other side of the bar by himself and a group of obnoxious men that look to be my age but act like they’ve never left their home world before. I’m getting sick of these guys, what should I do?`,
         oldManText: ``,
         variable: 0,       
         choices: [
@@ -63,7 +63,7 @@ const story = { //holds the entire story
         time: 0
     },
     six: {
-        text: `These hooligans need to be taught a lesson. I get up like I’m leaving but the moment I pass them I whip out my laser pistol and start firing. Once the smoke clears three of the four hooligans are dead and the last is begging for his life.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;These hooligans need to be taught a lesson. I get up like I’m leaving but the moment I pass them I whip out my laser pistol and start firing. Once the smoke clears three of the four hooligans are dead and the last is begging for his life.`,
         oldManText: ``,
         variable: 0,       
         choices: [
@@ -73,7 +73,7 @@ const story = { //holds the entire story
         time: 0
     },
     seven: {
-        text: `I don’t have the heart to kill a man begging for his life so I let him scramble out of the bar without a word. The old man looks shocked but then he says, “Thanks, I was about to do something about them myself, but you beat me to it. Let me buy you a drink.”`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I don’t have the heart to kill a man begging for his life so I let him scramble out of the bar without a word. The old man looks shocked but then he says, “Thanks, I was about to do something about them myself, but you beat me to it. Let me buy you a drink.”`,
         oldManText: ``,
         variable: 0,       
         choices: [
@@ -83,7 +83,7 @@ const story = { //holds the entire story
         time: 0
     },
     eight: {
-        text: `This guy disgusts me, I pull the trigger and he collapses on the floor. The old man looks scared but then says, “Thanks, I was about to do something about them myself, but you beat me to it. Let me buy you a drink.”`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This guy disgusts me, I pull the trigger and he collapses on the floor. The old man looks scared but then says, “Thanks, I was about to do something about them myself, but you beat me to it. Let me buy you a drink.”`,
         oldManText: ``,
         variable: 0,       
         choices: [
@@ -93,7 +93,7 @@ const story = { //holds the entire story
         time: 0
     },
     nine: {
-        text: `We sit and talk for another hour. I almost forget why I was even at the bar until he mentions he is an archaeologist. 
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We sit and talk for another hour. I almost forget why I was even at the bar until he mentions he is an archaeologist. 
         “Wait, so can you decipher old languages and codes or are you just the diggy kind?” I ask.
         He chuckles and says, “I knew you would ask that. I saw you staring at that map earlier. But to answer your question, yeah, a little of both. My skills are hardly ever useful now. Let me take a look.”`,
         oldManText: ``,
@@ -104,7 +104,7 @@ const story = { //holds the entire story
         time: 0
     },
     ten: {
-        text: `The old man looks a little dejected by the rejection but he takes it in stride and says, “Well at least let me help you.”
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The old man looks a little dejected by the rejection but he takes it in stride and says, “Well at least let me help you.”
         He must have seen the confused look on my face because then he explains, “I saw you looking at that map earlier. I’m an archaeologist, let me see it.”`,
         oldManText: ``,
         variable: 0,       
@@ -114,7 +114,7 @@ const story = { //holds the entire story
         time: 0
     },
     eleven: {
-        text: `“Why don't you kick rocks and leave us alone” one of the hooligans says. 
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“Why don't you kick rocks and leave us alone” one of the hooligans says. 
         “Oh yeah you would want that, huh,” I say angrily. 
         As soon as I say that, the old man appears and says, “They’re not worth your time”.`,
         oldManText: ``,
@@ -126,7 +126,7 @@ const story = { //holds the entire story
         time: 0
     },
     twelve: {
-        text: `“Why should I even trust you, I don’t even know you. I’m going to keep on trying"`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“Why should I even trust you, I don’t even know you. I’m going to keep on trying"`,
         oldManText: ``,
         variable: 0,       
         choices: [
@@ -135,7 +135,7 @@ const story = { //holds the entire story
         time: 0
     },
     thirteen: {
-        text: `“Hey”, I call out to the hooligans in desperation. 
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“Hey”, I call out to the hooligans in desperation. 
         “I thought we told you to kick rocks, now why don’t you?”, the hooligans say irritatedly. 
         “Because I got no other place to go”
         “Oh boo freaking hoo, we told you two times already to leave, this is your last warning”
@@ -158,7 +158,7 @@ const story = { //holds the entire story
         time: 0
     },
     fifteen: {
-        text: `“I should probably get going,” I say.
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“I should probably get going,” I say.
         “Wait! I think I can help you,” the old man says. 
        He must have seen the confused look on my face because then he explains, “I saw you looking at that map earlier. I’m an archaeologist, let me see it.”`,
         oldManText: ``,
@@ -169,7 +169,7 @@ const story = { //holds the entire story
         time: 0
     },
     sixteen: {
-        text: `Whatever. I’ll let it go. Not my problem. Or at least it wasn’t until the old man suddenly threw his glass at the wall near the hooligans and then kindly said, “Please keep it down.”
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Whatever. I’ll let it go. Not my problem. Or at least it wasn’t until the old man suddenly threw his glass at the wall near the hooligans and then kindly said, “Please keep it down.”
         The hooligans were shocked by his outburst and sudden kind attitude but one managed to squeak out, “What’s it matter to you?”
         With surprising speed the old man grabbed the more confident hooligan by his collar and then slammed him into the table.`,
         oldManText: ``,
@@ -181,7 +181,7 @@ const story = { //holds the entire story
         time: 0
     },
     seventeen: {
-        text: `I walk up to the old man and try to break up the fight. When he lets go of the hooligan they all run out and the old man turns to me.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I walk up to the old man and try to break up the fight. When he lets go of the hooligan they all run out and the old man turns to me.`,
         oldManText: ``,
         variable: 0,       
         choices: [
@@ -190,7 +190,7 @@ const story = { //holds the entire story
         time: 0
     },
     eighteen: {
-        text: `I should get out of here. I go for the door, but the hooligans push me out of the way to get away from the old man. He comes up to me and stops me from leaving.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I should get out of here. I go for the door, but the hooligans push me out of the way to get away from the old man. He comes up to me and stops me from leaving.`,
         oldManText: ``,
         variable: 0,       
         choices: [
@@ -199,8 +199,8 @@ const story = { //holds the entire story
         time: 0
     },
     nineteen: {
-        text: `“Wait,” the old man said, “Before you go, I might be able to help you.” 
-        He must have seen the confused look on my face because then he explains, “I saw you looking at that map earlier. I’m an archaeologist, let me see it.”`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“Wait,” the old man says, “Before you go, I might be able to help you.” 
+        He must see the confused look on my face because he explains, “I saw you looking at that map earlier. I’m an archaeologist, let me see it.”`,
         oldManText: ``,
         variable: 0,       
         choices: [
@@ -209,7 +209,7 @@ const story = { //holds the entire story
         time: 0
     },
     twenty: {
-        text: `The old man stops me forcefully and grabs the map from me. I try to take it back but he stops me and explains, “I saw you reading this earlier. I’m an archaeologist, I can help you.”`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The old man stops me forcefully and grabs the map from me. I try to take it back but he stops me and explains, “I saw you reading this earlier. I’m an archaeologist, I can help you.”`,
         oldManText: ``,
         variable: 0,       
         choices: [
@@ -218,7 +218,7 @@ const story = { //holds the entire story
         time: 0
     },
     twentyOne: {
-        text: `“Okay this thing says that you must go to the jungle planet, Vortex” he says.
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“Okay this thing says that you must go to the jungle planet, Vortex” he says.
         “Vortex huh, okay then I guess I’m going to Vortex”
         “Yeah, I guess you are. Well listen I gotta leave soon, but good luck on your quest.” The old man says, “and I’ll send you a cipher for the language. I think I’ve gotten it pretty much figured out now.”
         “Thanks! It means a lot” I say knowing I’m in for an adventure!`,
@@ -230,7 +230,7 @@ const story = { //holds the entire story
         time: 0
     },
     twentyTwo: {
-        text: `“Thanks for your help, but I’m doing this alone. Sorry.”
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“Thanks for your help, but I’m doing this alone. Sorry.”
         The old man tries to convince me but I shut him down and walk to my ship. When I’m taking off he sends me a hastily drawn cipher on a napkin through interlink. It could be useful if I ever need to translate more of the language.`,
         oldManText: ``,
         variable: 0,       
@@ -240,7 +240,7 @@ const story = { //holds the entire story
         time: 0
     },
     twentyThree: {
-        text: `“Okay, let’s see what we got here.” he mutters.
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“Okay, let’s see what we got here.” he mutters.
         “Well?” I say impatiently.
         “Okay so it appears that this thing that you’re looking for is located on the jungle planet Vortex” he says.
         “Okay then, I guess I’m going to Vortex”
@@ -254,7 +254,7 @@ const story = { //holds the entire story
         time: 0
     },    
     twentyFour: {
-        text: `“Alright, but we are leaving right now. Let’s go!”`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“Alright, but we are leaving right now. Let’s go!”`,
         oldManText: ``,
         variable: ["oldMan",1],       
         choices: [
@@ -263,7 +263,7 @@ const story = { //holds the entire story
         time: 0
     },    
     twentyFive: {
-        text: `We start to head to Vortex after quite a bit of traveling. When we’re about to land, the old man notices that we're about to land inside of a trap. There are a bunch of what look like primitive locals waiting in ambush. They are probably hunting some kind of flying beast. So we fly away from that location and we spot some plausible locations according to the relic.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We start to head to Vortex after quite a bit of traveling. When we’re about to land, the old man notices that we're about to land inside of a trap. There are a bunch of what look like primitive locals waiting in ambush. They are probably hunting some kind of flying beast. So we fly away from that location and we spot some plausible locations according to the relic.`,
         oldManText: ``,
         variable: 0,       
         choices: [
@@ -272,30 +272,30 @@ const story = { //holds the entire story
         time: 0
     },    
     twentySix: {
-        text: `After a long month of traveling I finally made it. I’m at Vortex. The planet is covered in dense jungle with about half of the surface area being ocean. It reminds me of the old pictures of earth before humanity left it as a dry ball of radiated dust. 
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;After a long month of traveling I finally made it. I’m at Vortex. The planet is covered in dense jungle with about half of the surface area being ocean. It reminds me of the old pictures of earth before humanity left it as a dry ball of radiated dust. 
         When I entered the system I got a worrying alert. My ship’s computer flashed huge danger signals at me. I read the report in horror. This solar system orbits the star Areps. Areps is a star at the end of its lifetime. At the very end of its lifetime. My computer calculates that I have ${timeLeft} imperial time units left before the star blows up in a massive supernova. 
         It’s fine. I’ll just be in and out, as long as nothing goes wrong. I land my ship in the first good spot I see so I can start looking soon. As soon as I step out of my ship I hear a loud guttural war cry from several humans running towards me. I’m too busy wondering why there were no logs of human civilization on this planet to notice the answer fly right by my face in the form of several ancient looking spears that deflect off my shield. They must be too primitive to be noticed. Still, it’s strange, we should have detected any life on this planet at all.
         My headset translates the warcry as, “FOR THE ARTIFACT!”. It seems that they speak a different language than was written on the map.`,
         oldManText: ``,
-        variable: 0,       
+        variable: ['trueEnding',1],       
         choices: [
             [`twentySeven`,`Spare them`],
             [`fortyFive`,`Kill them`],
             [`fortySix`,`Run away`]
         ],
-        time: 0
+        time: 1
     },    
     twentySeven: {
-        text: `These are just primitive locals. There’s no reason to kill them and they might know something about the artifact. I wait until they are close enough to me and then I incapacitate them with a gadget that wraps itself around the target and locks their joints together.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;These are just primitive locals. There’s no reason to kill them and they might know something about the artifact. I wait until they are close enough to me and then I incapacitate them with a gadget that wraps itself around the target and locks their joints together.`,
         oldManText: ``,
-        variable: 0,       
+        variable: ['trueEnding',1],       
         choices: [
             [`twentyEight`,`Continue`]
         ],
-        time: 0
+        time: 1
     },    
     twentyEight: {
-        text: `Once I had them all rounded up I spoke in my own language but they heard it as theirs. “Who are you?” I ask.
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Once I had them all rounded up I spoke in my own language but they heard it as theirs. “Who are you?” I ask.
         The obvious leader says “I am Khaa. You have bested me and my men, so by honor we are indebted to you. Thank you.”
         I’m taken aback by this very large man thanking me for beating him, but the brief curiosity fades away when I remember my time limit.
         “Earlier you yelled, ‘for the artifact’, what does that mean?” I ask.
@@ -309,47 +309,47 @@ const story = { //holds the entire story
             [`twentyNine`,`Yes`],
             [`fortyThree`,`No`]
         ],
-        time: 0
+        time: 1
     },    
     twentyNine: {
-        text: `I need all the help I can get. Plus they might have some useful information even if they don’t know exactly where the artifact is.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I need all the help I can get. Plus they might have some useful information even if they don’t know exactly where the artifact is.`,
         oldManText: ``,
-        variable: 0,       
+        variable: ['trueEnding',1],       
         choices: [
             [`thirty`,`Continue`]
         ],
-        time: 0
+        time: 1
     },    
     thirty: {
-        text: `Khaa stops me before I start walking and says, “Let us take you to our home.”`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Khaa stops me before I start walking and says, “Let us take you to our home.”`,
         oldManText: ``,
         variable: 0,       
         choices: [
             [`thirtyOne`,`Yes`],
             [`thirtyTwo`,`No`]
         ],
-        time: 0
+        time: 1
     },    
     thirtyOne: {
-        text: `Fine, maybe I can learn something. I follow them through the dense jungle until I come upon a great city. Houses and other buildings are built into the stone and the mountains. Some of the city seems to have been carved out of the ground, almost like the city is the natural geography. There were people bustling around everywhere. I would guess a total of a couple hundred people live here. I followed the squad into the city. Now that we are in the city they leave without a word. I really don’t understand this culture. What about their debt?`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fine, maybe I can learn something. I follow them through the dense jungle until I come upon a great city. Houses and other buildings are built into the stone and the mountains. Some of the city seems to have been carved out of the ground, almost like the city is the natural geography. There were people bustling around everywhere. I would guess a total of a couple hundred people live here. I followed the squad into the city. Now that we are in the city they leave without a word. I really don’t understand this culture. What about their debt?`,
         oldManText: ``,
-        variable: 0,       
+        variable: ['trueEnding',1],       
         choices: [
             [`sixtyTwo`,`Continue`]
         ],
-        time: 0
+        time: 1
     },
     thirtyTwo: {
-        text: `I don’t have time for that. There’s only so much time left. I need to get the artifact and get out of here.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I don’t have time for that. There’s only so much time left. I need to get the artifact and get out of here.`,
         oldManText: ``,
         variable: 0,       
         choices: [
             [`thirtyThree`,`Continue`]
         ],
-        time: 0
+        time: 1
     },
     thirtyThree: {
-        text: `“Alright where should I go?”, I ask myself. A few locations stand out: this ancient looking cave, a volcano, and a whole jungle. Although I could look for the civilization that lives here and try to save them from their doom. I listed the options to my new squad but they had some problems with my assessment.
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“Alright where should I go?”, I ask myself. A few locations stand out: this ancient looking cave, a volcano, and a whole jungle. Although I could look for the civilization that lives here and try to save them from their doom. I listed the options to my new squad but they had some problems with my assessment.
         “You must not go to the Volcano,” Khaa explains, “There is a beast there, and nothing else. We have made many expeditions into that hell hole to mine the volcanic rock, but they have always been dangerous and we have found nothing else.”
         “Fine, but if I find out that the artifact is actually there I’ll throw you into that beast myself.”`,
         oldManText: ``,
@@ -359,47 +359,47 @@ const story = { //holds the entire story
             [`thirtyEight`,`Look in the jungle`],
             [`sixtyTwo`,`Search for the civilization`]
         ],
-        time: 0
+        time: 1
     },
     thirtyFour: {
-        text: `As I went into the cave, something in my head shouts “Get out!”, in an evil spirit voice. I think nothing of it and proceed to work my way through the cave to come across potentially my hardest battle ever. “Okay calm down. Calm down.”, I whisper to myself. I was up against a beast with three glowing red eyes, with the horns of a bull and a wooly mammoth, the body of a lion, and razor sharp teeth stretching three rows back. So I knew I only had two options. Fight and die to this beast. Or try to run and possibly die from the beast.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;As I went into the cave, something in my head shouts “Get out!”, in an evil spirit voice. I think nothing of it and proceed to work my way through the cave to come across potentially my hardest battle ever. “Okay calm down. Calm down.”, I whisper to myself. I was up against a beast with three glowing red eyes, with the horns of a bull and a wooly mammoth, the body of a lion, and razor sharp teeth stretching three rows back. So I knew I only had two options. Fight and die to this beast. Or try to run and possibly die from the beast.`,
         oldManText: ``,
         variable: 0,       
         choices: [
             [`thirtyFive`,`Fight`],
             [`fortyTwo`,`Run`]
         ],
-        time: 0
+        time: 1
     },
     thirtyFive: {
-        text: `So I know I have to fight wisely. Either I draw my chain sword and activate its fire ability or draw my blasters with my rocket boots. If I choose my sword I will have to fight up close but if I choose my blasters I will have to fight from a distance.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;So I know I have to fight wisely. Either I draw my chain sword and activate its fire ability or draw my blasters with my rocket boots. If I choose my sword I will have to fight up close but if I choose my blasters I will have to fight from a distance.`,
         oldManText: ``,
         variable: 0,       
         choices: [
             [`thirtySix`,`Fight with chain sword with fire ability`],
             [`thirtySeven`,`Fight with rocket boots`]
         ],
-        time: 0
+        time: 1
     },
     thirtySix: {
-        text: `I draw my sword and get into a fierce fight with this beast. I activate the swords’ fire ability which does some damage but not enough to get the beast to yield. I attacked and attacked but after a long and tiring battle with every strike I blow to the beast, it damages my armor with its rows of teeth and grueling hits till it no longer protects me. My armor took its final blow and broke, meaning I had to make every strike worth it. I grab the sword tightly and charge at the beast, raining down strikes on its back and trying to hit its head, but the beast waits for the best opportunity and pierces my chest plate and stabs its horn into my heart. I had just lost the most important fight in my life, as it was to get this artifact and for my life.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I draw my sword and get into a fierce fight with this beast. I activate the swords’ fire ability which does some damage but not enough to get the beast to yield. I attacked and attacked but after a long and tiring battle with every strike I blow to the beast, it damages my armor with its rows of teeth and grueling hits till it no longer protects me. My armor took its final blow and broke, meaning I had to make every strike worth it. I grab the sword tightly and charge at the beast, raining down strikes on its back and trying to hit its head, but the beast waits for the best opportunity and pierces my chest plate and stabs its horn into my heart. I had just lost the most important fight in my life, as it was to get this artifact and for my life.`,
         oldManText: ``,
         variable: ['death', 1],       
         choices: [
         ],
-        time: 0
+        time: 1
     },
     thirtySeven: {
-        text: `I activate my rocket boots and draw my blasters. I charge towards the beast and it charges back at me, but I have no intention to get too close to the beast so before it hits me I launch myself into the air and send down loads of bullets from my blasters. These to my advantage pierced through its thick scales. After a long fight of wearing out the beast’s energy and scales, I’m able to strike the final blow with my blaster in hand and my rocket boots activated. I launch into the air and as I’m descending I shoot the beast dead.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I activate my rocket boots and draw my blasters. I charge towards the beast and it charges back at me, but I have no intention to get too close to the beast so before it hits me I launch myself into the air and send down loads of bullets from my blasters. These to my advantage pierced through its thick scales. After a long fight of wearing out the beast’s energy and scales, I’m able to strike the final blow with my blaster in hand and my rocket boots activated. I launch into the air and as I’m descending I shoot the beast dead.`,
         oldManText: ``,
         variable: 0,       
         choices: [
             [`fortyTwo`,`Continue`]
         ],
-        time: 0
+        time: 1
     },
     thirtyEight: {
-        text: `I begin my search for the artifact in this never ending jungle. This jungle is dense, consists of sky high trees and is rich in life. I manage to maneuver through the dense jungle on a discrete path made by someone or something, which is barely visible. Eventually I stumble across something that looks promising. I find what looks to be eight boulders that form a circle with each boulder being equidistant to the ones next to it. But in the middle there is a large rafflesia. So I begin to walk forward and to the center. I touch it and as soon as I do I hear a rumble. I look around and draw my chain sword. This rumble then turns into a voice and says in an extremely loud and deep voice “Why are you here?”. 
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I begin my search for the artifact in this never ending jungle. This jungle is dense, consists of sky high trees and is rich in life. I manage to maneuver through the dense jungle on a discrete path made by someone or something, which is barely visible. Eventually I stumble across something that looks promising. I find what looks to be eight boulders that form a circle with each boulder being equidistant to the ones next to it. But in the middle there is a large rafflesia. So I begin to walk forward and to the center. I touch it and as soon as I do I hear a rumble. I look around and draw my chain sword. This rumble then turns into a voice and says in an extremely loud and deep voice “Why are you here?”. 
         I am shocked and ask “Who said that?”
         Then the boulders roll and transform into equally large golems. I know I have two options, which are to fight or run.`,
         oldManText: ``,
@@ -408,10 +408,10 @@ const story = { //holds the entire story
             [`thirtyNine`,`Fight`],
             [`fortyTwo`,`Run`]
         ],
-        time: 0
+        time: 1
     },
     thirtyNine: {
-        text: `I think to myself that I have to fight in order to escape this. I say “I’m just here to find an artifact.” 
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I think to myself that I have to fight in order to escape this. I say “I’m just here to find an artifact.” 
         “Artifact? That doesn’t answer my question on why you’re here”, the largest golem says.
         I gulp and say “Well that’s why I’m here, for an artifact”. 
         “So you’ve come to steal, punishable of… death!” the main golem says angrily. 
@@ -422,10 +422,10 @@ const story = { //holds the entire story
             [`forty`,`Fight with explosive round blasters`],
             [`fortyOne`,`Fight with lightning sword`]
         ],
-        time: 0
+        time: 1
     },
     forty: {
-        text: `I grab my blasters from the holster and  get a little bit of distance. They all move towards me like how a gorilla crawls, I shoot at them and manage to strike two of them. They look back at their knocked down friends and now the six left golems all get angry and charge at me. I use the surrounding trees to my advantage, climbing them and going from tree to tree to be stealthy. From the trees I manage to take out many of the golems and only have the main golem left, the strongest and biggest golem there. 
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I grab my blasters from the holster and  get a little bit of distance. They all move towards me like how a gorilla crawls, I shoot at them and manage to strike two of them. They look back at their knocked down friends and now the six left golems all get angry and charge at me. I use the surrounding trees to my advantage, climbing them and going from tree to tree to be stealthy. From the trees I manage to take out many of the golems and only have the main golem left, the strongest and biggest golem there. 
         The golem says “You think those trees are in your favor, hiding in the shadows? I am the shadows, forged from fire and stone, being kept away from anyone and anything else alive.”
         I shoot my blaster at his feet from the trees and quickly rush down to the ground. I sneak up behind the golem and say “If you’re the shadows then you would know all about them, then how come I’m behind you?” 
         The golem smirks and says “Take the shot, you deserve it.” 
@@ -436,18 +436,18 @@ const story = { //holds the entire story
         choices: [
             [`fortyTwo`,`Continue`]
         ],
-        time: 0
+        time: 1
     },
     fortyOne: {
-        text: `I power on my rocket boots and quickly draw my sword. I grab the sword knowing that I am going to have a long and grueling fight. The golems charge at me while I am in the middle of all of them. They begin to attack me as I point my sword towards the air and summon lightning from the sky, causing an explosion pushing them all back. I am constantly moving erratically to avoid being hit but some of the time I’m not fast enough to dodge the hits. My armor starts to fully diminish, to the point where it is fully coming off of my body in scraps. All my strikes with the lightning aren’t doing as much damage as I had hoped and I am quickly running out of time to get the artifact and leave. I see a final chance with the lightning by bringing the largest lightning bolt I’ve ever produced. So I point my sword to the sky and before I could send it to the main golem, I am struck by the golem with enough force that the sword falls out of my hand. The main golem catches it and points it at me, pushing it through my chest. Before I know it the largest lightning bolt I’ve ever seen strikes me. Once the lightning goes away I can’t even speak. I just simply look at the main golem and nod out of respect for the fight. The golem nods back and simply says “Good fight, and goodbye.”`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I power on my rocket boots and quickly draw my sword. I grab the sword knowing that I am going to have a long and grueling fight. The golems charge at me while I am in the middle of all of them. They begin to attack me as I point my sword towards the air and summon lightning from the sky, causing an explosion pushing them all back. I am constantly moving erratically to avoid being hit but some of the time I’m not fast enough to dodge the hits. My armor starts to fully diminish, to the point where it is fully coming off of my body in scraps. All my strikes with the lightning aren’t doing as much damage as I had hoped and I am quickly running out of time to get the artifact and leave. I see a final chance with the lightning by bringing the largest lightning bolt I’ve ever produced. So I point my sword to the sky and before I could send it to the main golem, I am struck by the golem with enough force that the sword falls out of my hand. The main golem catches it and points it at me, pushing it through my chest. Before I know it the largest lightning bolt I’ve ever seen strikes me. Once the lightning goes away I can’t even speak. I just simply look at the main golem and nod out of respect for the fight. The golem nods back and simply says “Good fight, and goodbye.”`,
         oldManText: ``,
-        variable: 0,       
+        variable: ['death',1],       
         choices: [
         ],
-        time: 0
+        time: 1
     },
     fortyTwo: {
-        text: `Where should I be looking?`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Where should I be looking?`,
         oldManText: ``,
         variable: 0,       
         choices: [
@@ -455,19 +455,19 @@ const story = { //holds the entire story
             [`thirtyEight`,`Look in the jungle`],
             [`sixtyTwo`,`Search for the civilization`]
         ],
-        time: 0
+        time: 1
     },
     fortyThree: {
-        text: `I don’t need these primitives. They’d just slow me down. I power on my rocket boots and fly away before they have a chance to stop me.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I don’t need these primitives. They’d just slow me down. I power on my rocket boots and fly away before they have a chance to stop me.`,
         oldManText: ``,
         variable: 0,       
         choices: [
             [`fortyFour`,`Continue`]
         ],
-        time: 0
+        time: 1
     },
     fortyFour: {
-        text: `“Alright where should I go?” I ask myself looking at a few locations: this ancient looking cave, a volcano, and a whole jungle. Although I can also look for the civilization that lives here and try to save them from their doom.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“Alright where should I go?” I ask myself looking at a few locations: this ancient looking cave, a volcano, and a whole jungle. Although I can also look for the civilization that lives here and try to save them from their doom.`,
         oldManText: `“Okay what's the relic say?” I ask the old man. 
         “Not sure, it just says what it looks like and what planets it’s on.” the old man says shockingly. 
         “Okay well we’ve gotta go through the locations.”
@@ -483,75 +483,75 @@ const story = { //holds the entire story
             [`fiftySix`,`Look in the jungle`],
             [`sixtyOne`,`Search for the civilization`]
         ],
-        time: 0
+        time: 1
     },
     fortyFive: {
-        text: `I don’t have time for this. I pull out my power gauntlets and pick up the spears they threw at me. I threw them back with more power than they could ever imagine. When none were left I started looking around for where I should go next.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I don’t have time for this. I pull out my power gauntlets and pick up the spears they threw at me. I threw them back with more power than they could ever imagine. When none were left I started looking around for where I should go next.`,
         oldManText: ``,
         variable: 0,       
         choices: [
             [`fortyFour`,`Continue`]
         ],
-        time: 0
+        time: 1
     },
     fortySix: {
-        text: `I have no reason to fight these primitives. I kick my heels together to power on my rocket boots and fly away.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I have no reason to fight these primitives. I kick my heels together to power on my rocket boots and fly away.`,
         oldManText: ``,
         variable: 0,       
         choices: [
             [`fortyFour`,`Continue`]
         ],
-        time: 0
+        time: 1
     },
     fortySeven: {
-        text: `As I went into the cave, something in my head shouts “Get out!”, in an evil spirit voice. I think nothing of it and proceed to work my way through the cave to come across potentially my hardest battle ever. “Okay calm down. Calm down.”, I whisper to myself. I was up against a beast with three glowing red eyes, with the horns of a bull and a wooly mammoth, the body of a lion, and razor sharp teeth stretching three rows back. So I knew I only had two options. Fight and die to this beast. Or try to run and possibly die from the beast.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;As I went into the cave, something in my head shouts “Get out!”, in an evil spirit voice. I think nothing of it and proceed to work my way through the cave to come across potentially my hardest battle ever. “Okay calm down. Calm down.”, I whisper to myself. I was up against a beast with three glowing red eyes, with the horns of a bull and a wooly mammoth, the body of a lion, and razor sharp teeth stretching three rows back. So I knew I only had two options. Fight and die to this beast. Or try to run and possibly die from the beast.`,
         oldManText: ``,
         variable: 0,       
         choices: [
             [`fortyEight`,`Fight`],
             [`sixty`,`Run`]
         ],
-        time: 0
+        time: 1
     },
     fortyEight: {
-        text: `So I know I have to fight wisely. Either I draw my chain sword and activate its fire ability or draw my blasters with my rocket boots. If I choose my sword I will have to fight up close but if I choose my blasters I will have to fight from a distance.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;So I know I have to fight wisely. Either I draw my chain sword and activate its fire ability or draw my blasters with my rocket boots. If I choose my sword I will have to fight up close but if I choose my blasters I will have to fight from a distance.`,
         oldManText: ``,
         variable: 0,       
         choices: [
             [`fortyNine`,`Fight with chain sword with fire ability`],
             [`fifty`,`Fight with blasters with rocket boots`]
         ],
-        time: 0
+        time: 1
     },
     fortyNine: {
-        text: `I draw my sword and get into a fierce fight with this beast. I activate the swords’ fire ability which does some damage but not enough to get the beast to yield. I attacked and attacked but after a long and tiring battle with every strike I blow to the beast, it damages my armor with its rows of teeth and grueling hits till it no longer protects me. My armor took its final blow and broke, meaning I had to make every strike worth it. I grab the sword tightly and charge at the beast, raining down strikes on its back and trying to hit its head, but the beast waits for the best opportunity and pierces my chest plate and stabs its horn into my heart. I had just lost the most important fight in my life, as it was to get this artifact and for my life.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I draw my sword and get into a fierce fight with this beast. I activate the swords’ fire ability which does some damage but not enough to get the beast to yield. I attacked and attacked but after a long and tiring battle with every strike I blow to the beast, it damages my armor with its rows of teeth and grueling hits till it no longer protects me. My armor took its final blow and broke, meaning I had to make every strike worth it. I grab the sword tightly and charge at the beast, raining down strikes on its back and trying to hit its head, but the beast waits for the best opportunity and pierces my chest plate and stabs its horn into my heart. I had just lost the most important fight in my life, as it was to get this artifact and for my life.`,
         oldManText: ``,
-        variable: 0,       
+        variable: ['death',1],       
         choices: [
         ],
-        time: 0
+        time: 1
     },
     fifty: {
-        text: `I activate my rocket boots and draw my blasters. I charge towards the beast and it charges back at me, but I have no intention to get too close to the beast so before it hits me I launch myself into the air and send down loads of bullets from my blasters. These to my advantage pierced through its thick scales. After a long fight of wearing out the beast’s energy and scales, I’m able to strike the final blow with my blaster in hand and my rocket boots activated. I launch into the air and as I’m descending I shoot the beast dead.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I activate my rocket boots and draw my blasters. I charge towards the beast and it charges back at me, but I have no intention to get too close to the beast so before it hits me I launch myself into the air and send down loads of bullets from my blasters. These to my advantage pierced through its thick scales. After a long fight of wearing out the beast’s energy and scales, I’m able to strike the final blow with my blaster in hand and my rocket boots activated. I launch into the air and as I’m descending I shoot the beast dead.`,
         oldManText: ``,
         variable: 0,       
         choices: [
             [`sixty`,`Continue`]
         ],
-        time: 0
+        time: 1
     },
     fiftyOne: {
-        text: `I begin searching in and around the volcano. I know I’m in for a test of my abilities. With the heat I have to act fast because if I mess up I will die. On my journey I stumble across a demon with fiery eyes and skin of scorching red hot rock. It is able to grow to whatever size the lava would let it, and wears a crown. I have to speak wisely and concisely, it’s apparently royalty. This demon rises from the lava and says “Who are you and why are you here?” I say that I am just looking for an artifact, but he doesn’t buy it so he slowly begins to approach. I put my hand to my weapon, but he notices and yells, “You dare challenge me?” in a frightening tone. I gulp and know I have two options, to fight or run.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I begin searching in and around the volcano. I know I’m in for a test of my abilities. With the heat I have to act fast because if I mess up I will die. On my journey I stumble across a demon with fiery eyes and skin of scorching red hot rock. It is able to grow to whatever size the lava would let it, and wears a crown. I have to speak wisely and concisely, it’s apparently royalty. This demon rises from the lava and says “Who are you and why are you here?” I say that I am just looking for an artifact, but he doesn’t buy it so he slowly begins to approach. I put my hand to my weapon, but he notices and yells, “You dare challenge me?” in a frightening tone. I gulp and know I have two options, to fight or run.`,
         oldManText: ``,
         variable: 0,       
         choices: [
             [`fiftyTwo`,`Fight`],
             [`sixty`,`Run`]
         ],
-        time: 0
+        time: 1
     },
     fiftyTwo: {
-        text: `I understand that I have a few options of fighting: fighting with my ice blasters, a lightning sword, or my lightning arrows all paired with my rocket boots.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I understand that I have a few options of fighting: fighting with my ice blasters, a lightning sword, or my lightning arrows all paired with my rocket boots.`,
         oldManText: ``,
         variable: 0,       
         choices: [
@@ -559,36 +559,36 @@ const story = { //holds the entire story
             [`fiftyFour`,`Fight with lightning sword and rocket boots`],
             [`fiftyFive`,`Fight with lightning arrows and rocket boots`]
         ],
-        time: 0
+        time: 1
     },
     fiftyThree: {
-        text: `With my ice blasters I have to fight from a distance since it wouldn't be smart to fight up close. This demon is scorching hot and seems to be capable of throwing lava. I shoot at the demon and I begin to notice that it’s not able to leave the lava. With that I fly around and around the circumference of the volcano using my rocket boots. As I fly around and around I keep on pummeling it with shots on its head eventually tilting the crown. The demon quickly readjusts the crown and gets extremely angry. So I know that the crown had something to do with its health. I only focus my shots at the crown, eventually knocking it off of it and the demon yells “No!” as it falls into the lava. I quickly fly towards the crown before it can hit the lava and activate the demon again. I fly back to the ground and inspect the crown to quickly realize that it won’t help me in my quest for the artifact, so I left the volcano and tossed it back so I could preserve the long standing balance of the wildlife.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;With my ice blasters I have to fight from a distance since it wouldn't be smart to fight up close. This demon is scorching hot and seems to be capable of throwing lava. I shoot at the demon and I begin to notice that it’s not able to leave the lava. With that I fly around and around the circumference of the volcano using my rocket boots. As I fly around and around I keep on pummeling it with shots on its head eventually tilting the crown. The demon quickly readjusts the crown and gets extremely angry. So I know that the crown had something to do with its health. I only focus my shots at the crown, eventually knocking it off of it and the demon yells “No!” as it falls into the lava. I quickly fly towards the crown before it can hit the lava and activate the demon again. I fly back to the ground and inspect the crown to quickly realize that it won’t help me in my quest for the artifact, so I left the volcano and tossed it back so I could preserve the long standing balance of the wildlife.`,
         oldManText: ``,
         variable: 0,       
         choices: [
             [`sixty`,`Continue`]
         ],
-        time: 0
+        time: 1
     },
     fiftyFour: {
-        text: `With the sword I know I will have to fight extremely carefully since I would have to fight up close with the demon. I clench the sword in my hands and charge at it dodging all the lava that was being thrown at me. I fight it up close, moving upward starting from the chest. I see a clear shot to sink my blade into the head, so I take it. I get my boots to move me upward, but before I can get the blade into the head, I feel a burning sensation all over my body. My armor was no longer protecting me and the heat and lava that was thrown at me finally began to fully diminish my health. I’m dead before I could sink my blade into its head and defeat the demon.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;With the sword I know I will have to fight extremely carefully since I would have to fight up close with the demon. I clench the sword in my hands and charge at it dodging all the lava that was being thrown at me. I fight it up close, moving upward starting from the chest. I see a clear shot to sink my blade into the head, so I take it. I get my boots to move me upward, but before I can get the blade into the head, I feel a burning sensation all over my body. My armor was no longer protecting me and the heat and lava that was thrown at me finally began to fully diminish my health. I’m dead before I could sink my blade into its head and defeat the demon.`,
         oldManText: ``,
-        variable: 0,       
+        variable: ['death',1],       
         choices: [
         ],
-        time: 0
+        time: 1
     },
     fiftyFive: {
-        text: `I pull out my bow and get out my lightning arrows. I’m not sure how strong these things are, but hopefully it's enough. I shoot some arrows, but the demon blocks and dodges every arrow by throwing lava at them. I see an opening. I take a deep breath and pull the arrow back and align my shot. I let it go and its full power was unleashed, breaking the sound barrier with a loud boom. The arrow goes in, the sheer speed and power knocking the demon back and knocking its crown off its head. I quickly go for the crown thinking that it would help me in the quest. As I examine it I find it won’t so I leave. As I do I throw the crown back into the lava to keep the natural balance of the wildlife.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I pull out my bow and get out my lightning arrows. I’m not sure how strong these things are, but hopefully it's enough. I shoot some arrows, but the demon blocks and dodges every arrow by throwing lava at them. I see an opening. I take a deep breath and pull the arrow back and align my shot. I let it go and its full power was unleashed, breaking the sound barrier with a loud boom. The arrow goes in, the sheer speed and power knocking the demon back and knocking its crown off its head. I quickly go for the crown thinking that it would help me in the quest. As I examine it I find it won’t so I leave. As I do I throw the crown back into the lava to keep the natural balance of the wildlife.`,
         oldManText: ``,
         variable: 0,       
         choices: [
             [`sixty`,`Continue`]
         ],
-        time: 0
+        time: 1
     },
     fiftySix: {
-        text: `I begin my search for the artifact in this never ending jungle. This jungle is dense, consists of sky high trees and is rich in life. I manage to maneuver through the dense jungle on a discrete path made by someone or something, which is barely visible. Eventually I stumble across something that looks promising. I find what looks to be eight boulders that form a circle with each boulder being equidistant to the ones next to it. But in the middle there is a large rafflesia. So I begin to walk forward and to the center. I touch it and as soon as I do I hear a rumble. I look around and draw my chain sword. This rumble then turns into a voice and says in an extremely loud and deep voice “Why are you here?”. 
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I begin my search for the artifact in this never ending jungle. This jungle is dense, consists of sky high trees and is rich in life. I manage to maneuver through the dense jungle on a discrete path made by someone or something, which is barely visible. Eventually I stumble across something that looks promising. I find what looks to be eight boulders that form a circle with each boulder being equidistant to the ones next to it. But in the middle there is a large rafflesia. So I begin to walk forward and to the center. I touch it and as soon as I do I hear a rumble. I look around and draw my chain sword. This rumble then turns into a voice and says in an extremely loud and deep voice “Why are you here?”. 
         I am shocked and ask “Who said that?”
         Then the boulders roll and transform into equally large golems. I know I have two options, which are to fight or run.`,
         oldManText: ``,
@@ -597,10 +597,10 @@ const story = { //holds the entire story
             [`fiftySeven`,`Fight`],
             [`sixty`,`Run`]
         ],
-        time: 0
+        time: 1
     },
     fiftySeven: {
-        text: `I think to myself that I have to fight in order to escape this. I say “I’m just here to find an artifact.” 
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I think to myself that I have to fight in order to escape this. I say “I’m just here to find an artifact.” 
         “Artifact? That doesn’t answer my question on why you’re here”, the largest golem says.
         I gulp and say “Well that’s why I’m here, for an artifact”. 
         “So you’ve come to steal, punishable of… death!” the main golem says angrily. 
@@ -611,10 +611,10 @@ const story = { //holds the entire story
             [`fiftyEight`,`Fight with explosive round blasters`],
             [`fiftyNine`,`Fight with lightning sword`]
         ],
-        time: 0
+        time: 1
     },
     fiftyEight: {
-        text: `I grab my blasters from the holster and  get a little bit of distance. They all move towards me like how a gorilla crawls, I shoot at them and manage to strike two of them. They look back at their knocked down friends and now the six left golems all get angry and charge at me. I use the surrounding trees to my advantage, climbing them and going from tree to tree to be stealthy. From the trees I manage to take out many of the golems and only have the main golem left, the strongest and biggest golem there. 
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I grab my blasters from the holster and  get a little bit of distance. They all move towards me like how a gorilla crawls, I shoot at them and manage to strike two of them. They look back at their knocked down friends and now the six left golems all get angry and charge at me. I use the surrounding trees to my advantage, climbing them and going from tree to tree to be stealthy. From the trees I manage to take out many of the golems and only have the main golem left, the strongest and biggest golem there. 
         The golem says “You think those trees are in your favor, hiding in the shadows? I am the shadows, forged from fire and stone, being kept away from anyone and anything else alive.”
         I shoot my blaster at his feet from the trees and quickly rush down to the ground. I sneak up behind the golem and say “If you’re the shadows then you would know all about them, then how come I’m behind you?” 
         The golem smirks and says “Take the shot, you deserve it.” 
@@ -625,19 +625,19 @@ const story = { //holds the entire story
         choices: [
             [`sixty`,`Continue`]
         ],
-        time: 0
+        time: 1
     },
     fiftyNine: {
-        text: `I power on my rocket boots and quickly draw my sword. I grab the sword knowing that I am going to have a long and grueling fight. The golems charge at me while I am in the middle of all of them. They begin to attack me as I point my sword towards the air and summon lightning from the sky, causing an explosion pushing them all back. I am constantly moving erratically to avoid being hit but some of the time I’m not fast enough to dodge the hits. My armor starts to fully diminish, to the point where it is fully coming off of my body in scraps. All my strikes with the lightning aren’t doing as much damage as I had hoped and I am quickly running out of time to get the artifact and leave. I see a final chance with the lightning by bringing the largest lightning bolt I’ve ever produced. So I point my sword to the sky and before I could send it to the main golem, I am struck by the golem with enough force that the sword falls out of my hand. The main golem catches it and points it at me, pushing it through my chest. Before I know it the largest lightning bolt I’ve ever seen strikes me. Once the lightning goes away I can’t even speak. I just simply look at the main golem and nod out of respect for the fight. The golem nods back and simply says “Good fight, and goodbye.”`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I power on my rocket boots and quickly draw my sword. I grab the sword knowing that I am going to have a long and grueling fight. The golems charge at me while I am in the middle of all of them. They begin to attack me as I point my sword towards the air and summon lightning from the sky, causing an explosion pushing them all back. I am constantly moving erratically to avoid being hit but some of the time I’m not fast enough to dodge the hits. My armor starts to fully diminish, to the point where it is fully coming off of my body in scraps. All my strikes with the lightning aren’t doing as much damage as I had hoped and I am quickly running out of time to get the artifact and leave. I see a final chance with the lightning by bringing the largest lightning bolt I’ve ever produced. So I point my sword to the sky and before I could send it to the main golem, I am struck by the golem with enough force that the sword falls out of my hand. The main golem catches it and points it at me, pushing it through my chest. Before I know it the largest lightning bolt I’ve ever seen strikes me. Once the lightning goes away I can’t even speak. I just simply look at the main golem and nod out of respect for the fight. The golem nods back and simply says “Good fight, and goodbye.”`,
         oldManText: ``,
-        variable: 0,       
+        variable: ['death',1],       
         choices: [
             [`sixty`,`Continue`]
         ],
-        time: 0
+        time: 1
     },
     sixty: {
-        text: `Where should I be looking?`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Where should I be looking?`,
         oldManText: ``,
         variable: 0,       
         choices: [
@@ -646,20 +646,20 @@ const story = { //holds the entire story
             [`fiftySix`,`Look in the jungle`],
             [`sixtyOne`,`Search for the civilization`]
         ],
-        time: 0
+        time: 1
     },
     sixtyOne: {
-        text: `Those locals I saw earlier must be a part of some civilization. Maybe I should look for that. I stumble through the jungle until I find evidence of a civilized people. It’s a very faint trail that leads around the easiest paths on the dense jungle floor. I pick a direction and walk, following the path. Finally I move aside a big leaf and see it. 
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Those locals I saw earlier must be a part of some civilization. Maybe I should look for that. I stumble through the jungle until I find evidence of a civilized people. It’s a very faint trail that leads around the easiest paths on the dense jungle floor. I pick a direction and walk, following the path. Finally I move aside a big leaf and see it. 
         Houses and other buildings are built into the stone and the mountains. Some of the city seems to have been carved out of the ground, almost like the city is the natural geography. There are people bustling around everywhere. I make my way in.`,
         oldManText: ``,
         variable: 0,       
         choices: [
             [`sixtyTwo`,`Continue`]
         ],
-        time: 0
+        time: 1
     },
     sixtyTwo: {
-        text: `Walking into the city I instantly draw attention. People don’t draw their weapons at me but they do look ready to. I end up at the main square where I can see a couple different things. There is a huge structure that is most definitely the capital building. I’m sure I could find something good there. There is a path that leads into a very decorated building with beautiful stained glass windows that seems to be some kind of church. There’s potential there, especially since these people seem to worship the artifact. I could also just talk to someone in these crowds and see what they know.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Walking into the city I instantly draw attention. People don’t draw their weapons at me but they do look ready to. I end up at the main square where I can see a couple different things. There is a huge structure that is most definitely the capital building. I’m sure I could find something good there. There is a path that leads into a very decorated building with beautiful stained glass windows that seems to be some kind of church. There’s potential there, especially since these people seem to worship the artifact. I could also just talk to someone in these crowds and see what they know.`,
         oldManText: `“Woah” The old man says while looking around, “This is literally an archaeologist's dream.”
         “I can’t believe that all this went undiscovered.” I say.`,
         variable: 0,
@@ -668,10 +668,10 @@ const story = { //holds the entire story
             [`seventyFour`,`Talk to the prophet`],
             [`eightySeven`,`Talk to civilian`]
         ],
-        time: 0
+        time: 1
     },
     sixtyThree: {
-        text: `I maneuver throughout the city and see a large building like some sort of council building. I walk up the grand steps and get greeted by a bunch of kids. I greet them and walk into the building and in an instant everyone looks at me and the chatter comes a minimum. Whispers are the only sound in the room. Then after a few seconds I walk forward and people look at someone in the distance. I look at this person who I thought was just some guy with a little authority. After overhearing people's whispers, I figured out it was the leader of the city. I know this conversation will be spoken about so I decide to speak highly formal and respectful. I walk up to the leader, shake his hand, and greet him. I ask him about what he is and what he does for the city. He responds with discipline and respect to me, even though he just barely met me.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I maneuver throughout the city and see a large building like some sort of council building. I walk up the grand steps and get greeted by a bunch of kids. I greet them and walk into the building and in an instant everyone looks at me and the chatter comes a minimum. Whispers are the only sound in the room. Then after a few seconds I walk forward and people look at someone in the distance. I look at this person who I thought was just some guy with a little authority. After overhearing people's whispers, I figured out it was the leader of the city. I know this conversation will be spoken about so I decide to speak highly formal and respectful. I walk up to the leader, shake his hand, and greet him. I ask him about what he is and what he does for the city. He responds with discipline and respect to me, even though he just barely met me.`,
         oldManText: ``,
         variable: 0,       
         choices: [
@@ -679,30 +679,30 @@ const story = { //holds the entire story
             [`sixtyFive`,`Ask about civilization`],
             [`sixtySix`,`Tell him about star`]
         ],
-        time: 0
+        time: 1
     },
     sixtyFour: {
-        text: `I ask “Do you know about the artifact or where it may be?” 
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I ask “Do you know about the artifact or where it may be?” 
         “No, I don't know its whereabouts, though I do know something about it,” he says. I asked him to explain what he knows about the artifact. He says “I do know of this one saying that may help you. ‘Praecipio tibi, ut ne desinas.’” I ask what it means. He says “It’s an ancient saying passed down from leader to leader. I have no idea what it means.”`,
         oldManText: ``,
         variable: ['artifactInfoLeader',1],       
         choices: [
             [`seventyThree`,`Continue`]
         ],
-        time: 0
+        time: 1
     },
     sixtyFive: {
-        text: `I ask about their civilization. He laughs and invites me to sit.
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I ask about their civilization. He laughs and invites me to sit.
         “Our ‘civilization’ is not much more than a large family where everyone has a part to play. The jungle forces us to stay together to survive. Only the strong survive. That’s how I was elected. When the previous leader dies, candidates come together and have a tournament where we fight till the other surrenders. I am the strongest fighter in the tribe. But only by a little bit,” He says with a chuckle, “I almost lost the fight because of the shock of finding out that the final opponent was my wife!”`,
         oldManText: ``,
         variable: 0,       
         choices: [
             [`seventyThree`,`Continue`]
         ],
-        time: 0
+        time: 1
     },
     sixtySix: {
-        text: `“Hey there’s something you should know,” I say.
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“Hey there’s something you should know,” I say.
         “What is it?” he asks in a concerned tone.
         “The star it’s going to explode, meaning it’s going to become a supernova,” I tell him.
         “Really? Why don’t I believe you?”`,
@@ -712,10 +712,10 @@ const story = { //holds the entire story
             [`sixtySeven`,`Be honest`],
             [`sixtyEight`,`Try to trick him into believing you`]
         ],
-        time: 0
+        time: 1
     },
     sixtySeven: {
-        text: `“Look, I'm being completely honest with you. I’m not from here, which you could probably guess. I have advanced technology that allows me to see that the star is at the end of its life cycle. That means it’s going to explode in a massive supernova.” I tell him.
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“Look, I'm being completely honest with you. I’m not from here, which you could probably guess. I have advanced technology that allows me to see that the star is at the end of its life cycle. That means it’s going to explode in a massive supernova.” I tell him.
         “Look I told people to not mess or lie to me, now skedaddle and leave me alone.”
         “Look I'm telling the truth, you’re only failing yourself!” I plead.
         “Hah, okay” he says sarcastically, “Now leave me alone and stop lying to me.”
@@ -726,10 +726,10 @@ const story = { //holds the entire story
         choices: [
             [`seventyThree`,`Continue`]
         ],
-        time: 0
+        time: 1
     },
     sixtyEight: {
-        text: `“I’m serious. The star’s going to blow” I say.
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“I’m serious. The star’s going to blow” I say.
         “Still not believing it,” he responds.
         I know I won’t get to him with the truth so I make up a lie, “The prophet said so!” 
         He freezes and just says “You talked to the prophet?”
@@ -742,33 +742,33 @@ const story = { //holds the entire story
         choices: [
             [`seventyThree`,`Continue`]
         ],
-        time: 0
+        time: 1
     },
     sixtyNine: {//this onr is locked unless you talk to civilian
-        text: `“Look I don’t know why you don’t believe me, but if you’re that stubborn, I guess I’ll have to show you through a fight,” I say nervously.
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“Look I don’t know why you don’t believe me, but if you’re that stubborn, I guess I’ll have to show you through a fight,” I say nervously.
         “A fight aye?” he says with a smirk.
         “Yeah, a fight to convince you that what I’m saying is true,” I add.
         “Okay fine. Your fight is accepted,” he says eagerly.
         He grabs two swords from the wall that form an x shape, and hands me one of them. He then takes me down the hall into a massive room with a big pit.`,
         oldManText: ``,
-        variable: 0,       
+        variable: ['trueEnding',1],       
         choices: [
             [`seventy`,`Fight offensively`],
             [`seventyOne`,`Fight defensively`],
             [`seventyTwo`,`Try to cheat in the fight`]
         ],
-        time: 0
+        time: 1
     },
     seventy: {
-        text: `So we begin our fight with the swords pointed at each other. I grip the sword strongly and charge at him. He quickly dodges the strike attacks decisively. He slices my shoulder and says “watch all your angles.” I quickly get up and swing and swing but he counters all of my attacks. I get closer to him but he quickly hits his sword against mine, parrying the blow, and in one swift motion he manages to cut me. We continue fighting for a little while until we both feel exhausted. He grips his sword hard and does his finishing strike where in one swift motion hits my hand. It tosses my sword into the air and he catches it. Then leading to him having two swords with me left defenseless. Before I know it I lose and I’m dead, for nothing and with no artifact.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;So we begin our fight with the swords pointed at each other. I grip the sword strongly and charge at him. He quickly dodges the strike attacks decisively. He slices my shoulder and says “watch all your angles.” I quickly get up and swing and swing but he counters all of my attacks. I get closer to him but he quickly hits his sword against mine, parrying the blow, and in one swift motion he manages to cut me. We continue fighting for a little while until we both feel exhausted. He grips his sword hard and does his finishing strike where in one swift motion hits my hand. It tosses my sword into the air and he catches it. Then leading to him having two swords with me left defenseless. Before I know it I lose and I’m dead, for nothing and with no artifact.`,
         oldManText: ``,
-        variable: 0,       
+        variable: ['death',1],       
         choices: [
         ],
-        time: 0
+        time: 1
     },
     seventyOne: {
-        text: `I grab the sword and grip it tight. I can tell from his stance that he is going to be aggressive, so I decide to stay on the defense. I weave and counter every strike that he attempts. A little into the fight he doesn’t know what to do when I fight defensively so I just have to fight defensively the whole time. After a little while of fighting we both get fatigued. If I want to survive I will have to make my next play extremely well. So because I don’t have the energy to fight for too much longer, I grip my sword tighter than I already am. I roll close to him and hit his hand so he loses his grip and then I hit his sword, launching it into the air. Before he can grab it, I manage to get behind him and get my sword against his neck. As the sword is coming down I grab it, ultimately having both swords against his neck. I then say, “Do you want this to be the end or do you want to believe me?”
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I grab the sword and grip it tight. I can tell from his stance that he is going to be aggressive, so I decide to stay on the defense. I weave and counter every strike that he attempts. A little into the fight he doesn’t know what to do when I fight defensively so I just have to fight defensively the whole time. After a little while of fighting we both get fatigued. If I want to survive I will have to make my next play extremely well. So because I don’t have the energy to fight for too much longer, I grip my sword tighter than I already am. I roll close to him and hit his hand so he loses his grip and then I hit his sword, launching it into the air. Before he can grab it, I manage to get behind him and get my sword against his neck. As the sword is coming down I grab it, ultimately having both swords against his neck. I then say, “Do you want this to be the end or do you want to believe me?”
         He sighs and says, “Okay fine, now I’ll believe you.” I release my swords and we both get up.
         “Hey, good fight,” he says as he nods to me.
         “Thank you,” I say nodding to him out of respect for one another.`,
@@ -777,18 +777,18 @@ const story = { //holds the entire story
         choices: [
             [`seventyThree`,`Continue`]
         ],
-        time: 0
+        time: 1
     },
     seventyTwo: {
-        text: `I grab the sword and some smoke bombs. These work in a similar way to poppers, but produce a lot of smoke. I grab a popper, but begin fighting only with my sword. The fight was challenging and fun, but I know if I lost I will most likely be dead. I throw the popper to the floor, surprising him. I manage to hit him until he’s bloodied. I fight only with my sword for a little bit. We are both getting tired and so I know I will have the element of surprise on him, but he is just waiting for me to throw another bomb. I throw one down and attack him but in a split second he disappears. I grip my sword and start swinging toward his direction, but he uses the smoke to his advantage and sneaks up behind me. He strikes the final blow. He walks in front of me and says, “Good fight kid,” as he nods out of respect. Before I can actually convince him, he strikes me dead.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I grab the sword and some smoke bombs. These work in a similar way to poppers, but produce a lot of smoke. I grab a popper, but begin fighting only with my sword. The fight was challenging and fun, but I know if I lost I will most likely be dead. I throw the popper to the floor, surprising him. I manage to hit him until he’s bloodied. I fight only with my sword for a little bit. We are both getting tired and so I know I will have the element of surprise on him, but he is just waiting for me to throw another bomb. I throw one down and attack him but in a split second he disappears. I grip my sword and start swinging toward his direction, but he uses the smoke to his advantage and sneaks up behind me. He strikes the final blow. He walks in front of me and says, “Good fight kid,” as he nods out of respect. Before I can actually convince him, he strikes me dead.`,
         oldManText: ``,
-        variable: 0,       
+        variable: ['death',1],       
         choices: [
         ],
-        time: 0
+        time: 1
     },
     seventyThree: {
-        text: `What do I do next?`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;What do I do next?`,
         oldManText: ``,
         variable: 0,       
         choices: [
@@ -797,10 +797,10 @@ const story = { //holds the entire story
             [`sixtySix`,`Tell him about star`],
             [`ninetySix`,`Reenter main city`]
         ],
-        time: 0
+        time: 1
     },
     seventyFour: {
-        text: `I walk along the path to the church-like building. It’s a tall tower with a bell at the top. Inside there is a small podium in the center where a man is standing and talking to the various people around him. The room could comfortably fit around 50 people with extra in some galleries above the man. 
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I walk along the path to the church-like building. It’s a tall tower with a bell at the top. Inside there is a small podium in the center where a man is standing and talking to the various people around him. The room could comfortably fit around 50 people with extra in some galleries above the man. 
         As I walk in he is talking. He seems to be reciting some kind of scripture saying “-does that, will the hero have completed his true quest.” It seems to be some kind of conclusion because as soon as he says that, the quiet room becomes loud with the buzz of conversation about whatever he was talking about before I came in. 
         Once enough people leave I feel comfortable enough to go up and ask some questions. At this point it becomes obvious that he is blind.`,
         oldManText: ``,
@@ -810,10 +810,10 @@ const story = { //holds the entire story
             [`seventyNine`,`Ask about the civilization`],
             [`eighty`,`Tell him about the star`]
         ],
-        time: 0
+        time: 1
     },
     seventyFive: {
-        text: `“Excuse me sir, can I ask you a question?” I ask.
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“Excuse me sir, can I ask you a question?” I ask.
         “Yes, of course, my child.” He says.
         “The artifact that everyone worships, where is it?”
         “That’s not something for the average person to know.”
@@ -826,20 +826,20 @@ const story = { //holds the entire story
             [`seventySeven`,`Tell the truth`],
             [`seventyEight`,`Beat it out of him`]
         ],
-        time: 0
+        time: 1
     },
     seventySix: {
-        text: `“I'm just a normal guy wanting to get closer to my faith.” I say hopefully.
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“I'm just a normal guy wanting to get closer to my faith.” I say hopefully.
         “You must have duties to attend to, please leave.”`,
         oldManText: ``,
         variable: 0,       
         choices: [
             [`eightySix`,`Continue`]
         ],
-        time: 0
+        time: 1
     },
     seventySeven: {
-        text: `“I’m not from here. I am a human from a society far more advanced than yours. I want to find the artifact to-”
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“I’m not from here. I am a human from a society far more advanced than yours. I want to find the artifact to-”
         I was going to say more because I thought he would want more convincing but he cut me off by saying, “It’s in the ocean about just off the nearest coast to this city. You will be able to find it easily because it’s in the eye of a massive whirlpool. I would not go now though, there is a beast defending the entrance that can only be calmed by the special words only the chief knows. In fact, this beast is the thing generating the whirlpool”
         I’m kind of shocked for a moment at all that information but I eventually manage to say, “Why would you tell me all this so easily?”
         “That I can’t tell you, but soon you will know.” He says before leaving me alone in the room.`,
@@ -848,18 +848,18 @@ const story = { //holds the entire story
         choices: [
             [`eightySix`,`Continue`]
         ],
-        time: 0
+        time: 1
     },
     seventyEight: {
-        text: `I start to grab him and hit him but before I can do anything, a dozen guards jump out of hiding places I didn’t know were there. They impale me with spears before I know what happened. As death slowly comes over me the last thing I hear is the prophet saying, “So close, but you weren’t him.”`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I start to grab him and hit him but before I can do anything, a dozen guards jump out of hiding places I didn’t know were there. They impale me with spears before I know what happened. As death slowly comes over me the last thing I hear is the prophet saying, “So close, but you weren’t him.”`,
         oldManText: ``,
-        variable: 0,       
+        variable: ['death',1],       
         choices: [
         ],
-        time: 0
+        time: 1
     },
     seventyNine: {
-        text: `“Can you tell me some of the history of this place?” I ask.
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“Can you tell me some of the history of this place?” I ask.
         He looks kind of confused at why I would ask that question but continues on anyway, “A long time ago the akias visited our ancestors. The akias weren’t like us. They are some kind of extremely advanced alien species. Some say they even had magic.”
         I still don’t really believe this akias story. As much as we have looked, humanity has never found another advanced race like we always hoped. Most people have given up on the idea by now. I could sit here and ponder the existence of aliens for as long as I want, but I have a big blue deadline so I need to get back on topic.
         “This stuff about aliens is all very interesting, but what does all this have to do with the artifact you people worship?” I ask.
@@ -871,10 +871,10 @@ const story = { //holds the entire story
         choices: [
             [`eightySix`,`Continue`]
         ],
-        time: 0
+        time: 1
     },
     eighty: {
-        text: `These people deserve to know what’s about to happen. I might even be able to help them. I would have to give up finding the artifact but I can at least try.
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;These people deserve to know what’s about to happen. I might even be able to help them. I would have to give up finding the artifact but I can at least try.
         I go up to him and I say “Excuse me, I have something I need to tell you.” Before I can say anything else he starts talking to me, well, more like he began talking at me. He’s rambling on about me and their religion and whatever else.`,
         oldManText: ``,
         variable: 0,       
@@ -883,10 +883,10 @@ const story = { //holds the entire story
             [`eightyTwo`,`Listen and bring it up`],
             [`eightyFour`,`Tell him to shut up and listen`]
         ],
-        time: 0
+        time: 1
     },
     eightyOne: {
-        text: `Once he’s done I say, “Something really bad is about to happen. You need to hear about it. Areps is about to blow!”
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Once he’s done I say, “Something really bad is about to happen. You need to hear about it. Areps is about to blow!”
         He looks a bit suspicious but then asks, “What is Areps?”
         I’m an idiot. Of course they don’t use the imperial name for the star. “Uhhh, that’s what I call our star.” I tried to explain.
         “Ohhh… run along now,” He said dismissively.
@@ -896,47 +896,47 @@ const story = { //holds the entire story
         choices: [
             [`eightyThree`,`Continue`]
         ],
-        time: 0
+        time: 1
     },
     eightyTwo: {
-        text: `Once he’s finished I say, “Look, something really bad is about to happen. Your star is about to go supernova. That means explode. I can help you.”He laughs and says, “What did I tell you about pranking your elders, Tair.”As much as I tried to convince him, he just kept thinking it was a prank. I’ll have to try something else later.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Once he’s finished I say, “Look, something really bad is about to happen. Your star is about to go supernova. That means explode. I can help you.”He laughs and says, “What did I tell you about pranking your elders, Tair.”As much as I tried to convince him, he just kept thinking it was a prank. I’ll have to try something else later.`,
         oldManText: ``,
         variable: 0,       
         choices: [
             [`eightyThree`,`Continue`]
         ],
-        time: 0
+        time: 1
     },
     eightyThree: {
-        text: `He’s blind so if I leave the church and come back later I can try again. I feel a little bad for exploiting that but you do what you have to.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;He’s blind so if I leave the church and come back later I can try again. I feel a little bad for exploiting that but you do what you have to.`,
         oldManText: ``,
         variable: 0,       
         choices: [
             [`eightySix`,`Continue`]
         ],
-        time: 0
+        time: 1
     },
     eightyFour: {
-        text: `Before he can start I cut him off and say, “Shut up! This is more important! The sun is about to EXPLODE!” At first he looks shocked at the disrespect but it got his attention so he listens when I say, “I can help your people. Your star is at the end of its lifetime. You might have noticed it’s gotten bigger and redder, and down here it’s gotten hotter. We don’t have any time left. My ship is probably big enough to fit your entire population inside. You need to tell your people to follow me.”`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Before he can start I cut him off and say, “Shut up! This is more important! The sun is about to EXPLODE!” At first he looks shocked at the disrespect but it got his attention so he listens when I say, “I can help your people. Your star is at the end of its lifetime. You might have noticed it’s gotten bigger and redder, and down here it’s gotten hotter. We don’t have any time left. My ship is probably big enough to fit your entire population inside. You need to tell your people to follow me.”`,
         oldManText: ``,
         variable: 0,       
         choices: [
             [`eightyFive`,`Continue`]
         ],
-        time: 0
+        time: 1
     },
     eightyFive: {
-        text: `He looks at me with almost a sense of satisfaction. It’s almost like he’s proud of me. Strange. 
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;He looks at me with almost a sense of satisfaction. It’s almost like he’s proud of me. Strange. 
         Eventually he says, “Alright, I’ll let everyone know. Thank you.”`,
         oldManText: ``,
-        variable: ['convinceProphet',1],       
+        variable: ['convinceProphet',1,'trueEnding',1],
         choices: [
             [`eightySix`,`Continue`]
         ],
-        time: 0
+        time: 1
     },
     eightySix: {
-        text: `What do I do next?`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;What do I do next?`,
         oldManText: ``,
         variable: 0,       
         choices: [
@@ -945,10 +945,10 @@ const story = { //holds the entire story
             [`eighty`,`Tell him about the star`],
             [`ninetySix`,`Reenter main city`]
         ],
-        time: 0
+        time: 1
     },
     eightySeven: {
-        text: `“Hey, can I speak with you?” I said to a random motherly looking woman. 
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“Hey, can I speak with you?” I said to a random motherly looking woman. 
         “Uhhh, sure?” She answered.
        She looks a little put off by me but hopefully that doesn’t stop her from giving me any info I can use.`,
         oldManText: ``,
@@ -958,10 +958,10 @@ const story = { //holds the entire story
             [`eightyNine`,`Ask about the prophet`],
             [`ninety`,`Ask about the leader`]
         ],
-        time: 0
+        time: 1
     },
-    eightyEighty: {
-        text: `What do you know about the artifact? I’m trying to find it.” 
+    eightyEight: {
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;What do you know about the artifact? I’m trying to find it.” 
         “The artifact is a gift from the akias people who visited us long ago.”
         “Okay yeah, but where is it?”
         “I have no idea, I have never seen it. But we worship this thing, what do you intend to do with it once you find it?” She says accusingly.`,
@@ -972,49 +972,49 @@ const story = { //holds the entire story
             [`ninetyTwo`,`Use it`],
             [`ninetyThree`,`Hide it`]
         ],
-        time: 0
+        time: 1
     },
     eightyNine: {
-        text: `“What do you know about this prophet guy?” I ask.“The prophet is a great man, not just some ‘guy’. They say his blindness gave him the ability to see the truth. But I guess if you wanted to pass yourself off as a local you could. I don’t know if he would appreciate the dishonesty though.”`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“What do you know about this prophet guy?” I ask.“The prophet is a great man, not just some ‘guy’. They say his blindness gave him the ability to see the truth. But I guess if you wanted to pass yourself off as a local you could. I don’t know if he would appreciate the dishonesty though.”`,
         oldManText: ``,
         variable: 0,       
         choices: [
             [`ninetyFour`,`Continue`]
         ],
-        time: 0
+        time: 1
     },
     ninety: {
-        text: `“Tell me about the big guy in the palace. What’s the leader of you weirdos like?” I ask.
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“Tell me about the big guy in the palace. What’s the leader of you weirdos like?” I ask.
         “What makes you think we are weirdos?! The leader could crush you with his pinky finger! He is the strongest out of all of us. But the only way to get him to change his mind is to beat it into him. He knows how to fight in many ways, but from what I hear he needs to get better at fighting against a defensive opponent. Good luck!” She says with a laugh.`,
         oldManText: ``,
-        variable: 0,       
+        variable: ['knowChief', 1],       
         choices: [
             [`ninetyFour`,`Continue`]
         ],
-        time: 0
+        time: 1
     },
     ninetyOne: {
-        text: `“I’m going to sell it to the highest bidder. It will make me rich and famous. The last great mystery solved by me. To be honest I really don’t care about the thing.” I say before I can stop myself.
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“I’m going to sell it to the highest bidder. It will make me rich and famous. The last great mystery solved by me. To be honest I really don’t care about the thing.” I say before I can stop myself.
         She looks horrified and then slaps me and walks away without a word.`,
         oldManText: ``,
         variable: 0,       
         choices: [
             [`ninetyFour`,`Continue`]
         ],
-        time: 0
+        time: 1
     },
     ninetyTwo: {
-        text: `“When I find it I will study it and find out how to use it myself. I don’t know what I’ll do with it but I promise I will do something great.” 
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“When I find it I will study it and find out how to use it myself. I don’t know what I’ll do with it but I promise I will do something great.” 
         She looks shocked. She must have got something special out of those two sentences because she acts like she made some great revelation. These people are so weird.`,
         oldManText: ``,
-        variable: 0,       
+        variable: ['trueEnding',1],       
         choices: [
             [`ninetyFour`,`Continue`]
         ],
-        time: 0
+        time: 1
     },
     ninetyThree: {
-        text: `“Once I find it I’m going to hide it to make sure it doesn’t fall into the wrong hands.”
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“Once I find it I’m going to hide it to make sure it doesn’t fall into the wrong hands.”
         She looks at me like I’m an idiot and says, “Don’t you think it might be pretty well hidden here already?”
         I get flustered and say, “Shut up! I’ll figure it out when I get there.”`,
         oldManText: ``,
@@ -1022,21 +1022,22 @@ const story = { //holds the entire story
         choices: [
             [`ninetyFour`,`Continue`]
         ],
-        time: 0
+        time: 1
     },
     ninetyFour: {
-        text: `What should I do next?`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;What should I do next?`,
         oldManText: ``,
         variable: 0,       
         choices: [
             [`eightyEight`,`Ask about the Artifact`],
             [`eightyNine`,`Ask about the prophet`],
-            [`ninety`,`Ask about the leader`]
+            [`ninety`,`Ask about the leader`],
+            [`ninetySix`,`Reenter main city`]
         ],
-        time: 0
+        time: 1
     },
     ninetyFive: {
-        text: `I aboard my ship and begin to enter the location to get the artifact. Something about it feels off because I know I essentially have two choices: save the people or get the artifact. Do I go search for the artifact or save the people?`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I aboard my ship and begin to enter the location to get the artifact. Something about it feels off because I know I essentially have two choices: save the people or get the artifact. Do I go search for the artifact or save the people?`,
         oldManText: `The old man says to me, “You know if you do this you are abandoning an entire civilization to die.” “What would you have me do?” I ask
         “Well, the archaeologist in me wants to find and study this artifact, but the human in me wants to save the people. It’s up to you.”`,
         variable: 0,       
@@ -1044,10 +1045,10 @@ const story = { //holds the entire story
             [`ninetySix`,`No, reenter main city`],
             [`ninetySeven`,`Yes`]
         ],
-        time: 0
+        time: 1
     },
     ninetySix: {
-        text: `I reenter the main city. Where to next?`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I reenter the main city. Where to next?`,
         oldManText: ``,
         variable: 0,       
         choices: [
@@ -1057,48 +1058,48 @@ const story = { //holds the entire story
             //[`ninetyFive`,`Search for artifact?`] could possibly be locked, bring it up tmrw
             //[`oneHundredTwentySix`,`Save the people`] locked off until you've convinced both leader and prophet
         ],
-        time: 0
+        time: 1
     },
     ninetySeven: {
-        text: `I finally have enough information to get the artifact. After looking at how much time I have left I know I have to hurry. I can hear the whirlpool before I can see it. It sounds like a thousand waves crashing against another thousand waves at the same time. Somehow all that noise isn’t enough to cover up the sound of the monster breathing. I can literally see its slow breath heaving up and down. There was also a strange creaking noise that popped every once in a while. I assumed that it had something to do with how it generates the whirlpool.
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I finally have enough information to get the artifact. After looking at how much time I have left I know I have to hurry. I can hear the whirlpool before I can see it. It sounds like a thousand waves crashing against another thousand waves at the same time. Somehow all that noise isn’t enough to cover up the sound of the monster breathing. I can literally see its slow breath heaving up and down. There was also a strange creaking noise that popped every once in a while. I assumed that it had something to do with how it generates the whirlpool.
         Once I was close enough I set my ship to stay idle 50 feet above the water. I can see all the way down the massive whirlpool into the beast’s mouth. The whirlpool itself is probably 100s of feet across and about a 100 feet down. There was heavy mist in the air from the crashing waves and whatever else.I stepped out onto the deck and felt the cool mist. I thought it was refreshing until I realized it’s probably more of that beast’s saliva than anything else. I bellowed the words, “PRAECIPIO TIBI, UT NE DESINAS!”Somehow it heard me because suddenly the loud creaking from before turned into a light buzz as the raging whirlpool changed into a smooth tunnel. Apparently the monster can keep the water rotating at such a slow pace it almost looks frozen, all while the structural integrity of the tunnel remains intact. I went back into my ship and started the descent.`,
         oldManText: ``,
         variable: 0,
         choices: [
             [`ninetyEight`,`Continue`]
         ],
-        time: 0
+        time: 1
     },
     ninetyEight: {
-        text: `It quickly became obvious that there was a problem. At the bottom of the whirlpool I can see the entrance. Sealed. The door has text on it that matches the map I used to get here. I can use the cipher that the old man sent me. The handwriting is very different from what’s on the engraving. Did that old fart actually know what he was talking about?\nℸ ̣ ⍑╎ᓭ       ℸ ̣ 7ᒲʖ      ∴╎ꖎꖎ      7!¡ᒷリ     7リ     ℸ ̣ ⍑ᒷ      ᒷ⍊ᒷ 7⎓       ℸ ̣ ⍑ᒷ       ⎓╎リᔑꖎ       ↸ᔑ||,     ʖ⚍ℸ ̣     ᓵꖎ7ᓭᒷ    ʖᒷ⎓7∷ᒷ リ╎⊣⍑ℸ ̣         ℸ ̣ ᔑꖌᒷᓭ       7⍊ᒷ∷`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It quickly became obvious that there was a problem. At the bottom of the whirlpool I can see the entrance. Sealed. The door has text on it that matches the map I used to get here. I can use the cipher that the old man sent me. The handwriting is very different from what’s on the engraving. Did that old fart actually know what he was talking about?\nℸ ̣ ⍑╎ᓭ       ℸ ̣ 7ᒲʖ      ∴╎ꖎꖎ      7!¡ᒷリ     7リ     ℸ ̣ ⍑ᒷ      ᒷ⍊ᒷ 7⎓       ℸ ̣ ⍑ᒷ       ⎓╎リᔑꖎ       ↸ᔑ||,     ʖ⚍ℸ ̣     ᓵꖎ7ᓭᒷ    ʖᒷ⎓7∷ᒷ リ╎⊣⍑ℸ ̣         ℸ ̣ ᔑꖌᒷᓭ       7⍊ᒷ∷`,
         oldManText: `Or I could just ask him. “Hey old man! Take a look at this,” I yell over the sound of the water.“You know I have a name,” He says, sounding a little hurt, “It’s Colmãn.”“Alright, Colmãn, take a look at this.”It only takes him a few seconds of looking at it for him to translate it back to me as, “This tomb will open on the eve of the final day, but close before night takes over.” “That must mean tonight. With how much time is left I doubt the sun will rise again before it blows,” I say.“I think it should open right as we have ${timeLeft} imperial time units left,” Colmãn says, “But we need to get in there right after because it will close in another 1 or 2 time units. Should we just wait here for it to open or try to go do something else before it opens?”`,
         variable: ['puzzleStart', 1],       
         choices: 0,
-        time: 0
+        time: 1
     },
     ninetyNine: {
-        text: `I wait until something finally happens. The door rumbles open and I walk in.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I wait until something finally happens. The door rumbles open and I walk in.`,
         oldManText: ``,
         variable: 0,       
         choices: [
             [`oneHundredTen`,`Continue`]
         ],
-        time: 0
+        time: 1
     },
 
     oneHundred: {
-        text: `So this means that tonight it will open. When I have x time units left should be right when this thing opens. But it will close soon after. Either I wait here or try to do something else real quick and come back.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;So this means that tonight it will open. When I have x time units left should be right when this thing opens. But it will close soon after. Either I wait here or try to do something else real quick and come back.`,
         oldManText: ``,
         variable: 0,       
         choices: [
             [`ninetyNine`,`Wait`],
             [`ninetySix`,`Go back to main city`]
         ],
-        time: 0
+        time: 1
     },
    
     oneHundredOne: {
-        text: `So this means that tonight it will open. When I have x time units left should be right when this thing opens. But it will close soon after. I get ready to hunker down and wait until I check my watch. No… What?! There’s no way! I missed it. That explains the sound I heard earlier.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;So this means that tonight it will open. When I have x time units left should be right when this thing opens. But it will close soon after. I get ready to hunker down and wait until I check my watch. No… What?! There’s no way! I missed it. That explains the sound I heard earlier.`,
         oldManText: ``,
         variable: 0,       
         choices: [
@@ -1106,7 +1107,7 @@ const story = { //holds the entire story
             [`oneHundredFive`,`Go back to the people`],
             [`oneHundredSix`,`Give up`]
         ],
-        time: 0
+        time: 1
     },
     /*This was an oopsy so oneHundredTwo is to be discarded     
     oneHundredTwo: {
@@ -1118,40 +1119,40 @@ const story = { //holds the entire story
             [``,``],
             [``,``]
         ],
-        time: 0
+        time: 1
     },
     */
     oneHundredThree: {
-        text: `It quickly became obvious that there was a problem. At the bottom of the whirlpool I can see the entrance. Sealed. The door has text on it that matches the map I used to get here. I can use the cipher that the old man sent me. The handwriting is very different from what’s on the engraving. Did that old fart actually know what he was talking about?\nℸ ̣ ⍑╎ᓭ       ℸ ̣ 7ᒲʖ      ∴╎ꖎꖎ      7!¡ᒷリ     7リ     ℸ ̣ ⍑ᒷ      ᒷ⍊ᒷ 7⎓       ℸ ̣ ⍑ᒷ       ⎓╎リᔑꖎ       ↸ᔑ||,     ʖ⚍ℸ ̣     ᓵꖎ7ᓭᒷ    ʖᒷ⎓7∷ᒷ リ╎⊣⍑ℸ ̣         ℸ ̣ ᔑꖌᒷᓭ       7⍊ᒷ∷`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It quickly became obvious that there was a problem. At the bottom of the whirlpool I can see the entrance. Sealed. The door has text on it that matches the map I used to get here. I can use the cipher that the old man sent me. The handwriting is very different from what’s on the engraving. Did that old fart actually know what he was talking about?\nℸ ̣ ⍑╎ᓭ       ℸ ̣ 7ᒲʖ      ∴╎ꖎꖎ      7!¡ᒷリ     7リ     ℸ ̣ ⍑ᒷ      ᒷ⍊ᒷ 7⎓       ℸ ̣ ⍑ᒷ       ⎓╎リᔑꖎ       ↸ᔑ||,     ʖ⚍ℸ ̣     ᓵꖎ7ᓭᒷ    ʖᒷ⎓7∷ᒷ リ╎⊣⍑ℸ ̣         ℸ ̣ ᔑꖌᒷᓭ       7⍊ᒷ∷`,
         oldManText: `Or I could just ask him. “Hey old man! Take a look at this,” I yell over the sound of the water. “You know I have a name,” He says, sounding a little hurt, “It’s Colmãn.”“Alright, Colmãn, take a look at this.”It only takes him a few seconds of looking at it for him to translate it back to me as, “This tomb will open on the eve of the final day, but close before night takes over.” “That must mean tonight. With how much time is left I doubt the sun will rise again before it blows,” I say.“I think it should open right as we have ${timeLeft} imperial time units left,” Colmãn says, “But we need to get in there right after because it will close in another 1 or 2 time units. Should we just wait here for it to open or try to go do something else before it opens?”`,
         variable: ['puzzleStart', 2],       
         choices: 0,
-        time: 0
+        time: 1
     },
     oneHundredFour: {//user dies
-        text: `I get into my ship in a fit of rage and start blasting. I don’t care about ammo, I don’t care about this planet, I don’t care about this stupid artifact, I don’t care ab- The sea monster lunges at my ship with its mouth wide open. It crunches my ship with me inside it. I don’t care.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I get into my ship in a fit of rage and start blasting. I don’t care about ammo, I don’t care about this planet, I don’t care about this stupid artifact, I don’t care ab- The sea monster lunges at my ship with its mouth wide open. It crunches my ship with me inside it. I don’t care.`,
         oldManText: `Colmãn and I look at each other and simply nod.`,
-        variable: 0,       
+        variable: ['death',1],       
         choices: [
         ],
-        time: 0
+        time: 1
     },
     oneHundredFive: {
-        text: `I’ve got no chance of getting the artifact, but I might have a chance to save the people. I’m going to go back to the city and make sure they aren’t killed by their own star.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I’ve got no chance of getting the artifact, but I might have a chance to save the people. I’m going to go back to the city and make sure they aren’t killed by their own star.`,
         oldManText: ``,
         variable: 0,       
         choices: [
             [`ninetySix`,`Continue`]
         ],
-        time: 0
+        time: 1
     },
     oneHundredSix: {
-        text: `There’s nothing I can do. I barely have any time left. No reason to continue. I’ll just leave this stupid planet. I walk to my ship dejected. I fly off with no artifact and leave all these people to die. My life fades back into obscurity.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;There’s nothing I can do. I barely have any time left. No reason to continue. I’ll just leave this stupid planet. I walk to my ship dejected. I fly off with no artifact and leave all these people to die. My life fades back into obscurity.`,
         oldManText: ``,
-        variable: 0,       
+        variable: ['death',1],       
         choices: [
         ],
-        time: 0
+        time: 1
     },
     /*This was an oopsy and numbers oneHundredSeven to oneHundredNine are to be discarded
     oneHundredSeven: {
@@ -1163,7 +1164,7 @@ const story = { //holds the entire story
             [``,``],
             [``,``]
         ],
-        time: 0
+        time: 1
     },
     oneHundredEight: {
         text: ` `,
@@ -1174,7 +1175,7 @@ const story = { //holds the entire story
             [``,``],
             [``,``]
         ],
-        time: 0
+        time: 1
     },
     oneHundredNine: {
         text: ` `,
@@ -1185,11 +1186,11 @@ const story = { //holds the entire story
             [``,``],
             [``,``]
         ],
-        time: 0
+        time: 1
     },
     */
     oneHundredTen: {
-        text: `Walking in I am taken aback by the room I’m in. It’s very small, about the size of a fighter ship. Now that I think about it, it might actually be some kind of fighter ship. All of the tech is like nothing I’ve ever seen before but I can recognize places where thrusters and controls would go. It has the ideal shape and weight placement for space travel. It’s also completely airtight or it wouldn’t be completely clean under all this water and dirt.
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Walking in I am taken aback by the room I’m in. It’s very small, about the size of a fighter ship. Now that I think about it, it might actually be some kind of fighter ship. All of the tech is like nothing I’ve ever seen before but I can recognize places where thrusters and controls would go. It has the ideal shape and weight placement for space travel. It’s also completely airtight or it wouldn’t be completely clean under all this water and dirt.
         Everything that I might find useful is completely scrapped except for something at the very back. There’s some kind of canister made out of some kind of very tough black metal. This must be the artifact. I have to find some way to open it up.`,
         oldManText: ``,
         variable: 0,       
@@ -1198,28 +1199,28 @@ const story = { //holds the entire story
             [`oneHundredTwelve`,`Examine the canister`],
             [`oneHundredThirteen`,`Examine the ship`]
         ],
-        time: 0
+        time: 1
     },
     oneHundredEleven: {
-        text: `I took out my blunt force maximizers and hit the canister as hard as I could. It barely made a dent. What it did was make me feel like I punched a brick wall with my bare fists. Ow.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I took out my blunt force maximizers and hit the canister as hard as I could. It barely made a dent. What it did was make me feel like I punched a brick wall with my bare fists. Ow.`,
         oldManText: ``,
         variable: 0,       
         choices: [
             [`oneHundredTwentyOne`,`Continue`]
         ],
-        time: 0
+        time: 1
     },
     oneHundredTwelve: {
-        text: `The longer I look at it, the more obvious it becomes that there is nothing to look at. It’s all made out of the same metal and it has some pretty intricate detail but there’s nothing apart from that.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The longer I look at it, the more obvious it becomes that there is nothing to look at. It’s all made out of the same metal and it has some pretty intricate detail but there’s nothing apart from that.`,
         oldManText: ``,
         variable: 0,       
         choices: [
             [`oneHundredTwentyOne`,`Continue`]
         ],
-        time: 0
+        time: 1
     },
     oneHundredThirteen: {
-        text: `On closer examination I can see some more personal aspects of the ship. I’m pretty sure that the one who owns this ship is the one this tomb was memorializing. Once I look closely at the front console I realize that it’s been modified. There is a large box that I thought was part of the weird alien tech but seems to be added on. This box covers where the controls are. It’s welded on at the base so I have no hope of even budging it. I hope it’s not a bomb.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;On closer examination I can see some more personal aspects of the ship. I’m pretty sure that the one who owns this ship is the one this tomb was memorializing. Once I look closely at the front console I realize that it’s been modified. There is a large box that I thought was part of the weird alien tech but seems to be added on. This box covers where the controls are. It’s welded on at the base so I have no hope of even budging it. I hope it’s not a bomb.`,
         oldManText: ``,
         variable: 0,       
         choices: [
@@ -1227,19 +1228,19 @@ const story = { //holds the entire story
             [`oneHundredFifteen`,`Look for any buttons`],
             [`oneHundredSixteen`,`Leave it alone`]
         ],
-        time: 0
+        time: 1
     },
     oneHundredFourteen: {
-        text: `I take my blunt force maximizers from earlier and prepare to hit it with 100% power. Before I made contact with the box it made a lot of sound like it was trying to stop me, but it was not enough. Because I set my maxers to 100% I couldn’t stop the punch until after it completely shattered the box. With the box destroyed it reveals more of the center console. I can see what each button and switch goes to, even if I don’t understand the text. There’s a lever under a glass box that has a line leading to the canister. This must be how I get the artifact. I smash the glass and pull the lever. With a hiss the canister slides open. I turn around and there it is.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I take my blunt force maximizers from earlier and prepare to hit it with 100% power. Before I made contact with the box it made a lot of sound like it was trying to stop me, but it was not enough. Because I set my maxers to 100% I couldn’t stop the punch until after it completely shattered the box. With the box destroyed it reveals more of the center console. I can see what each button and switch goes to, even if I don’t understand the text. There’s a lever under a glass box that has a line leading to the canister. This must be how I get the artifact. I smash the glass and pull the lever. With a hiss the canister slides open. I turn around and there it is.`,
         oldManText: ``,
         variable: 0,       
         choices: [
             [`oneHundredSeventeen`,`Continue`]
         ],
-        time: 0
+        time: 1
     },
     oneHundredFifteen: {
-        text: `I run my hands around the box trying to find something I can press until I hear it say, “Stop it.”
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I run my hands around the box trying to find something I can press until I hear it say, “Stop it.”
         This box must be the ship’s AI. I’m screwed. I raise my blunt force maximizers to stop the AI before it can retaliate but it yells. “NO NO NO WAIT. I’m not hostile. Hold on!”
         “Fine, I’ll give you a chance, but you have to give me whatever is in that canister,” I say pointing to it, “And tell me what is going on with this planet!”
         “Okay maybe I will, but first I need to tell you the full story,” it says. It talks using thousands of little chirps that end up sounding like human speech somehow. “I am Zäki, I was one of the akias species. I am the one that this demeaning ‘tomb’ was made for. More like prison. They turned me into AI and locked me in this box to punish me. You see, we akias have evolved past dying, I was killed.”
@@ -1256,19 +1257,19 @@ const story = { //holds the entire story
         choices: [
             [`oneHundredSeventeen`,`Continue`]
         ],
-        time: 0
+        time: 1
     },
     oneHundredSixteen: {
-        text: `I look around for a bit and find nothing. Maybe there’s something more with that box?`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I look around for a bit and find nothing. Maybe there’s something more with that box?`,
         oldManText: ``,
         variable: 0,       
         choices: [
             [`oneHundredTwentyOne`,`Continue`]
         ],
-        time: 0
+        time: 1
     },
     oneHundredSeventeen: {
-        text: `Inside the canister I can see a liquid looking object. The color is constantly shifting from blue to pink to colors I have never seen before. It’s kind of hard to look out. Almost as soon as it touches the air it starts expanding. Several tendrils shoot out and latch themselves on to the hull of the ship with a crunch. The main mass slowly lurches out of the canister as it gets bigger. It’s not inflating, it’s like it’s generating more mass out of nothing. The “skin” starts bubbling and popping. The tendrils pull back bringing part of the metal of the ship into the main mass like armor. More tendrils start shooting at me and I jump out of the way. Time to find a way to contain this monster.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inside the canister I can see a liquid looking object. The color is constantly shifting from blue to pink to colors I have never seen before. It’s kind of hard to look out. Almost as soon as it touches the air it starts expanding. Several tendrils shoot out and latch themselves on to the hull of the ship with a crunch. The main mass slowly lurches out of the canister as it gets bigger. It’s not inflating, it’s like it’s generating more mass out of nothing. The “skin” starts bubbling and popping. The tendrils pull back bringing part of the metal of the ship into the main mass like armor. More tendrils start shooting at me and I jump out of the way. Time to find a way to contain this monster.`,
         oldManText: ``,
         variable: 0,       
         choices: [
@@ -1276,35 +1277,35 @@ const story = { //holds the entire story
             [`oneHundredNineteen`,`Use my railgun`],
             [`oneHundredTwenty`,`Freeze it`]
         ],
-        time: 0
+        time: 1
     },
     oneHundredEighteen: {
-        text: `I grab the ball from my chest and then throw it. When the ball hits the artifact several ropes made out of pure electricity wrapped around it. For a moment the artifact was entangled and it stopped attacking me. Then it became still. I stopped jumping around to inspect the artifact. Then the electro ropes are absorbed and the artifact activates once again. I’m caught off guard so I’m not able to jump away in time. One of the tendrils strikes me directly in the chest. Before I die I can feel myself being sucked into whatever this thing is.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I grab the ball from my chest and then throw it. When the ball hits the artifact several ropes made out of pure electricity wrapped around it. For a moment the artifact was entangled and it stopped attacking me. Then it became still. I stopped jumping around to inspect the artifact. Then the electro ropes are absorbed and the artifact activates once again. I’m caught off guard so I’m not able to jump away in time. One of the tendrils strikes me directly in the chest. Before I die I can feel myself being sucked into whatever this thing is.`,
         oldManText: ``,
-        variable: 0,       
+        variable: ['death',1],       
         choices: [
         ],
-        time: 0
+        time: 1
     },
     oneHundredNineteen: {
-        text: `Something like this is gonna need a lot of power. I pull out my railgun and start charging it up. This is still pretty short range so I won’t use full power, but I’ll use as much as I can. Once the color of the light coming from the chamber turns red then I can shoot. But until then I can’t get hit. I switch my boots into frenzy mode so I get random bursts of speed to throw the artifact off. As soon as I see the light turn red I switch my boots into anchor mode to get the most stability. I kneel down and take the shot aiming in between the armor. In a flash of blinding light I hear the round puncture the artifact. At the impact point it became solid. Cracks splitted out from the hole. The artifact started crumbling apart, but slowly it became liquid. The hole filled back in and the artifact was whole again. I know what is about to happen so I try to jump away. But since my boots are in anchor mode my feet never leave the ground. One of the tendrils strikes me directly in the chest. Before I die I can feel myself being sucked into whatever this thing is.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Something like this is gonna need a lot of power. I pull out my railgun and start charging it up. This is still pretty short range so I won’t use full power, but I’ll use as much as I can. Once the color of the light coming from the chamber turns red then I can shoot. But until then I can’t get hit. I switch my boots into frenzy mode so I get random bursts of speed to throw the artifact off. As soon as I see the light turn red I switch my boots into anchor mode to get the most stability. I kneel down and take the shot aiming in between the armor. In a flash of blinding light I hear the round puncture the artifact. At the impact point it became solid. Cracks splitted out from the hole. The artifact started crumbling apart, but slowly it became liquid. The hole filled back in and the artifact was whole again. I know what is about to happen so I try to jump away. But since my boots are in anchor mode my feet never leave the ground. One of the tendrils strikes me directly in the chest. Before I die I can feel myself being sucked into whatever this thing is.`,
         oldManText: ``,
-        variable: 0,       
+        variable: ['death',1],       
         choices: [
         ],
-        time: 0
+        time: 1
     },
     oneHundredTwenty: {
-        text: `Luckily the artifact is staying stationary so that means I can set up an artificial atmosphere. While avoiding the revolving tentacles I set up several small boxes around the artifact. These create a small force field and inject certain atmospheric conditions inside. Used on such a small scale the effect should be instantly powerful. I crank the temperature down as low as it can go. The artifact slows down and stops expanding. Then it starts getting smaller. The pieces of metal it’s using as armor fall off. Then it hardens into a small perfect sphere. I set the atmosphere back to normal but stay ready to crank it down again. The sphere stays still even when it’s not cold anymore. It must be safe for now. I pick it up carefully and walk out. I get on my ship and start it up. While flying away I pass over the city. All of the people here are going to die soon, whether they know about it or not. The only emotion I feel is pity, and maybe a little bit of shame for not helping them. Well it was either the people or the artifact, and I made my decision.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Luckily the artifact is staying stationary so that means I can set up an artificial atmosphere. While avoiding the revolving tentacles I set up several small boxes around the artifact. These create a small force field and inject certain atmospheric conditions inside. Used on such a small scale the effect should be instantly powerful. I crank the temperature down as low as it can go. The artifact slows down and stops expanding. Then it starts getting smaller. The pieces of metal it’s using as armor fall off. Then it hardens into a small perfect sphere. I set the atmosphere back to normal but stay ready to crank it down again. The sphere stays still even when it’s not cold anymore. It must be safe for now. I pick it up carefully and walk out. I get on my ship and start it up. While flying away I pass over the city. All of the people here are going to die soon, whether they know about it or not. The only emotion I feel is pity, and maybe a little bit of shame for not helping them. Well it was either the people or the artifact, and I made my decision.`,
         oldManText: ``,
         variable: 0,       
         choices: [
             [`oneHundredTwentyTwo`,`Continue`]
         ],
-        time: 0
+        time: 1
     },
     oneHundredTwentyOne: {
-        text: `Current location: room. What should I do?`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Current location: room. What should I do?`,
         oldManText: ``,
         variable: 0,       
         choices: [
@@ -1312,10 +1313,10 @@ const story = { //holds the entire story
             [`oneHundredTwelve`,`Examine the canister`],
             [`oneHundredThirteen`,`Examine the ship`]
         ],
-        time: 0
+        time: 1
     },
     oneHundredTwentyTwo: {
-        text: `I’m out, I’m finally out. I place the artifact on the table to fully examine it, but before I can place it down my ship gets hit, making me fall and drop the artifact. I check the monitors and other equipment to see what is going on. I see that the hit came from another ship trying to attack me. I turn on the gunships and other weapons to prepare for battle. 
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I’m out, I’m finally out. I place the artifact on the table to fully examine it, but before I can place it down my ship gets hit, making me fall and drop the artifact. I check the monitors and other equipment to see what is going on. I see that the hit came from another ship trying to attack me. I turn on the gunships and other weapons to prepare for battle. 
         The opposing ship says, “I’m a fellow bounty hunter and I’m here for that artifact, now hand it over or else.” 
         I turn on my microphone and say, “What are you talking about?” just trying to play dumb.
         Then the ship said “I know you have it. I saw you leave with it.” 
@@ -1327,54 +1328,53 @@ const story = { //holds the entire story
             [`oneHundredTwentyFour`,`Fight normally`],
             [`oneHundredTwentyFive`,`Use the artifact`]
         ],
-        time: 0
+        time: 1
     },
     oneHundredTwentyThree: {
-        text: `I power on my ship's turbo engines to attempt to get away. I begin my fight with this bum and so I’m just weaving all their shots to not lose the artifact that I spent so long to get. I shoot my plasma cannon and at the same time they shoot their fireball resulting in a large explosion. Some of the particles flew out and made the star speed up a lot from the sheer amount of energy the explosion produced. I look over and see that the supernova just went off and because there’s no air in space there was no sound, only light. The artifact began to vibrate rigorously prior to the supernova going off. I look to see what happened as the artifact powers on the engine and makes its way into the fuel tank. The ship then speaks to me saying that it’s ready to enter light speed just as the supernova goes off. I enter lightspeed, now knowing that I am one of the most powerful people in the universe.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I power on my ship's turbo engines to attempt to get away. I begin my fight with this bum and so I’m just weaving all their shots to not lose the artifact that I spent so long to get. I shoot my plasma cannon and at the same time they shoot their fireball resulting in a large explosion. Some of the particles flew out and made the star speed up a lot from the sheer amount of energy the explosion produced. I look over and see that the supernova just went off and because there’s no air in space there was no sound, only light. The artifact began to vibrate rigorously prior to the supernova going off. I look to see what happened as the artifact powers on the engine and makes its way into the fuel tank. The ship then speaks to me saying that it’s ready to enter light speed just as the supernova goes off. I enter lightspeed, now knowing that I am one of the most powerful people in the universe.`,
         oldManText: ``,
         variable: 0,       
         choices: [
         ],
-        time: 0
+        time: 1
     },
     oneHundredTwentyFour: {
-        text: `We’re at a stalemate with my plasma cannon and their fireball cannon. We shoot at the same time resulting in an explosion between us. I put my ship's blasters into combat mode and they do the samel. We chase each other like kids in a park playing tag. I power on my ship's turbo engines to get a higher speed chase going, leaving it up to the better pilot. I press the button that makes me 15 times faster than I’ve ever gone, thinking I lost him. I am suddenly hit in the back where the engines turbo jets are located with a fireball. Before I know it my ship and I am gone. The artifact is now out of my possession and belongs to some bum of a bounty hunter.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We’re at a stalemate with my plasma cannon and their fireball cannon. We shoot at the same time resulting in an explosion between us. I put my ship's blasters into combat mode and they do the samel. We chase each other like kids in a park playing tag. I power on my ship's turbo engines to get a higher speed chase going, leaving it up to the better pilot. I press the button that makes me 15 times faster than I’ve ever gone, thinking I lost him. I am suddenly hit in the back where the engines turbo jets are located with a fireball. Before I know it my ship and I am gone. The artifact is now out of my possession and belongs to some bum of a bounty hunter.`,
         oldManText: ``,
-        variable: 0,       
+        variable: ['death',1],       
         choices: [
         ],
-        time: 0
+        time: 1
     },
     oneHundredTwentyFive: {
-        text: `I should use the artifact in some way. I spent too long trying to get it to lose it because of some bum of a bounty hunter. I think for a second that this thing can be used as a fuel since it’s fluid like. I place the container with the fluid in it next to the engine. In front of my eyes the fluid pushes its way out and begins to shapeshift to get inside the fuel tank. I check the monitors to see my fuel and diagnostics of the ship. The ship now says that it’s preparing to go lightspeed and that it now has unlimited fuel. I think to myself that maybe because it’s an energy source, I can use it for my plasma cannon to make it become the most powerful in the universe. I power the cannon back on and wait for the opposing ship to start their next attack in order for me to get a good shot when they’re more vulnerable. The opposing ship begins their attack but leaves an opening for my attack. I line up the cannon to get a clean shot. I took it and in a matter of a second a bright white light shines from the ship. The ship blows up and just turns into a large ball of white light. I think to myself that I’m now one of the most powerful people in the universe. My ship asks to enter lightspeed and I agree and so I enter lightspeed.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I should use the artifact in some way. I spent too long trying to get it to lose it because of some bum of a bounty hunter. I think for a second that this thing can be used as a fuel since it’s fluid like. I place the container with the fluid in it next to the engine. In front of my eyes the fluid pushes its way out and begins to shapeshift to get inside the fuel tank. I check the monitors to see my fuel and diagnostics of the ship. The ship now says that it’s preparing to go lightspeed and that it now has unlimited fuel. I think to myself that maybe because it’s an energy source, I can use it for my plasma cannon to make it become the most powerful in the universe. I power the cannon back on and wait for the opposing ship to start their next attack in order for me to get a good shot when they’re more vulnerable. The opposing ship begins their attack but leaves an opening for my attack. I line up the cannon to get a clean shot. I took it and in a matter of a second a bright white light shines from the ship. The ship blows up and just turns into a large ball of white light. I think to myself that I’m now one of the most powerful people in the universe. My ship asks to enter lightspeed and I agree and so I enter lightspeed.`,
         oldManText: ``,
         variable: 0,       
         choices: [
         ],
-        time: 0
+        time: 1
     },
     oneHundredTwentySix: {
-        text: ` `,
-        oldManText: ``,
-        variable: 0,       
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“I’m going to save these people!”
+        I go to the city and round everyone up. I tell them that they don't have much time left. Most of them don’t believe me until the prophet himself comes out to preach that everyone should follow me. Most of them gasp and begin to trust me. Those that don’t are just influenced by their peers so they simply joined too.`,
+        oldManText: `"I think you made a good decision," Colmãn says."Yeah I think so too"`,
+        variable: ['trueEnding',1],       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`oneHundredTwentyEight`,`Continue`]
         ],
-        time: 0
+        time: 1
     },
     oneHundredTwentySeven: {
-        text: `I fly down and see the door wide open. This was the spot that that huge beacon came from. I have to assume that all that noise was this door opening. I land and walk into the door.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I fly down and see the door wide open. This was the spot that that huge beacon came from. I have to assume that all that noise was this door opening. I land and walk into the door.`,
         oldManText: ``,
         variable: 0,       
         choices: [
             [`oneHundredTen`,`Continue`]
         ],
-        time: 0
+        time: 1
     },
     oneHundredTwentyEight: {
-        text: `I begin to load everyone onto the ship. People are starting to understand the situation enough that they were thanking me for saving them. Once everyone is on we leave and my mind is calm. The ship is so packed I would not be able to fit an artifact of any size even if I had the time. Only a small part of me feels regret for the lost artifact. We take off and are a good distance away to be safe from the blast. I turn my ship around so that people can say their goodbyes to their home. As they did the star explodes. The supernova provides a split second of blinding levels of light. I can’t do anything but admire its beauty, until I notice something is wrong with the planet. Or at least the area of space where the planet used to be. There was a tiny light that was quickly growing to be not so tiny. Then I realize the light is not growing, it’s getting closer. When the light emitting from the object dwindles down slightly, it suddenly stops mid-flight in front of me. I use my ship to scan the object from afar. An error appears on the monitor. I check the monitor to see what was wrong. The moment I check the monitor my ship gets hit by something big. I turn on the defenses and check what it was. I see that it’s another bounty hunter. 
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I begin to load everyone onto the ship. People are starting to understand the situation enough that they were thanking me for saving them. Once everyone is on we leave and my mind is calm. The ship is so packed I would not be able to fit an artifact of any size even if I had the time. Only a small part of me feels regret for the lost artifact. We take off and are a good distance away to be safe from the blast. I turn my ship around so that people can say their goodbyes to their home. As they did the star explodes. The supernova provides a split second of blinding levels of light. I can’t do anything but admire its beauty, until I notice something is wrong with the planet. Or at least the area of space where the planet used to be. There was a tiny light that was quickly growing to be not so tiny. Then I realize the light is not growing, it’s getting closer. When the light emitting from the object dwindles down slightly, it suddenly stops mid-flight in front of me. I use my ship to scan the object from afar. An error appears on the monitor. I check the monitor to see what was wrong. The moment I check the monitor my ship gets hit by something big. I turn on the defenses and check what it was. I see that it’s another bounty hunter. 
         I turn on the speakers and say, “Who are you and why are you attacking me!” 
         After a moment of no sound I hear, “I’m another bounty hunter and I saw you enter this place. I knew you were after something and now I know exactly what, the artifact. So how about you hand it o–” 
         From the window I watch as the other hunter’s ship gets completely destroyed into a spew of rubble. In the middle of all the rubble was the artifact. It’s beginning to glow brighter and look like it is heading straight for me. I have a few options of getting out of this alive: try to weave all attacks, try to run away, and try to fight it with my ship.`,
@@ -1385,44 +1385,45 @@ const story = { //holds the entire story
             [`oneHundredThirty`,`Try to run away`],
             [`oneHundredThirtyOne`,`All power to weapons`]
         ],
-        time: 0
+        time: 1
     },
     oneHundredTwentyNine: {
-        text: `I power up my ship and get into the driving chair. I swerve out of the way from every attack that’s thrown at me. I’m running low on fuel. Someone yells, “The energy is so bright!” I think to myself that because the energy is so bright that it might be capable of reflection. I might as well try it. I turn my ship to face the artifact and place my finger on the button that will turn the windows into mirrors. I wait till it shoots a beam of energy. The wait is excruciating but it finally shoots. I wait a split second before it hits my windows so I can get the perfect angle and push the button. Once the energy hits I start thinking that this must be what death feels like. Turns out it was just a little bit of shaking. After a moment someone asks, “Is that it?” At that moment I switch the windows back to normal and look at the artifact. It starts cracking like an egg shell. The artifact rattles and cracks bursting into an immense amount of energy. Then the light fades away, revealing nothing but a bunch of scrap. I must have obliterated anything that could have been useful. Well at least we survived.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I power up my ship and get into the driving chair. I swerve out of the way from every attack that’s thrown at me. I’m running low on fuel. Someone yells, “The energy is so bright!” I think to myself that because the energy is so bright that it might be capable of reflection. I might as well try it. I turn my ship to face the artifact and place my finger on the button that will turn the windows into mirrors. I wait till it shoots a beam of energy. The wait is excruciating but it finally shoots. I wait a split second before it hits my windows so I can get the perfect angle and push the button. Once the energy hits I start thinking that this must be what death feels like. Turns out it was just a little bit of shaking. After a moment someone asks, “Is that it?” At that moment I switch the windows back to normal and look at the artifact. It starts cracking like an egg shell. The artifact rattles and cracks bursting into an immense amount of energy. Then the light fades away, revealing nothing but a bunch of scrap. I must have obliterated anything that could have been useful. Well at least we survived.`,
         oldManText: ``,
         variable: 0,       
         choices: [
         ],
-        time: 0
+        time: 1
     },
     oneHundredThirty: {
-        text: `I power on my engines in an attempt to outrun this artifact. I take off, in the beginning the artifact matches my speed, staying in the same relative position next to my ship. I then hover my hand over the button that will boost me to three times my max speed. I wait for the artifact to try to hit my ship so I can hit the button that will make my engines enter turbo mode. It will make my ship go 15 times faster than it ever had before, but it will destroy the engines. Before the artifact hits my ship I press it. Before I know it I’m traveling so fast that my ship’s about to fall apart. I check my mirrors and shout “Hey I think we los–” the ship is hit by the artifact’s beam of pure energy causing one of the engines to fail. I don’t know what to do so I look up from the monitor telling me that the engine is down. The artifact is there right above me, hovering in space. The artifact then shoots a beam of pure energy directly inside the ship causing the ship to fail and everyone inside the ship to perish.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I power on my engines in an attempt to outrun this artifact. I take off, in the beginning the artifact matches my speed, staying in the same relative position next to my ship. I then hover my hand over the button that will boost me to three times my max speed. I wait for the artifact to try to hit my ship so I can hit the button that will make my engines enter turbo mode. It will make my ship go 15 times faster than it ever had before, but it will destroy the engines. Before the artifact hits my ship I press it. Before I know it I’m traveling so fast that my ship’s about to fall apart. I check my mirrors and shout “Hey I think we los–” the ship is hit by the artifact’s beam of pure energy causing one of the engines to fail. I don’t know what to do so I look up from the monitor telling me that the engine is down. The artifact is there right above me, hovering in space. The artifact then shoots a beam of pure energy directly inside the ship causing the ship to fail and everyone inside the ship to perish.`,
         oldManText: ``,
-        variable: 0,       
+        variable: ['death',1],       
         choices: [
         ],
-        time: 0
+        time: 1
     },
     oneHundredThirtyOne: {
-        text: `I turn on all my weapons I have on board my ship, pointing all of them at the artifact. Everything unloads all of my ammo on the artifact leading to a massive boom thus creating a bright light. Once the explosions are all over I look to see what the damage is. I see that nothing has happened except for the artifact growing brighter and brighter. I have one last option to take this thing out. I have to launch a nuke at it to try to destroy it. I power on my cannon that launches a 20 ton nuke. I hit the button launching it and in a split second the nuke goes off resulting in a large ball of energy spanning so wide that I would have to turn my head to even see the end. After the ball disappears, at the center is the artifact undamaged. This artifact doesn’t even have a scratch on it. All the nuke did to the artifact was make it glow brighter, almost as if it absorbed the energy. It heads towards the ship while glowing brighter. It charges up and shoots multiple beams of energy directly at the defenseless ship. The ship completely shatters like glass and begins to completely shine in white light, which from neighboring solar systems looks like a second supernova just occurred.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I turn on all my weapons I have on board my ship, pointing all of them at the artifact. Everything unloads all of my ammo on the artifact leading to a massive boom thus creating a bright light. Once the explosions are all over I look to see what the damage is. I see that nothing has happened except for the artifact growing brighter and brighter. I have one last option to take this thing out. I have to launch a nuke at it to try to destroy it. I power on my cannon that launches a 20 ton nuke. I hit the button launching it and in a split second the nuke goes off resulting in a large ball of energy spanning so wide that I would have to turn my head to even see the end. After the ball disappears, at the center is the artifact undamaged. This artifact doesn’t even have a scratch on it. All the nuke did to the artifact was make it glow brighter, almost as if it absorbed the energy. It heads towards the ship while glowing brighter. It charges up and shoots multiple beams of energy directly at the defenseless ship. The ship completely shatters like glass and begins to completely shine in white light, which from neighboring solar systems looks like a second supernova just occurred.`,
         oldManText: ``,
-        variable: 0,
+        variable: ['death',1],
         choices: [
         ],
-        time: 0
+        time: 1
     },
     oneHundredThirtyTwo: {
-        text: `I have a strange feeling. Something about that wreckage is affecting my mind. Maybe there is actually something in there. I go out in my spacesuit to inspect it. I find that the true artifact is inside. It’s a fluid that is kept in a sphere. The fluid is pure energy that acts like oobleck. It hardens when something hits it and acts like fluid at normal conditions.I walk into the ship and place it next to the fuel tank and some sort of magic occurs. The sphere shifts the matter of my ship creating a hemisphere shape. I look at my ship's conditions and my fuel shows an infinite amount of energy. As the sphere creates a hemisphere shape in my ship, the people begin to pray and they tell me that I fulfilled their prophecy. They say I am the prophecised hero.`,
+        text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I have a strange feeling. Something about that wreckage is affecting my mind. Maybe there is actually something in there. I go out in my spacesuit to inspect it. I find that the true artifact is inside. It’s a fluid that is kept in a sphere. The fluid is pure energy that acts like oobleck. It hardens when something hits it and acts like fluid at normal conditions.I walk into the ship and place it next to the fuel tank and some sort of magic occurs. The sphere shifts the matter of my ship creating a hemisphere shape. I look at my ship's conditions and my fuel shows an infinite amount of energy. As the sphere creates a hemisphere shape in my ship, the people begin to pray and they tell me that I fulfilled their prophecy. They say I am the prophecised hero.`,
         oldManText: ``,
         variable: 0,       
         choices: [
         ],
-        time: 0
+        time: 1
     }
 };
 
 function storyLoop (number){ //all of the mechanics
     storyArray.push(number);
+    document.getElementById('selectedChoices').innerHTML = storyArray;
     timeLeft -= story[number].time; //subtracts time     
     if (timeLeft <= 10 && artifactDoor == 'closed'){ //special events
         document.getElementById('storyText').innerHTML += '<i><br><br>Suddenly a loud rumbling can be heard all across the entire planet. A huge beacon of light shoots out from the ocean. Something important must be happening there</i></br></br> ';
@@ -1447,10 +1448,10 @@ function storyLoop (number){ //all of the mechanics
             case 'knowChief':
                 knowChief += story[number].variable[i+1];
                 break;
-            case 'conviceLeader':
+            case 'convinceLeader':
                 convinceLeader += story[number].variable[i+1];
                 break;
-            case 'conviceProphet':
+            case 'convinceProphet':
                 convinceProphet += story[number].variable[i+1];
                 break;
             case 'artifactInfoLeader':
@@ -1490,15 +1491,19 @@ function storyLoop (number){ //all of the mechanics
     }
     if ((convinceLeader >= 1) && (convinceProphet >= 1)){
         story['ninetySix'].choices.push(['oneHundredTwentySix', 'Save the people']);
-        convinceLeaders = -1000000;
+        convinceLeader = -1000000;
+        convinceProphet = -100000;
     }
     if ((artifactInfoLeader >= 1) && (artifactInfoProphet >= 1)){
         story['ninetySix'].choices.push(['ninetyFive', 'Search for the artifact']);
-        artifactInfo = -1000000;
+        artifactInfoLeader = -1000000;
+        artifactInfoProphet = -100000;
     }    
-    if (trueEnding == 9){
-        story['oneHundredTwentyNine'].choices.push(['oneHundredThirtyTwo', 'Continue']);
-        trueEnding = -10000000;
+    if (trueEnding == 20){
+        story['oneHundredTwentyNine'].choices = [['oneHundredThirtyTwo', 'Continue']];
+        //trueEnding = -10000000;
+    } else {
+        story['oneHundredTwentyNine'].choices = 0;
     }
     if (puzzleStart >= 1){
         document.getElementById('puzzleBox').classList.remove('puzzleOff');
@@ -1506,7 +1511,7 @@ function storyLoop (number){ //all of the mechanics
     }
     for(i = 0; i < story[number].choices.length; i++){ //loops for how many choices there are
         let btn = document.createElement('button'); //creates a button HTML tag inside of a variable
-        btn.setAttribute('onclick', `storyLoop('${story[number].choices[i][0]}')`); //adds an onclick attribute to the button with the specific pointer needed
+        btn.setAttribute('onclick', (`storyLoop('${story[number].choices[i][0]}')`)); //adds an onclick attribute to the button with the specific pointer needed
         btn.innerHTML = story[number].choices[i][1]; //adds the button text
         document.getElementById('choiceMenu').appendChild(btn); //adds the button to the UI
     } 
@@ -1530,11 +1535,7 @@ function puzzleCode() {
     }
 }
 /*
-citizen doesn't work
-three buttons for search for artifact when in main city when you have enough info
 add variables
 add time
-CSS
-    make background as image
-    etc.
+line indents
 */

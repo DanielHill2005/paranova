@@ -2,12 +2,45 @@
     display: none;
 }
 .puzzleOn {
-    width: 80vw;
+    width: 60vw;
     display: flex;
     flex-direction: column;
 }
 .puzzleMenu {
-    width: 80vw;
+    width: 60vw;
     display: flex;
     flex-direction: row;
+}
+body {
+    display: flex;
+    flex-direction: row;
+    background-image: url(stars-gaa44ccf48_1920.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    text-shadow: 5px 5px black;
+}
+.storyText {
+    width: 60vw;
+    font-size: 20px;
+    height: 60vh;
+    overflow: auto;
+}
+button {
+    background-color: white;
+    padding: 15px;
+    height: 50px;
+    width: 200px;
+    box-shadow: 0;
+    border-radius: 5px;
+    transition: .4s;
+}
+button:hover {
+    box-shadow: 0 6px 8px 0 rgba(255,255,255,0.24), 0 8px 25px 0 rgba(255,255,255,0.19);
+}
+.rightSide {
+    width: 35vw;
+}
+.clock {
+    font-size: 50px;
 }
