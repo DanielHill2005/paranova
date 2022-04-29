@@ -10,6 +10,7 @@ var trueEnding = 0;
 var storyArray = [];
 var death = 0;
 var puzzleStart = 0;
+var wait = 0;
 const story = { //holds the entire story
     one: {
         text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It’s the staryear 193-08793. The Milky Way galaxy’s unexplored mysteries didn’t last long after humanity finally discovered the secrets of space travel. I was born in an age of space pirates and war. With the entire galaxy conquered, humanity had nothing to do but fight over what we already had. All I ever wanted to do was be an old school explorer. But with this galaxy completely explored and the endless space between other galaxies untraversable, I was stuck as a bounty hunter.
@@ -1080,11 +1081,11 @@ const story = { //holds the entire story
     ninetyNine: {
         text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I wait until something finally happens. The door rumbles open and I walk in.`,
         oldManText: ``,
-        variable: 0,       
+        variable: ['wait', 1],       
         choices: [
             [`oneHundredTen`,`Continue`]
         ],
-        time: 1
+        time: 0
     },
 
     oneHundred: {
@@ -1423,7 +1424,11 @@ const story = { //holds the entire story
 
 function storyLoop (number){ //all of the mechanics
     storyArray.push(number);
-    document.getElementById('selectedChoices').innerHTML = storyArray;
+    document.getElementById('selectedChoices').innerHTML += `, ${number}`;
+    if (wait == 1){
+        wait = -100000;
+        timeLeft -= (timeLeft - 10);
+    }    
     timeLeft -= story[number].time; //subtracts time     
     if (timeLeft <= 10 && artifactDoor == 'closed'){ //special events
         document.getElementById('storyText').innerHTML += '<i><br><br>Suddenly a loud rumbling can be heard all across the entire planet. A huge beacon of light shoots out from the ocean. Something important must be happening there</i></br></br> ';
@@ -1435,6 +1440,7 @@ function storyLoop (number){ //all of the mechanics
         artifactDoor = 'closed forever';
     } else if (timeLeft <= 0){
         timeLeft = 0;
+        death = 1;
         document.getElementById('storyText').innerHTML += "<br><br>I’m out of time. I need to get back to my ship. I start running hoping that I have enough time to escape. I finally reach my ship and get in. As I’m flying away I look back at the star. It looks giant and red. Then there’s a flash of light. I should have enough time to get away. I start flying away but something weird happens. Even though I’m powering up the engines I’m slowing down. Then the ship stops and starts going backwards. The star’s gravity is enough to pull me in. I give up. I turn around and watch as the beautiful and massive explosion turns me into nothing in an instant.";
     }
     if(timeLeft <= 30){
@@ -1469,6 +1475,9 @@ function storyLoop (number){ //all of the mechanics
             case 'puzzleStart':
                 puzzleStart += story[number].variable[i+1];
                 break;
+            case 'wait':
+                wait += story[number].variable[i+1];
+                break;
             default:
                 alert('something broke lol, try restarting'); //debugging tool
         }
@@ -1499,9 +1508,9 @@ function storyLoop (number){ //all of the mechanics
         artifactInfoLeader = -1000000;
         artifactInfoProphet = -100000;
     }    
-    if (trueEnding == 20){
+    if (trueEnding == 8){
         story['oneHundredTwentyNine'].choices = [['oneHundredThirtyTwo', 'Continue']];
-        //trueEnding = -10000000;
+        trueEnding = -10000000;
     } else {
         story['oneHundredTwentyNine'].choices = 0;
     }
@@ -1534,8 +1543,3 @@ function puzzleCode() {
         document.getElementById('storyText').innerHTML += `<br><br>That can’t be it, that’s nonsense! Let me try something else.`;
     }
 }
-/*
-add variables
-add time
-line indents
-*/
