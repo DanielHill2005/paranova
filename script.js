@@ -1109,20 +1109,16 @@ const story = { //holds the entire story
             [`oneHundredSix`,`Give up`]
         ],
         time: 1
-    },
-    /*This was an oopsy so oneHundredTwo is to be discarded     
+    },     
     oneHundredTwo: {
-        text: ` `,
+        text: `I fly down and see the door wide open. This was the spot that that huge beacon came from. I have to assume that all that noise was this door opening. I land and walk into the door.`,
         oldManText: ``,
         variable: 0,       
         choices: [
-            [``,``],
-            [``,``],
-            [``,``]
+            [`oneHundredTen`,`Continue`]
         ],
         time: 1
     },
-    */
     oneHundredThree: {
         text: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It quickly became obvious that there was a problem. At the bottom of the whirlpool I can see the entrance. Sealed. The door has text on it that matches the map I used to get here. I can use the cipher that the old man sent me. The handwriting is very different from what’s on the engraving. Did that old fart actually know what he was talking about?\nℸ ̣ ⍑╎ᓭ       ℸ ̣ 7ᒲʖ      ∴╎ꖎꖎ      7!¡ᒷリ     7リ     ℸ ̣ ⍑ᒷ      ᒷ⍊ᒷ 7⎓       ℸ ̣ ⍑ᒷ       ⎓╎リᔑꖎ       ↸ᔑ||,     ʖ⚍ℸ ̣     ᓵꖎ7ᓭᒷ    ʖᒷ⎓7∷ᒷ リ╎⊣⍑ℸ ̣         ℸ ̣ ᔑꖌᒷᓭ       7⍊ᒷ∷`,
         oldManText: `Or I could just ask him. “Hey old man! Take a look at this,” I yell over the sound of the water. “You know I have a name,” He says, sounding a little hurt, “It’s Colmãn.”“Alright, Colmãn, take a look at this.”It only takes him a few seconds of looking at it for him to translate it back to me as, “This tomb will open on the eve of the final day, but close before night takes over.” “That must mean tonight. With how much time is left I doubt the sun will rise again before it blows,” I say.“I think it should open right as we have ${timeLeft} imperial time units left,” Colmãn says, “But we need to get in there right after because it will close in another 1 or 2 time units. Should we just wait here for it to open or try to go do something else before it opens?”`,
@@ -1432,7 +1428,7 @@ function storyLoop (number){ //all of the mechanics
     timeLeft -= story[number].time; //subtracts time     
     if (timeLeft <= 10 && artifactDoor == 'closed'){ //special events
         document.getElementById('storyText').innerHTML += '<i><br><br>Suddenly a loud rumbling can be heard all across the entire planet. A huge beacon of light shoots out from the ocean. Something important must be happening there</i></br></br> ';
-        story['ninetySeven'].choices = [['oneHundredTwentyTwo', 'Continue']];
+        story['ninetySeven'].choices = [['oneHundredTwo', 'Continue']];
         artifactDoor = 'open';
     } else if (timeLeft <= 5 && artifactDoor == 'open'){
         document.getElementById('storyText').innerHTML += "<i><br><br>The beacon of light vanishes</i></br></br> ";
@@ -1491,6 +1487,7 @@ function storyLoop (number){ //all of the mechanics
     currentAddedText = story[number].text + story[number].oldManText;
     }
     document.getElementById('storyText').innerHTML += `<br><br>${currentAddedText}`; //adds the text to the main story
+    document.getElementById('bottom').scrollIntoView();
     if (death == 1){
         document.getElementById('menu').innerHTML = 'GAME OVER! Maybe try another path?';
     }
@@ -1541,5 +1538,11 @@ function puzzleCode() {
         }
     } else {
         document.getElementById('storyText').innerHTML += `<br><br>That can’t be it, that’s nonsense! Let me try something else.`;
+    }
+}
+function restart() {
+    let text = "Are you sure you want to restart?";
+    if (confirm(text) == true) {
+        window.location.reload()
     }
 }

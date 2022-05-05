@@ -14,26 +14,34 @@
 body {
     display: flex;
     flex-direction: row;
-    background-image: url(stars-gaa44ccf48_1920.jpg);
+    justify-content: space-around;
+    background-image: url(pexels-kai-pilger-1341279.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
     text-shadow: 5px 5px black;
 }
-.storyText {
+#text {
     width: 60vw;
-    font-size: 20px;
+    font-size: 25px;
     height: 60vh;
-    overflow: auto;
+    overflow: auto;    
 }
 button {
     background-color: white;
     padding: 15px;
+    margin: 5px;
     height: 50px;
     width: 200px;
     box-shadow: 0;
     border-radius: 5px;
     transition: .4s;
+}
+.restartButton {
+    background-color: red;
+    font-size: 25px;
+    color: white;
+    margin-top: 40px;
 }
 button:hover {
     box-shadow: 0 6px 8px 0 rgba(255,255,255,0.24), 0 8px 25px 0 rgba(255,255,255,0.19);
@@ -46,4 +54,30 @@ button:hover {
 }
 .list {
     width: 20vw;
+}
+/*Large Tablet*/
+@media screen and (max-width: 992px) {
+
+}
+/*Medium Tablet*/
+@media screen and (max-width: 768px) {
+    
+}
+/*Mobile*/
+@media screen and (max-width: 480px) {
+    body{
+        flex-direction: column;
+    }
+    .storyText{
+        height: 50vh;
+        width: 80vw;
+    }
+    #text{
+        width: 80vw;
+    }
+    button {
+        padding: 10px;
+        height: 50px;
+        width: 100px;
+    }
 }

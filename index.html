@@ -13,6 +13,7 @@
         <h2>By: Daniel Hill and Isaak Maldonado</h2>
         <section id="text">
             <p id="storyText" class="storyText"></p><!--Intended for the building of the story text-->
+            <a id="bottom"></a>
         </section>
         <h3 id="menu">Options:</h3>
         <section id="choiceMenu"> <!--choice user interface-->
@@ -25,7 +26,7 @@
             <input type="button" onclick="puzzleCode()" value="Submit">
             </article>
         </section>
-        <button id="restart" onclick="window.location.reload()">RESTART</button> <!--resets the page-->        
+        <button id="restart" onclick="restart()" class="restartButton"><b>RESTART</b></button> <!--resets the page-->        
     </section>
     <section class="rightSide">
         <section id="clock" class="clock"> <!--shows timeLeft variable-->
