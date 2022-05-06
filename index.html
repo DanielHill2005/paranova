@@ -17,13 +17,13 @@
         </section>
         <h3 id="menu">Options:</h3>
         <section id="choiceMenu"> <!--choice user interface-->
-            <button value="Start" onclick="storyLoop(`one`)">Start</button>
+            <button value="Start" onclick="storyLoop(`one`)">Start</button><!--starts and calls the function-->
         </section>
-        <section id="puzzleBox" class="puzzleOff">
-            <img src="cipher.png">
+        <section id="puzzleBox" class="puzzleOff"><!--puzzle section-->
+            <img src="cipher.png"><!--cipher for the puzzle, for user to decipher the code-->
             <article class="puzzleMenu">
-            <input type="text" id="puzzleInput">
-            <input type="button" onclick="puzzleCode()" value="Submit">
+            <input type="text" id="puzzleInput"><!--has user input their answer for the cipher-->
+            <input type="button" onclick="puzzleCode()" value="Submit"><!--calls the puzzleCode function so that it can check if their code is correct-->
             </article>
         </section>
         <button id="restart" onclick="restart()" class="restartButton"><b>RESTART</b></button> <!--resets the page-->        
@@ -32,7 +32,7 @@
         <section id="clock" class="clock"> <!--shows timeLeft variable-->
             <p id="time"></p>
         </section>
-        <section class="list">
+        <section class="list"><!--shows the users amount of time left (timeLeft variable)-->
             <p>Current path:</p>
             <p id="selectedChoices"></p>
         </section>

@@ -1,34 +1,34 @@
-.puzzleOff {
+.puzzleOff {/*makes the cipher invisible until user actually gets to the point in the story where they actually need it*/
     display: none;
 }
-.puzzleOn {
+.puzzleOn { /*when puzzle is on, make the image appear*/
     width: 60vw;
     display: flex;
     flex-direction: column;
 }
-.puzzleMenu {
+.puzzleMenu {/*aligns the menu for the puzzle, when the user gets to see it*/
     width: 60vw;
     display: flex;
     flex-direction: row;
 }
-body {
+body {/*alignment for the page*/
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background-image: url(pexels-kai-pilger-1341279.jpg);
+    background-image: url(pexels-kai-pilger-1341279.jpg);/*background image*/
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
     text-shadow: 5px 5px black;
-    overflow-x: hidden;
+    overflow-x: hidden;/*makes the page not scrollable on the x-axis (horizontally)*/
 }
-#text {
+#text { /* makes the text box */
     width: 60vw;
     font-size: 25px;
     height: 60vh;
     overflow-y: auto;    
 }
-#choiceMenu button {
+#choiceMenu button { /* makes buttons nice and pretty */
     padding: 15px;
     margin: 5px;
     height: 50px;
@@ -41,7 +41,7 @@ body {
     border-width: 3px;
     color: white;
 }
-.restartButton {
+.restartButton { /* makes restart button scary */
     background-color: red;
     font-size: 25px;
     color: white;
@@ -50,13 +50,13 @@ body {
     border-color: white;
     border-width: 3px;
 }
-button:hover {
+button:hover { /* hover effects on buttons */
     box-shadow: 0 6px 8px 0 rgba(255,255,255,0.24), 0 8px 25px 0 rgba(255,255,255,0.19);
 }
-.rightSide {
+.rightSide { /* flexbox shenanigans  */
     width: 35vw;
 }
-.clock {
+.clock { 
     font-size: 50px;
     width: 90vw;
 }
@@ -92,8 +92,8 @@ button:hover {
         width: 20vw;
     }
 }
-/*Medium Tablet*/
-@media screen and (max-width: 768px) {
+/*Medium Tablet (768px)*/
+@media screen and (max-width: 768px) {/*shrinks the clock and menu, enlarges the story text, and makes the direction of the page into a column instead of a row (horizontally)*/
     body{
         flex-direction: column;
     }
@@ -124,8 +124,8 @@ button:hover {
         width: 80vw;
     }
 }
-/*Mobile*/
-@media screen and (max-width: 480px) {
+/*Mobile (480px)*/
+@media screen and (max-width: 480px) {/*shrinks the clock and options chosen by the user*/
     .rightSide {
         font-size: 20px;
     }

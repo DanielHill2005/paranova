@@ -1419,27 +1419,27 @@ const story = { //holds the entire story
 };
 
 function storyLoop (number){ //all of the mechanics
-    storyArray.push(number);
-    document.getElementById('selectedChoices').innerHTML += `, ${number}`;
-    if (wait == 1){
+    storyArray.push(number); //adds the selected choice to the story array
+    document.getElementById('selectedChoices').innerHTML += `, ${number}`; //displays current path
+    if (wait == 1){ //special "wait" option that changes how much time is subtracted depending on what time it is
         wait = -100000;
         timeLeft -= (timeLeft - 10);
     }    
     timeLeft -= story[number].time; //subtracts time     
-    if (timeLeft <= 10 && artifactDoor == 'closed'){ //special events
+    if (timeLeft <= 10 && artifactDoor == 'closed'){ //when the door to the artifact opens
         document.getElementById('storyText').innerHTML += '<i><br><br>Suddenly a loud rumbling can be heard all across the entire planet. A huge beacon of light shoots out from the ocean. Something important must be happening there</i></br></br> ';
         story['ninetySeven'].choices = [['oneHundredTwo', 'Continue']];
         artifactDoor = 'open';
-    } else if (timeLeft <= 5 && artifactDoor == 'open'){
+    } else if (timeLeft <= 5 && artifactDoor == 'open'){ //when the door to the artifact closes
         document.getElementById('storyText').innerHTML += "<i><br><br>The beacon of light vanishes</i></br></br> ";
         story['ninetySeven'].choices = [['oneHundredTwentySeven', 'Continue']];
         artifactDoor = 'closed forever';
-    } else if (timeLeft <= 0){
+    } else if (timeLeft <= 0){ //when time completely runs out
         timeLeft = 0;
         death = 1;
         document.getElementById('storyText').innerHTML += "<br><br>I'm out of time. I need to get back to my ship. I start running hoping that I have enough time to escape. I finally reach my ship and get in. As I'm flying away I look back at the star. It looks giant and red. Then there's a flash of light. I should have enough time to get away. I start flying away but something weird happens. Even though I'm powering up the engines I'm slowing down. Then the ship stops and starts going backwards. The star's gravity is enough to pull me in. I give up. I turn around and watch as the beautiful and massive explosion turns me into nothing in an instant.";
     }
-    if(timeLeft <= 30){
+    if(timeLeft <= 30){ //shows how much time is left
     document.getElementById(`clock`).innerHTML = `Time left = ${timeLeft}`;
     }        
     for(i = 0; i < story[number].variable.length; i+=2){ //updates all variables
@@ -1479,7 +1479,7 @@ function storyLoop (number){ //all of the mechanics
         }
     }    
     document.getElementById('choiceMenu').innerHTML = ''; //clears all of the old choices
-    if(timeLeft > 0){
+    if(timeLeft > 0){ //doesn't let the code run if the story is done
     let currentAddedText = ''; //holds the new text to be added
     if(oldMan == 0){ //adds the main text and optional text if needed
         currentAddedText = story[number].text;
@@ -1487,11 +1487,11 @@ function storyLoop (number){ //all of the mechanics
     currentAddedText = story[number].text + story[number].oldManText;
     }
     document.getElementById('storyText').innerHTML += `<br><br>${currentAddedText}`; //adds the text to the main story
-    document.getElementById('bottom').scrollIntoView();
-    if (death == 1){
+    document.getElementById('bottom').scrollIntoView(); //scrolls to the bottom of the text box automatically
+    if (death == 1){ //death condition
         document.getElementById('menu').innerHTML = 'GAME OVER! Maybe try another path?';
     }
-    if (knowChief == 1){
+    if (knowChief == 1){ //once you get enough information new options appear
         story['sixtySix'].choices.push(['sixtyNine', 'Fight him']);
         knowChief = -1000000;
     }
@@ -1509,9 +1509,9 @@ function storyLoop (number){ //all of the mechanics
         story['oneHundredTwentyNine'].choices = [['oneHundredThirtyTwo', 'Continue']];
         trueEnding = -10000000;
     }
-    if (puzzleStart >= 1){
-        document.getElementById('puzzleBox').classList.remove('puzzleOff');
-        document.getElementById('puzzleBox').classList.add('puzzleOn');
+    if (puzzleStart >= 1){ //when the player starts the puzzle
+        document.getElementById('puzzleBox').classList.remove('puzzleOff'); //takes off the CSS making the puzzle invisible
+        document.getElementById('puzzleBox').classList.add('puzzleOn'); //gives the puzzle CSS
     }
     for(i = 0; i < story[number].choices.length; i++){ //loops for how many choices there are
         let btn = document.createElement('button'); //creates a button HTML tag inside of a variable
@@ -1521,26 +1521,26 @@ function storyLoop (number){ //all of the mechanics
     } 
 }  
 }
-function puzzleCode() {
-    if((document.getElementById('puzzleInput').value.toLowerCase()) == 'this tomb will open on the eve of the final day but close before night takes over'){
-        if(puzzleStart == 1){
-            document.getElementById('puzzleBox').classList.add('puzzleOff');
+function puzzleCode() { //holds the puzzle
+    if((document.getElementById('puzzleInput').value.toLowerCase()) == 'this tomb will open on the eve of the final day but close before night takes over'){ //if the user types the right answer
+        if(puzzleStart == 1){ //if you enter the puzzle from before or after the door is closed
+            document.getElementById('puzzleBox').classList.add('puzzleOff'); //turn off puzzle
             document.getElementById('puzzleBox').classList.remove('puzzleOn');  
             puzzleStart = -100000;          
-            storyLoop('oneHundred');
+            storyLoop('oneHundred'); //move forward to before door is open
         } else {
             document.getElementById('puzzleBox').classList.add('puzzleOff');
             document.getElementById('puzzleBox').classList.remove('puzzleOn');
             puzzleStart = -10000;
-            storyLoop('oneHundredOne');            
+            storyLoop('oneHundredOne'); //move forward to after door is open     
         }
     } else {
-        document.getElementById('storyText').innerHTML += `<br><br>That can't be it, that's nonsense! Let me try something else.`;
+        document.getElementById('storyText').innerHTML += `<br><br>That can't be it, that's nonsense! Let me try something else.`; //incorrect answer
     }
 }
-function restart() {
+function restart() { //when player clicks restart
     let text = "Are you sure you want to restart?";
-    if (confirm(text) == true) {
+    if (confirm(text) == true) { //gives player chance to not restart
         window.location.reload()
     }
 }
